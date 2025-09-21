@@ -1,5 +1,5 @@
 export const sponsor = {
-    data: [""],
+    data: [""], // 确保始终是数组，避免map调用失败(fix)
     month: 0,
     updated: false,
     get title() {
@@ -25,15 +25,16 @@ export const sponsor = {
         }
         var res = await this.getRawData();
         if (res != null && res.code == 200) {
-            this.data = res.data.sponsors;
+            this.data = res.data.sponsors || []; // 确保即使sponsors字段为空也返回数组
             this.month = res.data.month;
             this.updated = true;
             return true;
         }
+        // 即使获取数据失败，也要确保data是数组
+        this.data = this.data || [];
         return false;
             
-        
-    },
+        },
     get names() {
         return this.data;
     }
