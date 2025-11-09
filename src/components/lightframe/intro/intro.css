@@ -1,0 +1,170 @@
+.intro {
+  padding: clamp(40px, 8vw, 80px) 0;
+  background: var(--lf-background-color);
+  container-type: inline-size;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: normal;
+  margin-bottom: clamp(30px, 6vw, 50px);
+  color: var(--lf-text-color);
+}
+
+.intro-grid {
+  display: grid;
+  /* 使用现代 Grid 布局 - 自动适应容器宽度 */
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(20px, 4vw, 30px);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  container-type: inline-size;
+}
+
+.intro-item {
+  background: var(--lf-card-bg);
+  border: 1px solid var(--lf-primary-color);
+  border-radius: var(--border-radius-md);
+  padding: clamp(20px, 5vw, 30px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(12px, 3vw, 20px);
+  min-height: clamp(200px, 30vh, 250px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.intro-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--lf-shadow-color);
+}
+
+.intro-icon {
+  color: var(--lf-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(60px, 10vw, 80px);
+  height: clamp(60px, 10vw, 80px);
+  flex-shrink: 0;
+}
+
+.intro-icon svg {
+  width: 100%;
+  height: 100%;
+  max-width: 42px;
+  max-height: 42px;
+}
+
+.intro-item h3 {
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: normal;
+  margin: 0;
+  color: var(--lf-text-color);
+  line-height: 1.3;
+}
+
+.intro-item p {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
+  color: var(--lf-text-color);
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* 容器查询 - 处理小网格布局 */
+@container (max-width: 640px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 3vw, 20px);
+    padding: 0 var(--spacing-sm);
+  }
+
+  .intro-item {
+    padding: clamp(20px, 4vw, 25px) clamp(16px, 3vw, 20px);
+    min-height: auto;
+  }
+
+  .intro-icon {
+    width: clamp(50px, 8vw, 60px);
+    height: clamp(50px, 8vw, 60px);
+  }
+
+  .intro-icon svg {
+    max-width: 36px;
+    max-height: 36px;
+  }
+}
+
+/* 极小屏幕优化 */
+@container (max-width: 400px) {
+  .intro {
+    padding: clamp(30px, 6vw, 50px) 0;
+  }
+
+  .section-title {
+    font-size: clamp(24px, 4vw, 28px);
+    margin-bottom: clamp(20px, 4vw, 30px);
+  }
+
+  .intro-item {
+    padding: clamp(16px, 3vw, 20px);
+    text-align: left;
+    align-items: flex-start;
+    gap: clamp(10px, 2vw, 15px);
+  }
+
+  .intro-icon {
+    align-self: center;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .intro-item p {
+    text-align: left;
+    font-size: clamp(13px, 2.5vw, 15px);
+  }
+}
+
+/* 中等屏幕优化 - 2列布局 */
+@container (min-width: 641px) and (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+}
+
+/* 大屏幕优化 - 更多列和更大间距 */
+@container (min-width: 1200px) {
+  .intro-grid {
+    gap: clamp(30px, 5vw, 40px);
+  }
+
+  .intro-item {
+    padding: clamp(25px, 6vw, 40px);
+  }
+
+  .intro-icon {
+    width: clamp(70px, 12vw, 90px);
+    height: clamp(70px, 12vw, 90px);
+  }
+
+  .intro-icon svg {
+    max-width: 48px;
+    max-height: 48px;
+  }
+}
+
+/* 超大屏幕优化 */
+@container (min-width: 1400px) {
+  .intro-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(35px, 6vw, 50px);
+  }
+}

@@ -1,0 +1,299 @@
+.contributors {
+  padding: 80px 0;
+  background: var(--lf-background-color);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: normal;
+  margin-bottom: 50px;
+  color: var(--lf-text-color);
+}
+
+/* 最近贡献者部分 */
+.recent-contributors {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.recent-contributors h3 {
+  color: var(--lf-text-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.recent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.recent-list .contributor-name.highlight {
+  background: transparent;
+  color: var(--lf-text-color);
+  padding: 8px 16px;
+  border: 1px solid var(--lf-border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: normal;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: default;
+}
+
+.recent-list .contributor-name.highlight:hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
+  transform: translateY(-1px);
+}
+
+.recent-list .contributor-name.highlight:active {
+  transform: translateY(0);
+}
+
+.recent-list .contributor-name.highlight.empty {
+  background: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+  cursor: default;
+  font-style: italic;
+}
+
+.recent-list .contributor-name.highlight.empty:hover {
+  color: #666;
+  background: transparent;
+  border-color: #ccc;
+  transform: none;
+}
+
+.loading-recent {
+  color: #666;
+  font-style: italic;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: default;
+}
+
+.loading-recent:hover {
+  color: #666;
+  background: transparent;
+  border-color: #ccc;
+  transform: none;
+}
+
+/* 详细贡献者信息 */
+.contributors-container {
+  max-height: 400px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  position: relative;
+}
+
+.contributors-container.expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contributor-group {
+  background: var(--lf-card-bg);
+  border: 1px solid var(--lf-border-color);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.contributor-group h3 {
+  color: var(--lf-primary-color);
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  font-weight: normal;
+}
+
+.contributor-group p {
+  color: var(--lf-text-color);
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.contributor-list, .sponsor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  min-height: 40px;
+  align-items: center;
+}
+
+.contributor-name {
+  background: transparent;
+  color: var(--lf-text-color);
+  padding: 6px 12px;
+  border: 1px solid var(--lf-border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: default;
+}
+
+.contributor-name:hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
+  transform: translateY(-1px);
+}
+
+.contributor-name:active {
+  transform: translateY(0);
+}
+
+.contribution-link {
+  text-align: center;
+}
+
+.contribution-link a {
+  color: var(--lf-text-color);
+  text-decoration: none;
+  font-weight: normal;
+  padding: 8px 16px;
+  border: 1px solid var(--lf-border-color);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.contribution-link a:hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
+  transform: translateY(-1px);
+}
+
+.loading {
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 展开/收起按钮 */
+.contributors-toggle {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 1px solid var(--lf-border-color);
+  color: var(--lf-text-color);
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.toggle-btn:hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
+  transform: translateY(-1px);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+}
+
+.toggle-icon {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.up {
+  transform: rotate(180deg);
+}
+
+.toggle-icon.down {
+  transform: rotate(0deg);
+}
+
+/* 添加渐变遮罩效果 */
+.contributors-container:not(.expanded)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, var(--lf-background-color));
+  pointer-events: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .contributors {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .recent-contributors h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .recent-list {
+    gap: 10px;
+  }
+
+  .recent-list .contributor-name.highlight {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .contributors-container {
+    max-height: 300px;
+  }
+
+  .contributors-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contributor-group {
+    padding: 25px 20px;
+  }
+
+  .contributor-group h3 {
+    font-size: 20px;
+  }
+
+  .toggle-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

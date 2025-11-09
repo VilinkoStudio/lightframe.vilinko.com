@@ -1,0 +1,38 @@
+/**
+ * 可复用的 SVG Icon 组件
+ * 用于渲染 SVG 图标
+ */
+
+import { component$ } from "@builder.io/qwik";
+import type { SvgIcon } from "~/types";
+
+export interface IconProps {
+  paths: SvgIcon;
+  width?: number;
+  height?: number;
+  fill?: string;
+  class?: string;
+}
+
+export const Icon = component$<IconProps>(({
+  paths,
+  width = 42,
+  height = 42,
+  fill = "currentColor",
+  class: className = "",
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      fill={fill}
+      viewBox="0 0 16 16"
+      class={className}
+    >
+      {paths.map((pathData, index) => (
+        <path key={index} d={pathData} />
+      ))}
+    </svg>
+  );
+});

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "jsx": "react",
+    "lib": ["DOM", "ESNext"],
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

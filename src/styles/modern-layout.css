@@ -1,0 +1,374 @@
+ * 现代布局工具类 - 基于 CSS Grid、Flexbox 和容器查询
+ * 替代传统的 max-width 媒体查询，提供更健壮的响应式设计
+ */
+
+/* ==================== 流体容器系统 ==================== */
+.fluid-container {
+  width: min(100% - var(--spacing-lg), var(--container-max));
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+.fluid-container-sm {
+  width: min(100% - var(--spacing-md), 900px);
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+.fluid-container-lg {
+  width: min(100% - var(--spacing-xl), 1600px);
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+/* ==================== 现代 Flexbox 工具类 ==================== */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-start {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+
+.flex-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+.flex-none {
+  flex: none;
+}
+
+/* Flex Gap 工具类 */
+.gap-xs { gap: var(--spacing-xs); }
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+.gap-lg { gap: var(--spacing-lg); }
+.gap-xl { gap: var(--spacing-xl); }
+
+/* ==================== 现代 Grid 工具类 ==================== */
+.grid {
+  display: grid;
+}
+
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+.grid-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.grid-cols-auto-2 {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 50%), 1fr));
+}
+
+.grid-cols-auto-3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 33.333%), 1fr));
+}
+
+/* Grid Area 和 Item */
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.grid-area-start {
+  place-self: start;
+}
+
+.grid-area-center {
+  place-self: center;
+}
+
+.grid-area-end {
+  place-self: end;
+}
+
+.grid-area-stretch {
+  place-self: stretch;
+}
+
+/* ==================== 响应式间距工具类 ==================== */
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+.px-xs { padding-left: var(--spacing-xs); padding-right: var(--spacing-xs); }
+.px-sm { padding-left: var(--spacing-sm); padding-right: var(--spacing-sm); }
+.px-md { padding-left: var(--spacing-md); padding-right: var(--spacing-md); }
+.px-lg { padding-left: var(--spacing-lg); padding-right: var(--spacing-lg); }
+.px-xl { padding-left: var(--spacing-xl); padding-right: var(--spacing-xl); }
+
+.py-xs { padding-top: var(--spacing-xs); padding-bottom: var(--spacing-xs); }
+.py-sm { padding-top: var(--spacing-sm); padding-bottom: var(--spacing-sm); }
+.py-md { padding-top: var(--spacing-md); padding-bottom: var(--spacing-md); }
+.py-lg { padding-top: var(--spacing-lg); padding-bottom: var(--spacing-lg); }
+.py-xl { padding-top: var(--spacing-xl); padding-bottom: var(--spacing-xl); }
+
+.m-xs { margin: var(--spacing-xs); }
+.m-sm { margin: var(--spacing-sm); }
+.m-md { margin: var(--spacing-md); }
+.m-lg { margin: var(--spacing-lg); }
+.m-xl { margin: var(--spacing-xl); }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.my-xs { margin-top: var(--spacing-xs); margin-bottom: var(--spacing-xs); }
+.my-sm { margin-top: var(--spacing-sm); margin-bottom: var(--spacing-sm); }
+.my-md { margin-top: var(--spacing-md); margin-bottom: var(--spacing-md); }
+.my-lg { margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
+.my-xl { margin-top: var(--spacing-xl); margin-bottom: var(--spacing-xl); }
+
+/* ==================== 响应式字体工具类 ==================== */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* ==================== 边框圆角工具类 ==================== */
+.rounded-xs { border-radius: var(--border-radius-xs); }
+.rounded-sm { border-radius: var(--border-radius-sm); }
+.rounded-md { border-radius: var(--border-radius-md); }
+.rounded-lg { border-radius: var(--border-radius-lg); }
+.rounded-xl { border-radius: var(--border-radius-xl); }
+.rounded-full { border-radius: 50%; }
+
+/* ==================== 显示和定位工具类 ==================== */
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.hidden { display: none; }
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* ==================== 容器查询基础类 ==================== */
+.container-query {
+  container-type: inline-size;
+}
+
+.container-size {
+  container-type: size;
+}
+
+/* ==================== 现代卡片组件 ==================== */
+.modern-card {
+  background: var(--lf-card-bg);
+  border: 1px solid var(--lf-border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  container-type: inline-size;
+}
+
+.modern-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--lf-shadow-color);
+}
+
+.modern-card-sm {
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.modern-card-lg {
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+}
+
+/* ==================== 响应式组件类 ==================== */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--spacing-md);
+  container-type: inline-size;
+}
+
+.responsive-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  container-type: inline-size;
+}
+
+/* ==================== 容器查询示例 ==================== */
+
+/* 小型容器 (< 480px) */
+@container (max-width: 480px) {
+  .stack-mobile {
+    flex-direction: column;
+  }
+  
+  .hide-mobile {
+    display: none;
+  }
+  
+  .grid-mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 中型容器 (480px - 768px) */
+@container (min-width: 481px) and (max-width: 768px) {
+  .grid-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 大型容器 (> 768px) */
+@container (min-width: 769px) {
+  .grid-desktop {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .show-desktop {
+    display: block;
+  }
+}
+
+/* ==================== 现代按钮系统 ==================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--lf-border-color);
+  background: transparent;
+  color: var(--lf-text-color);
+  min-height: clamp(44px, 6vw, 52px);
+  container-type: inline-size;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--lf-shadow-color);
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  min-height: clamp(36px, 5vw, 44px);
+}
+
+.btn-lg {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  min-height: clamp(52px, 7vw, 60px);
+}
+
+.btn-primary {
+  background-color: var(--lf-primary-color);
+  color: var(--lf-background-color);
+  border-color: var(--lf-primary-color);
+}
+
+.btn-secondary {
+  background-color: var(--lf-secondary-color);
+  color: var(--lf-text-color);
+  border-color: var(--lf-secondary-color);
+}
+
+/* ==================== 辅助功能增强 ==================== */
+@media (prefers-reduced-motion: reduce) {
+  .modern-card,
+  .btn,
+  .btn:hover {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .modern-card,
+  .btn {
+    border-width: 2px;
+  }
+}
+
+/* ==================== 触摸设备优化 ==================== */
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    min-height: clamp(48px, 7vw, 56px);
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+  }
+}
+
+/* ==================== 打印样式 ==================== */
+@media print {
+  .modern-card {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+  
+  .btn {
+    border: 1px solid #000 !important;
+    color: #000 !important;
+  }
+}

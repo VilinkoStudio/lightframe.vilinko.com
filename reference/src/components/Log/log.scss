@@ -1,0 +1,35 @@
+.logItem {
+  max-width: 1250px;
+  margin: 16px auto;
+  padding: 8px;
+  cursor: default;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: var(--breakpoint-md)) {
+  .logItem {
+    max-width: 95%;
+    margin: 12px auto;
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+// 小屏幕
+@media screen and (max-width: var(--breakpoint-sm)) {
+  .logItem {
+    max-width: 98%;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 13px;
+  }
+}
+
+// 大屏幕
+@media screen and (min-width: var(--breakpoint-xl)) {
+  .logItem {
+    padding: 10px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,128 @@
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(14px, 3vw, 20px) clamp(20px, 4vw, 40px);
+  background: var(--lf-background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--lf-primary-color);
+  container-type: inline-size;
+}
+
+.title {
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: normal;
+  color: var(--lf-text-color);
+  flex-shrink: 0;
+}
+
+.menu {
+  display: flex;
+  gap: clamp(8px, 2vw, 15px);
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.item {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--lf-text-color);
+  font-size: clamp(14px, 2.5vw, 18px);
+  text-decoration: none;
+  cursor: pointer;
+  padding: clamp(6px, 1.5vw, 8px) clamp(10px, 2.5vw, 16px);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.item:hover {
+  color: var(--lf-primary-color);
+  background-color: var(--lf-hover-bg);
+}
+
+.item:active {
+  color: var(--lf-primary-color);
+}
+
+.donate {
+  display: flex;
+  align-items: center;
+}
+
+.donate-btn {
+  background: transparent;
+  border: 1px solid var(--lf-primary-color);
+  color: var(--lf-text-color);
+  font-size: clamp(12px, 2.5vw, 14px);
+  cursor: pointer;
+  padding: clamp(6px, 1.5vw, 8px) clamp(10px, 2.5vw, 16px);
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, 1vw, 5px);
+  position: relative;
+  white-space: nowrap;
+}
+
+.donate-btn:hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
+  transform: translateY(-1px);
+}
+
+.donate-btn:active {
+  transform: translateY(0);
+}
+
+/* 容器查询 - 处理小屏幕下的布局调整 */
+@container (max-width: 480px) {
+  .top {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .menu {
+    justify-content: center;
+    gap: var(--spacing-xs);
+  }
+
+  .item {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .donate-btn {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+@container (max-width: 320px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+
+  .item, .donate-btn {
+    width: 100%;
+    justify-content: center;
+    max-width: 200px;
+  }
+}
