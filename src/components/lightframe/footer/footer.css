@@ -1,34 +1,120 @@
 .footer {
-  background: var(--lf-background-color);
-  border-top: 1px solid var(--lf-primary-color);
-  padding: 40px 0 20px;
-  margin-top: 80px;
+  background:  #000;
+  margin-top: 120px;
+  position: relative;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-bottom: 30px;
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  /*background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.1) 20%,
+    rgba(255,255,255,0.1) 80%,
+    transparent 100%);*/
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 80px 0 60px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 80px;
+}
+
+/* 品牌区域 */
+.footer-brand {
+  color: #ffffff;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.brand-initial {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.brand-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  max-width: 300px;
+}
+
+.brand-social {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px); /* 使用全局hover-lift效果 */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 功能区域 */
+.footer-section {
+  color: #ffffff;
 }
 
 .footer-section h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  font-weight: normal;
-}
-
-.footer-section h4 {
-  color: var(--lf-text-color);
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: normal;
-}
-
-.footer-section p {
-  color: var(--lf-text-color);
-  line-height: 1.6;
-  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 28px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .footer-section ul {
@@ -37,52 +123,177 @@
   margin: 0;
 }
 
-.footer-section ul li {
-  margin-bottom: 10px;
+.footer-section li {
+  margin-bottom: 16px;
 }
 
-.footer-section ul li a {
-  color: var(--lf-text-color);
+.footer-section a {
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+  font-size: 14px;
+  transition: all 0.2s ease; /* 使用标准过渡时间 */
+  position: relative;
+  display: inline-block;
 }
 
-.footer-section ul li a:hover {
-  background-color: rgba(100, 100, 100, 0.1);
+.footer-section a:hover {
+  color: #ffffff;
 }
 
-.footer-bottom {
-  border-top: 1px solid var(--lf-primary-color);
-  padding-top: 20px;
+.footer-section a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--lf-border-color);
+  transition: width 0.3s ease;
+}
+
+.footer-section a:hover::after {
+  width: 100%;
+}
+
+/* 支持区域 */
+.support-info {
   text-align: center;
 }
 
-.footer-bottom p {
-  color: var(--lf-text-color);
-  margin: 0;
+.support-info p {
+  color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
+  margin: 0 0 16px 0;
+}
+
+.support-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.support-btn:hover {
+  transform: translateY(-2px); /* 使用全局hover-lift效果 */
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.support-btn span:first-child {
+  font-size: 16px;
+}
+
+/* 底部区域 */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px 0;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* 响应式设计 */
+@media (max-width: 1024px) {
+  .footer-grid {
+    flex-direction: column;
+    gap: 60px;
+    padding: 60px 0 48px;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .brand-logo {
+    justify-content: center;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
 @media (max-width: 768px) {
-  .footer {
-    padding: 30px 0 15px;
-    margin-top: 60px;
+  .footer-grid {
+    gap: 48px;
+    padding: 48px 0 36px;
   }
 
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 20px;
+  .footer-brand {
+    text-align: center;
   }
 
-  .footer-section h3 {
-    font-size: 20px;
+  .footer-section {
+    text-align: center;
   }
 
-  .footer-section h4 {
-    font-size: 16px;
+  .footer-right {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 16px;
+  }
+
+  .brand-logo {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .support-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
   }
 }

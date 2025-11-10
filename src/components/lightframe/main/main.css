@@ -1,27 +1,21 @@
 .groundPlace {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--lf-background-color);
   position: relative;
   padding: clamp(20px, 4vw, 60px);
-  container-type: inline-size;
-}
-
-.body-container {
-  text-align: center;
-  z-index: 1;
-  padding: clamp(40px, 8vw, 80px) clamp(15px, 3vw, 30px);
-  max-width: min(800px, 90vw);
-  width: 100%;
-  container-type: inline-size;
 }
 
 .body-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(20px, 5vh, 50px);
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .body-title {
@@ -30,7 +24,6 @@
   color: var(--lf-text-color);
   line-height: 1.2;
   margin: 0;
-  padding: clamp(15px, 3vw, 30px) 0;
 }
 
 .body-button-container {
@@ -41,172 +34,125 @@
   justify-content: center;
 }
 
-.download-btn, .body-button {
-  background: transparent;
-  border: 1px solid var(--lf-primary-color);
-  color: var(--lf-text-color);
-  font-size: clamp(16px, 3vw, 18px);
-  font-weight: normal;
-  cursor: pointer;
-  padding: clamp(12px, 2.5vw, 18px) clamp(24px, 4vw, 36px);
-  border-radius: var(--border-radius-md);
-  min-width: clamp(120px, 15vw, 160px);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(6px, 1.5vw, 12px);
-  transition: all 0.2s ease;
-  position: relative;
+/* Main page specific button hover effects */
+.body-button-container .btn {
+  transition: all 0.1s ease;
 }
 
-.download-btn:hover, .body-button:hover {
+.body-button-container .btn:hover {
   color: var(--lf-background-color);
   background-color: var(--lf-primary-color);
   border-color: var(--lf-primary-color);
-  transform: translateY(-1px);
 }
 
-.download-btn:active, .body-button:active {
-  transform: translateY(0);
-}
 
-.support-btn {
-  background: transparent;
-  border: 1px solid var(--lf-primary-color);
-  color: var(--lf-text-color);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(6px, 1.5vw, 12px);
-  transition: all 0.2s ease;
-  position: relative;
-}
+/* 支持按钮样式继承自 body-button，这里无需重复定义 */
 
-.support-btn:hover {
-  color: var(--lf-background-color);
-  background-color: var(--lf-primary-color);
-  border-color: var(--lf-primary-color);
-  transform: translateY(-1px);
-}
-
-.support-btn:active {
-  transform: translateY(0);
-}
-
-/* 模态框样式 - 使用现代布局 */
+/* 模态框样式 */
 .modal-overlay {
   position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  display: grid;
-  place-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--lf-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
   overflow: hidden;
-  overscroll-behavior: contain;
-  touch-action: none;
-  padding: var(--spacing-md);
-  container-type: inline-size;
 }
+
+
+/* 模态框滚动锁定由JavaScript控制，这里只保留必要的样式 */
+
 
 .modal-content {
   background: var(--lf-background-color);
-  border: 1px solid var(--lf-primary-color);
-  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--lf-border-color);
+  border-radius: 12px;
   padding: 0;
   max-width: min(500px, 90vw);
-  width: 100%;
-  max-height: min(80vh, 600px);
+  width: auto;
+  max-height: 80vh;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: clamp(16px, 4vw, 24px);
-  border-bottom: 1px solid var(--lf-primary-color);
-  gap: var(--spacing-sm);
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--lf-border-color);
 }
 
 .modal-header h2 {
   margin: 0;
   color: var(--lf-text-color);
-  font-size: clamp(18px, 4vw, 20px);
+  font-size: 20px;
   font-weight: normal;
-  flex: 1;
 }
 
 .close-btn {
   background: none;
   border: none;
   color: var(--lf-text-color);
-  font-size: clamp(20px, 4vw, 24px);
+  font-size: 24px;
   cursor: pointer;
-  padding: var(--spacing-xs);
-  border-radius: var(--border-radius-sm);
-  width: clamp(28px, 6vw, 32px);
-  height: clamp(28px, 6vw, 32px);
+  padding: 5px;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
-  flex-shrink: 0;
+  transition: all 0.05s ease;
 }
 
 .close-btn:hover {
-  color: var(--lf-primary-color);
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
 }
 
+
 .modal-body {
-  padding: clamp(20px, 4vw, 24px);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
+  padding: 24px;
 }
 
 .download-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 100%;
   background: transparent;
-  border: 1px solid var(--lf-primary-color);
+  border: 1px solid var(--lf-border-color);
   color: var(--lf-text-color);
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: 16px;
   font-weight: normal;
   cursor: pointer;
-  padding: clamp(12px, 3vw, 18px) clamp(16px, 3vw, 24px);
-  border-radius: var(--border-radius-md);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  position: relative;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
   text-align: center;
-  min-height: clamp(44px, 8vw, 52px);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.1s ease;
 }
 
-.download-link:hover:not(:disabled) {
+.download-link:not(:disabled):hover {
   color: var(--lf-background-color);
   background-color: var(--lf-primary-color);
   border-color: var(--lf-primary-color);
-  transform: translateY(-1px);
 }
 
-.download-link:not(:disabled):active {
-  transform: translateY(0);
-}
 
 .download-link:disabled {
-  color: rgba(72, 86, 150, 0.6);
-  border-color: rgba(115, 127, 188, 0.2);
+  color: var(--lf-text-color);
+  border-color: rgba(0, 0, 0, 0.2);
   cursor: not-allowed;
   opacity: 0.7;
-  background: linear-gradient(135deg, rgba(115, 127, 188, 0.02), rgba(115, 127, 188, 0.05));
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05));
   position: relative;
 }
 
@@ -218,100 +164,76 @@
     45deg,
     transparent,
     transparent 10px,
-    rgba(115, 127, 188, 0.03) 10px,
-    rgba(115, 127, 188, 0.03) 20px
+    rgba(0, 0, 0, 0.03) 10px,
+    rgba(0, 0, 0, 0.03) 20px
   );
-  border-radius: inherit;
-}
-
-.download-link:disabled:hover {
-  color: rgba(72, 86, 150, 0.6);
-  background: linear-gradient(135deg, rgba(115, 127, 188, 0.02), rgba(115, 127, 188, 0.05));
-  border-color: rgba(115, 127, 188, 0.2);
-  transform: none;
-  box-shadow: none;
+  border-radius: 10px;
 }
 
 .terms-container {
-  margin-top: var(--spacing-md);
-  padding-top: var(--spacing-md);
-  border-top: 1px solid var(--lf-primary-color);
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--lf-border-color);
 }
 
 .terms-label {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(6px, 1.5vw, 12px);
-  font-size: clamp(11px, 2.5vw, 14px);
-  line-height: 1.4;
   cursor: pointer;
-  text-align: left;
 }
 
 .terms-label input[type="checkbox"] {
-  margin-top: 2px;
-  transform: scale(clamp(0.8, 1.5vw, 0.9));
-  flex-shrink: 0;
+  /*margin-top: 2px;*/
+  transform: scale(0.9);
+  vertical-align: baseline;
 }
 
 .terms-link {
   color: var(--lf-primary-color);
   text-decoration: none;
-  margin: 0 2px;
-  word-break: break-word;
+  margin: 0 4px;
+  transition: all 0.1s ease;
 }
 
 .terms-link:hover {
-  text-decoration: underline;
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
-/* 容器查询 - 处理极小屏幕 */
-@container (max-width: 400px) {
-  .body-button-container {
-    flex-direction: column;
-    width: 100%;
-  }
 
-  .download-btn, .body-button, .support-btn {
-    width: 100%;
-    max-width: 300px;
-  }
 
-  .modal-content {
-    margin: 0;
-    width: calc(100% - var(--spacing-lg));
-  }
-}
 
-@container (max-width: 320px) {
-  .modal-overlay {
-    padding: var(--spacing-sm);
-  }
-
-  .terms-label {
-    font-size: 10px;
-    line-height: 1.3;
-  }
-}
-
-/* 中等屏幕优化 */
-@container (min-width: 768px) {
-  .body-content {
-    gap: clamp(30px, 4vh, 60px);
-  }
-
-  .modal-content {
-    width: min(500px, 85vw);
-  }
-}
-
-/* 大屏幕优化 */
-@container (min-width: 1200px) {
-  .groundPlace {
-    padding: clamp(40px, 5vw, 80px);
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .body-container {
+    padding: 40px 15px;
   }
 
   .body-title {
-    padding: clamp(20px, 3vw, 40px) 0;
+    font-size: clamp(24px, 4vw, 36px);
+  }
+
+  .body-button-container {
+    gap: 15px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px 24px;
+    min-width: 100px;
+    min-height: 44px;
+  }
+
+  .modal-content {
+    margin: 20px;
+    width: auto;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+  }
+
+  .modal-header, .modal-body {
+    padding: 16px 20px;
   }
 }

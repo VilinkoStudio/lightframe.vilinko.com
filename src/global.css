@@ -1,206 +1,81 @@
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
-
-/* 导入样式文件 */
+/* Global styles */
+@import url('./components/utilities/utilities.css');
 @import url('./components/common/common.css');
-@import url('./styles/modern-layout.css');
 
 *::selection {
-  background: #2e98cc2e;
+  background: rgba(102, 126, 234, 0.3);
+  color: inherit;
 }
 
-:root {
-  --qwik-dark-blue: #006ce9;
-  --qwik-light-blue: #18b6f6;
-  --qwik-light-purple: #ac7ff4;
-  --qwik-dark-purple: #713fc2;
-  --qwik-dirty-black: #1d2033;
-  --qwik-dark-background: #151934;
-  --qwik-dark-text: #ffffff;
-
-  /* 现代响应式系统 - 使用容器查询和流体值 */
-  --container-min: 320px;
-  --container-max: 1400px;
-  --spacing-xs: clamp(8px, 2vw, 12px);
-  --spacing-sm: clamp(12px, 3vw, 20px);
-  --spacing-md: clamp(20px, 4vw, 40px);
-  --spacing-lg: clamp(30px, 5vw, 60px);
-  --spacing-xl: clamp(40px, 6vw, 80px);
-  --border-radius-sm: clamp(4px, 1vw, 8px);
-  --border-radius-md: clamp(6px, 1.5vw, 12px);
-  --border-radius-lg: clamp(8px, 2vw, 16px);
-  --font-size-xs: clamp(12px, 2.5vw, 14px);
-  --font-size-sm: clamp(14px, 3vw, 16px);
-  --font-size-md: clamp(16px, 3.5vw, 18px);
-  --font-size-lg: clamp(18px, 4vw, 24px);
-  --font-size-xl: clamp(24px, 5vw, 36px);
-  --font-size-2xl: clamp(32px, 6vw, 48px);
-
-  /* LightFrame 主题色 - Light Mode (默认) */
-  --lf-primary-color: #737fbc;
-  --lf-secondary-color: #c6d7ff;
-  --lf-background-color: #ffffff;
-  --lf-text-color: #485696;
-  --lf-card-bg: #ffffff;
-  --lf-border-color: #737fbc;
-  --lf-nav-bg: #ffffff;
-  --lf-hover-bg: rgba(20, 20, 20, 0.1);
-  --lf-shadow-color: rgba(115, 127, 188, 0.3);
-  --lf-scrollbar-track: #ffffff;
-  --lf-scrollbar-thumb: rgba(255, 255, 255, 0.5);
-}
-
-/* Dark Mode - 自动跟随系统设置 */
+/* Dark mode selection */
 @media (prefers-color-scheme: dark) {
+  *::selection {
+    background: rgba(102, 126, 234, 0.4);
+    color: #ffffff;
+  }
+}
+
 :root {
-  --lf-primary-color: rgba(255, 255, 255, 0.9);
-  --lf-secondary-color: rgba(255, 255, 255, 0.7);
-  --lf-background-color: #1a1a1a;
-  --lf-text-color: #e0e0e0;
-  --lf-card-bg: #2d2d2d;
-  --lf-border-color: rgba(255, 255, 255, 0.8);
-  --lf-nav-bg: #242424;
-  --lf-hover-bg: rgba(255, 255, 255, 0.15);
-  --lf-shadow-color: rgba(255, 255, 255, 0.08);
-  --lf-scrollbar-track: #2d2d2d;
-  --lf-scrollbar-thumb: rgba(255, 255, 255, 0.6);
+  /* LightFrame 主题色 - Light Mode */
+  --lf-primary-color: #333333;
+  --lf-secondary-color: #f0f0f0;
+  --lf-background-color: #ffffff;
+  --lf-text-color: #000000;
+  --lf-card-bg: #ffffff;
+  --lf-border-color: #000000;
+  --lf-glass-bg: rgba(255, 255, 255, 0.8);
+  --lf-hover-bg: rgba(20, 20, 20, 0.1);
+  --lf-shadow-color: rgba(0, 0, 0, 0.3);
+  --lf-outline-color: #000000;
+
+  /* 动画速度 */
+  --transition-fast: 0.15s;
+  --transition-normal: 0.2s;
+  --transition-slow: 0.25s;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* 边框圆角 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
 }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lf-primary-color: rgba(255, 255, 255, 0.9);
+    --lf-secondary-color: rgba(255, 255, 255, 0.7);
+    --lf-background-color: #1a1a1a;
+    --lf-text-color: #e0e0e0;
+    --lf-card-bg: #2d2d2d;
+    --lf-border-color: rgba(255, 255, 255, 0.8);
+    --lf-glass-bg: rgba(26, 26, 26, 0.8);
+    --lf-hover-bg: rgba(255, 255, 255, 0.15);
+    --lf-shadow-color: rgba(255, 255, 255, 0.08);
+  }
 }
 
 html {
-  line-height: 1;
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-}
-
-html {
-  scroll-padding-top: 100px; /* 固定 header 高度 + 额外间距 */
   scroll-behavior: smooth;
+  font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 }
 
-html body {
-  height: 100%;
-  width: 100%;
+body {
   margin: 0;
-  overflow: auto;
-  font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-  line-height: 1.5;
   background: var(--lf-background-color);
   color: var(--lf-text-color);
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* 为所有使用主题变量的元素添加平滑过渡 */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* 排除不需要过渡的元素 */
-*, *::before, *::after {
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-  transition-property: background-color, color, border-color, box-shadow;
-}
-
-/* 图片和视频不使用颜色过渡 */
-img, video, iframe, canvas {
-  transition: none !important;
-}
-
-/* 动画相关元素保持原有动画 */
-
-.animated,
-.animated * {
-  transition: none !important;
-}
-
-.container {
-  width: 100%;
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 var(--spacing-sm);
-  container-type: inline-size;
-}
-
-/* 流体容器 */
-.fluid-container {
-  width: min(100% - var(--spacing-lg), var(--container-max));
-  margin: 0 auto;
-  container-type: inline-size;
-}
-
-/* Flexbox 容器 */
-.flex-container {
-  display: flex;
-  container-type: inline-size;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-center {
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-between {
-  justify-content: space-between;
-}
-
-.flex-gap-sm > * + * {
-  margin-left: var(--spacing-xs);
-}
-
-.flex-gap-md > * + * {
-  margin-left: var(--spacing-sm);
-}
-
-.flex-gap-lg > * + * {
-  margin-left: var(--spacing-md);
-}
-
-/* Grid 容器 */
-.grid-container {
-  display: grid;
-  container-type: inline-size;
-}
-
-.grid-auto-fit {
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-}
-
-.grid-auto-fill {
-  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
-}
-
-.grid-gap-sm {
-  gap: var(--spacing-sm);
-}
-
-.grid-gap-md {
-  gap: var(--spacing-md);
-}
-
-.grid-gap-lg {
-  gap: var(--spacing-lg);
+/* 移除移动端点击高亮 */
+button, .toggle-btn {
+  -webkit-tap-highlight-color: transparent;
 }
 
 body::-webkit-scrollbar {
   width: 10px;
-  height: 1px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -211,54 +86,29 @@ body::-webkit-scrollbar-track {
   background: var(--lf-background-color);
 }
 
-/* 纯CSS滚动锁定方案 - 激进但有效 */
-
-/* 使用:has()选择器完全锁定滚动 */
-body:has(.modal-overlay) {
-  overflow: hidden !important;
-  position: fixed !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  top: 0 !important;
-  left: 0 !important;
+/* Header menu overflow control */
+body:has(.top.menu-open) {
+  overflow: hidden;
 }
 
-/* html也需要锁定以确保完整效果 */
-html:has(.modal-overlay) {
-  overflow: hidden !important;
-  height: 100vh !important;
+/* ==================== 通用过渡动画工具类 ==================== */
+.transition-sm {
+  transition: all 0.1s ease;
 }
 
-/* 模态框覆盖层 - 完全覆盖 */
-.modal-overlay {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  z-index: 999999 !important;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  /* 阻止所有交互和滚动 */
-  overflow: hidden !important;
-  touch-action: none !important;
-  overscroll-behavior: contain !important;
-  pointer-events: auto !important;
+.transition-normal {
+  transition: all 0.2s ease;
 }
 
-/* 确保模态框内容可以交互 */
-.modal-overlay > * {
-  pointer-events: auto !important;
+.transition-lg {
+  transition: all 0.3s ease;
 }
 
-/* 阻止背景的所有交互 */
-body:has(.modal-overlay) > *:not(.modal-overlay) {
-  pointer-events: none !important;
+/* 悬停提升效果 */
+.hover-lift:hover {
+  transform: translateY(-2px);
 }
 
-/* 确保模态框始终可交互 */
-.modal-overlay,
-.modal-overlay * {
-  pointer-events: auto !important;
+.hover-lift:active {
+  transform: translateY(0);
 }

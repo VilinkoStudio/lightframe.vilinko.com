@@ -1,21 +1,18 @@
 /**
- * 通用组件样式 - 现代响应式重构
- * 使用 fluid typography、容器查询和现代 CSS 函数
+ * 通用组件样式
  */
 
 /* ToggleButton 样式 */
 .toggle-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: clamp(1rem, 3vw, 2rem) 0;
-  container-type: inline-size;
 }
 
 .toggle-btn {
   display: flex;
   align-items: center;
-  gap: clamp(6px, 1.5vw, 12px);
+  gap: 8px;
   padding: clamp(12px, 3vw, 20px) clamp(20px, 4vw, 30px);
   font-size: clamp(14px, 3vw, 18px);
   font-weight: 500;
@@ -24,17 +21,14 @@
   border: 2px solid var(--lf-border-color);
   border-radius: var(--border-radius-md);
   cursor: pointer;
-  outline: none;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  position: relative;
+  transition: all var(--transition-normal) var(--transition-ease);
   min-height: clamp(44px, 6vw, 52px);
 }
 
 .toggle-btn:hover {
   color: var(--lf-background-color);
   background-color: var(--lf-primary-color);
-  border-color: var(--lf-primary-color);
+  border-color: var(--lf-border-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px var(--lf-shadow-color);
 }
@@ -45,64 +39,12 @@
 
 .toggle-icon {
   display: inline-block;
-  transition: transform 0.2s ease;
-  font-size: clamp(10px, 2vw, 14px);
-  flex-shrink: 0;
-}
-
-.toggle-icon.down {
-  transform: rotate(0deg);
+  transition: transform var(--transition-normal) var(--transition-ease);
+  font-size: 12px;
 }
 
 .toggle-icon.up {
   transform: rotate(180deg);
-}
-
-/* 按钮基础样式 */
-.button-base {
-  padding: clamp(12px, 3vw, 20px) clamp(20px, 4vw, 30px);
-  font-size: clamp(14px, 3vw, 18px);
-  font-weight: 500;
-  color: var(--lf-text-color);
-  background: transparent;
-  border: 1px solid var(--lf-border-color);
-  border-radius: var(--border-radius-md);
-  cursor: pointer;
-  outline: none;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(6px, 1.5vw, 12px);
-  transition: all 0.2s ease;
-  position: relative;
-  min-height: clamp(44px, 6vw, 52px);
-  container-type: inline-size;
-}
-
-.button-base:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  color: var(--lf-text-color);
-  border-color: var(--lf-border-color);
-  background: linear-gradient(135deg, 
-    rgba(115, 127, 188, 0.02), 
-    rgba(115, 127, 188, 0.05)
-  );
-  transform: none !important;
-  box-shadow: none !important;
-}
-
-.button-base:not(:disabled):hover {
-  color: var(--lf-background-color);
-  background-color: var(--lf-primary-color);
-  border-color: var(--lf-primary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--lf-shadow-color);
-}
-
-.button-base:not(:disabled):active {
-  transform: translateY(0);
 }
 
 /* Icon 组件样式 */
@@ -110,7 +52,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  container-type: inline-size;
 }
 
 .icon svg {
@@ -119,117 +60,24 @@
   height: 100%;
 }
 
-/* 现代按钮变体 */
-.button-sm {
-  padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 20px);
-  font-size: clamp(12px, 2.5vw, 14px);
-  min-height: clamp(36px, 5vw, 44px);
-  border-radius: var(--border-radius-sm);
-}
-
-.button-lg {
-  padding: clamp(16px, 4vw, 24px) clamp(24px, 5vw, 36px);
-  font-size: clamp(16px, 3.5vw, 20px);
-  min-height: clamp(52px, 7vw, 60px);
-  border-radius: var(--border-radius-lg);
-}
-
-/* 按钮样式变体 */
-.button-primary {
-  background-color: var(--lf-primary-color);
-  color: var(--lf-background-color);
-  border-color: var(--lf-primary-color);
-}
-
-.button-primary:hover:not(:disabled) {
-  background-color: color-mix(in srgb, var(--lf-primary-color) 90%, black);
-  transform: translateY(-2px);
-}
-
-.button-secondary {
-  background-color: var(--lf-secondary-color);
-  color: var(--lf-text-color);
-  border-color: var(--lf-secondary-color);
-}
-
-.button-secondary:hover:not(:disabled) {
-  background-color: color-mix(in srgb, var(--lf-secondary-color) 90%, var(--lf-primary-color));
-}
-
-/* 容器查询 - 小屏幕优化 */
-@container (max-width: 400px) {
-  .toggle-container {
-    margin: clamp(12px, 2vw, 20px) 0;
-  }
-
-  .toggle-btn, .button-base {
+/* 响应式优化 */
+@media (max-width: 400px) {
+  .toggle-btn {
     width: 100%;
     max-width: 280px;
-    padding: clamp(10px, 2.5vw, 16px) clamp(16px, 3vw, 24px);
-    font-size: clamp(12px, 2.5vw, 16px);
-  }
-
-  .button-sm {
-    font-size: clamp(11px, 2vw, 13px);
-    padding: clamp(6px, 1.5vw, 10px) clamp(12px, 2.5vw, 16px);
-  }
-
-  .button-lg {
-    font-size: clamp(14px, 3vw, 18px);
-    padding: clamp(12px, 3vw, 20px) clamp(20px, 4vw, 30px);
-  }
-}
-
-/* 容器查询 - 极小屏幕 */
-@container (max-width: 320px) {
-  .toggle-btn, .button-base {
-    max-width: 240px;
-    gap: clamp(4px, 1vw, 8px);
-  }
-
-  .toggle-icon {
-    font-size: clamp(8px, 1.5vw, 12px);
-  }
-}
-
-/* 大屏幕优化 */
-@container (min-width: 1200px) {
-  .toggle-btn:hover, .button-base:hover:not(:disabled) {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px var(--lf-shadow-color);
-  }
-}
-
-/* 高对比度模式支持 */
-@media (prefers-contrast: high) {
-  .toggle-btn, .button-base {
-    border-width: 2px;
-  }
-  
-  .toggle-btn:hover, .button-base:hover:not(:disabled) {
-    border-width: 3px;
+    padding: 16px 24px;
+    font-size: 14px;
   }
 }
 
 /* 减少动画模式支持 */
 @media (prefers-reduced-motion: reduce) {
-  .toggle-btn, .button-base, .toggle-icon {
+  .toggle-btn,
+  .toggle-icon {
     transition: none;
   }
-  
-  .toggle-btn:hover, .button-base:hover:not(:disabled) {
-    transform: none;
-  }
-}
 
-/* 触摸设备优化 */
-@media (hover: none) and (pointer: coarse) {
-  .toggle-btn, .button-base {
-    min-height: clamp(48px, 7vw, 56px);
-    padding: clamp(14px, 3.5vw, 22px) clamp(22px, 4.5vw, 32px);
-  }
-  
-  .toggle-btn:active, .button-base:active {
-    transform: scale(0.98);
+  .toggle-btn:hover {
+    transform: none;
   }
 }

@@ -48,8 +48,8 @@ export const MESSAGES = {
 
 // 应用元数据
 export const APP_META = {
-  TITLE: '轻框 | LightFrame',
+  TITLE: '轻框 | LightFrame 2.0',
   SUBTITLE: '以轻量的方式定义自己喜欢的桌面',
   DESCRIPTION: 'LightFrame - 以轻量的方式定义自己喜欢的桌面。轻量、灵感、沉浸、免费的桌面应用。',
-  COPYRIGHT: '© 2024 Vilinko. All rights reserved.',
+  COPYRIGHT: '© 2025 Vilinko. All rights reserved.',
 } as const;

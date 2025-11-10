@@ -3,59 +3,49 @@ import { LINKS, APP_META } from "~/constants";
 import "./footer.css";
 
 export default component$(() => {
-  const currentYear = new Date().getFullYear(); // 自动更新年份，不再使用 APP_META
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>{APP_META.TITLE}</h3>
-            <p>{APP_META.SUBTITLE}</p>
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-logo">
+              <span class="brand-initial">L</span>
+              <span class="brand-name">{APP_META.TITLE}</span>
+            </div>
+            <p class="brand-description">{APP_META.SUBTITLE}</p>
           </div>
-          <div class="footer-section">
-            <h4>相关链接</h4>
-            <ul>
-              <li>
-                <a href={LINKS.MAIN_SITE} target="_blank" rel="noopener noreferrer">
-                  主站
-                </a>
-              </li>
-              <li>
-                <a href={LINKS.WALLPAPER} target="_blank" rel="noopener noreferrer">
-                  壁纸库
-                </a>
-              </li>
-              <li>
-                <a href={LINKS.DOCS} target="_blank" rel="noopener noreferrer">
-                  文档
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>联系我们</h4>
-            <ul>
-              <li>
-                <a href={LINKS.BILIBILI} target="_blank" rel="noopener noreferrer">
-                  Bilibili
-                </a>
-              </li>
-              <li>
-                <a href={LINKS.GITHUB} target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href={LINKS.AFDIAN} target="_blank" rel="noopener noreferrer">
-                  爱发电
-                </a>
-              </li>
-            </ul>
+
+          <div class="footer-right">
+            <div class="footer-section">
+              <h3>产品</h3>
+              <ul>
+                <li><a href={LINKS.MAIN_SITE} target="_blank" rel="noopener noreferrer">官方网站</a></li>
+                <li><a href={LINKS.WALLPAPER} target="_blank" rel="noopener noreferrer">壁纸库</a></li>
+                <li><a href={LINKS.DOCS} target="_blank" rel="noopener noreferrer">使用文档</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>社区</h3>
+              <ul>
+                <li><a href={LINKS.BILIBILI} target="_blank" rel="noopener noreferrer">Bilibili</a></li>
+                <li><a href={LINKS.GITHUB} target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href={LINKS.AFDIAN} target="_blank" rel="noopener noreferrer">爱发电</a></li>
+              </ul>
+            </div>
           </div>
         </div>
+
         <div class="footer-bottom">
-          <p>© {currentYear} Vilinko. All rights reserved.</p>
+          <div class="footer-bottom-content">
+            <p>&copy; {currentYear} {APP_META.TITLE}. All rights reserved.</p>
+            <div class="footer-bottom-links">
+              <a href="/privacy">隐私政策</a>
+              <a href="/terms">服务条款</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

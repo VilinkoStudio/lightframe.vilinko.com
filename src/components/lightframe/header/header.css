@@ -1,54 +1,147 @@
 .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: clamp(14px, 3vw, 20px) clamp(20px, 4vw, 40px);
-  background: var(--lf-background-color);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  border-bottom: 1px solid var(--lf-primary-color);
+  background: var(--lf-glass-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   container-type: inline-size;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+}
+
+.top.menu-open {
+  /* When menu is open, body overflow will be handled by CSS */
+}
+
+@media (max-width: 800px) {
+  .top {
+    display: block;
+  }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
 }
 
 .title {
-  font-size: clamp(18px, 4vw, 24px);
-  font-weight: normal;
+  font-size: 1.5em;
   color: var(--lf-text-color);
+  white-space: nowrap;
+  text-overflow: ellipsis;
   flex-shrink: 0;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--lf-text-color) 0%, var(--lf-primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 12px;
+  transition: all var(--transition-normal) var(--transition-ease);
+  position: relative;
+  z-index: 1002;
+}
+
+.menu-toggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.menu-toggle:active {
+  transform: scale(0.95);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 24px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background: var(--lf-text-color);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  transform-origin: center;
+}
+
+.menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .menu {
-  display: flex;
-  gap: clamp(8px, 2vw, 15px);
+  display: inline-flex;
+  gap: 8px;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .item {
-  background: transparent;
-  border: 1px solid transparent;
   color: var(--lf-text-color);
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(14px, 2.5vw, 16px);
   text-decoration: none;
-  cursor: pointer;
-  padding: clamp(6px, 1.5vw, 8px) clamp(10px, 2.5vw, 16px);
-  border-radius: var(--border-radius-sm);
+  padding: 8px 12px;
+  white-space: nowrap;
+  opacity: 0.9;
   transition: all 0.2s ease;
   position: relative;
-  white-space: nowrap;
+  display: inline-block;
 }
 
 .item:hover {
   color: var(--lf-primary-color);
-  background-color: var(--lf-hover-bg);
+  opacity: 1;
 }
 
-.item:active {
-  color: var(--lf-primary-color);
+.item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--lf-primary-color);
+  transition: width 0.3s ease;
+}
+
+.item:hover::after {
+  width: 100%;
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--lf-outline-color);
+  outline-offset: 2px;
+}
+
+
+@media (max-width: 768px) {
 }
 
 .donate {
@@ -57,72 +150,171 @@
 }
 
 .donate-btn {
-  background: transparent;
+  background: linear-gradient(135deg, var(--lf-primary-color), var(--lf-primary-color));
   border: 1px solid var(--lf-primary-color);
-  color: var(--lf-text-color);
+  color: var(--lf-background-color);
   font-size: clamp(12px, 2.5vw, 14px);
   cursor: pointer;
-  padding: clamp(6px, 1.5vw, 8px) clamp(10px, 2.5vw, 16px);
-  border-radius: var(--border-radius-md);
-  transition: all 0.2s ease;
+  padding: clamp(8px, 1.5vw, 12px) clamp(16px, 2.5vw, 20px);
+  border-radius: 12px;
+  transition: all var(--transition-normal) var(--transition-ease);
   display: flex;
   align-items: center;
-  gap: clamp(4px, 1vw, 5px);
+  gap: clamp(4px, 1vw, 8px);
   position: relative;
   white-space: nowrap;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .donate-btn:hover {
-  color: var(--lf-background-color);
-  background-color: var(--lf-primary-color);
-  border-color: var(--lf-primary-color);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .donate-btn:active {
   transform: translateY(0);
 }
 
-/* 容器查询 - 处理小屏幕下的布局调整 */
-@container (max-width: 480px) {
-  .top {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: stretch;
-    text-align: center;
-  }
-
-  .title {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-xs);
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
 
   .menu {
-    justify-content: center;
-    gap: var(--spacing-xs);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--lf-glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+    padding: 0;
+  }
+
+  .menu.active {
+    max-height: 400px;
+    opacity: 1;
+    visibility: visible;
+    padding: 16px 0;
   }
 
   .item {
-    font-size: var(--font-size-sm);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    width: 100%;
+    max-width: 280px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    animation: dropIn 0.25s ease forwards;
+    animation-delay: calc(var(--item-index) * 0.04s);
   }
 
-  .donate-btn {
-    font-size: var(--font-size-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
+  .item:last-child {
+    border-bottom: none;
+  }
+
+  
+  
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 999;
+  }
+
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @keyframes dropIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Container queries for smaller screens */
+@container (max-width: 480px) {
+  .header-content {
+    padding: clamp(14px, 4vw, 20px) clamp(16px, 5vw, 24px);
+  }
+
+  .title {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  .menu.active {
+    max-height: 350px;
+  }
+
+  .item {
+    padding: clamp(14px, 2vw, 16px);
+    max-width: 260px;
   }
 }
 
 @container (max-width: 320px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-xs);
+  .menu.active {
+    max-height: 300px;
   }
 
-  .item, .donate-btn {
-    width: 100%;
-    justify-content: center;
-    max-width: 200px;
+  .item {
+    padding: 12px 16px;
+    max-width: 240px;
   }
+}
+
+/* Dark theme adaptations */
+@media (prefers-color-scheme: dark) {
+  .top,
+  .menu {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+
+  
+  .menu-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle,
+  .hamburger-line,
+  .menu,
+  .menu-overlay,
+  .item {
+    transition: none;
+  }
+
+  .item {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Focus states */
+.menu-toggle:focus-visible,
+.item:focus-visible {
+  outline: 2px solid var(--lf-outline-color);
+  outline-offset: 2px;
 }
