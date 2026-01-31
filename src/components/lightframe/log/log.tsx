@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
 import { useToggle } from "~/hooks/useToggle";
 import { ToggleButton } from "~/components/common/ToggleButton";
 import { logs } from "~/data/logs";
@@ -15,6 +15,7 @@ export default component$(() => {
           <div class={`log-container ${isExpanded.value ? 'expanded' : ''}`}>
             {logs.map((log, index) => (
               <div key={`${log.version}-${index}`} class="log-item modern-card timeline">
+                <div class="connector-line"></div>
                 <div class="log-version">{log.version}</div>
                 <div class="log-date">{log.date}</div>
                 <h3>{log.title}</h3>

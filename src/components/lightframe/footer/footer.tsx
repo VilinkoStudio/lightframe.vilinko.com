@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
 import { LINKS, APP_META } from "~/constants";
 import "./footer.css";
 

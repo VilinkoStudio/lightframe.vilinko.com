@@ -1,5 +1,5 @@
-import { component$, useSignal, $ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { component$, useSignal, $ } from "@qwik.dev/core";
+import { Link } from "@qwik.dev/router";
 import { headerConfig } from "~/config";
 import "./header.css";
 

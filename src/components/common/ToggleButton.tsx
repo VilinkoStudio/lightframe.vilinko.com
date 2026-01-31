@@ -1,5 +1,5 @@
-import { component$ } from "@builder.io/qwik";
-import type { Signal } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
+import type { Signal } from "@qwik.dev/core";
 
 export interface ToggleButtonProps {
   isExpanded: Signal<boolean>;

@@ -1,9 +1,9 @@
-import { component$, $, type Signal } from "@builder.io/qwik";
+import { component$, $, type Signal } from "@qwik.dev/core";
 import { useToggle } from "~/hooks/useToggle";
 import { trackDownload } from "~/services/api";
 import { LINKS, APP_META, DOWNLOAD } from "~/constants";
 import "./main.css";
-import { Link } from "@builder.io/qwik-city";
+import { Link } from "@qwik.dev/router";
 
 const DownloadIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

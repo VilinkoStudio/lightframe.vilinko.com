@@ -1,4 +1,4 @@
-import { component$, useResource$, Resource } from "@builder.io/qwik";
+import { component$, useResource$, Resource } from "@qwik.dev/core";
 import { contributions } from "~/config";
 import { getSponsors, getRecentContributors } from "~/services/api";
 import { useToggle } from "~/hooks/useToggle";

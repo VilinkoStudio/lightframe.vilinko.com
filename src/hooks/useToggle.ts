@@ -4,8 +4,8 @@
  * 注意：在 Qwik 中，事件处理程序必须是 QRL，所以这个 Hook 返回的是 Signal
  */
 
-import { useSignal } from "@builder.io/qwik";
-import type { Signal } from "@builder.io/qwik";
+import { useSignal } from "@qwik.dev/core";
+import type { Signal } from "@qwik.dev/core";
 
 export interface UseToggleReturn {
   value: Signal<boolean>;

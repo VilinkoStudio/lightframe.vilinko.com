@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* Import User Provided Minecraft Font */
+@font-face {
+  font-family: "Minecraft";
+  src: url("/fonts/minecraftfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 140px 40px 60px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.dashboard-card {
+  height: 260px;
+  border-radius: var(--border-radius-xl, 16px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-card:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 1200px) {
+  .dashboard-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.meet-card {
+  background-color: var(--lf-card-bg);
+  color: var(--lf-text-color);
+  align-items: flex-start;
+  padding: 3rem 2.5rem 2.5rem;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.meet-line {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 10px;
+  background-color: #6366f1;
+  border-radius: 10px;
+}
+
+.meet-text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #d1d1d1;
+  margin-top: 2rem;
+}
+
+.clock-card {
+  background-color: var(--lf-card-bg);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.clock-text {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--lf-text-color);
+  opacity: 0.6;
+  letter-spacing: -2px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-card {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0;
+  overflow: visible;
+}
+
+.action-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.click-btn {
+  flex: 1.2;
+  background: #999 url("https://i.ibb.co/rb2TWXL/bgbtn.png") center / cover;
+  border: 2px solid #000000;
+  box-shadow:
+    inset 2px 2px 0px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 0px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  image-rendering: pixelated;
+  color: #fff;
+  text-shadow: 3px 3px 0px #3f3f3f;
+  font-family: "Minecraft", "Press Start 2P", monospace;
+  font-size: 26px;
+}
+
+.click-btn:hover {
+  filter: brightness(1.1);
+}
+
+.click-btn:active {
+  filter: brightness(0.8);
+  box-shadow:
+    inset 2px 2px 0px rgba(0, 0, 0, 0.4),
+    inset -2px -2px 0px rgba(255, 255, 255, 0.2);
+  transform: translateY(0);
+}
+
+.mc-text {
+  text-shadow: inherit;
+}
+
+.date-row {
+  flex: 0.8;
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.date-box {
+  flex: 1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-primary, sans-serif);
+  font-weight: 800;
+  font-size: 2.2rem;
+  transition: transform 0.2s ease;
+  color: #e2e2e2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.date-box span {
+  display: block;
+}
+
+.date-box:hover {
+  transform: scale(1.02);
+}
+
+.month-box {
+  background-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.day-box {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Explicit dark mode overrides for deep black cards */
+@media (prefers-color-scheme: dark) {
+  .meet-card {
+    background-color: #1a1a1a;
+    border-color: #333;
+  }
+
+  .clock-card {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+
+  .clock-text {
+    opacity: 0.85;
+  }
+}

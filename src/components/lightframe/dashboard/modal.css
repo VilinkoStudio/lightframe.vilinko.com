@@ -1,0 +1,185 @@
+/* Download Modal Styles - Ported directly from main.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--lf-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.modal-content {
+  background: var(--lf-background-color);
+  border: 1px solid var(--lf-border-color);
+  border-radius: 12px;
+  padding: 0;
+  max-width: min(500px, 90vw);
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--lf-border-color);
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: var(--lf-text-color);
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--lf-text-color);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.05s ease;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.download-link {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--lf-border-color);
+  color: var(--lf-text-color);
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.1s ease;
+}
+
+.download-link:not(:disabled):hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
+}
+
+.download-link:disabled {
+  color: var(--lf-text-color);
+  border-color: var(--lf-border-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  filter: none;
+}
+
+.download-link:disabled::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(128, 128, 128, 0.1),
+    rgba(128, 128, 128, 0.1) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  background-size: 10px 10px;
+}
+
+.terms-container {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--lf-border-color);
+  font-size: 14px;
+  color: var(--lf-text-color);
+  opacity: 0.8;
+}
+
+.terms-label {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+.terms-label input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.terms-link {
+  color: var(--lf-primary-color);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+  padding-bottom: 1px;
+}
+
+.terms-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--lf-primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.terms-link:hover {
+  color: var(--lf-primary-color);
+  opacity: 1;
+}
+
+.terms-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 20px;
+    width: auto;
+    max-width: calc(100vw - 40px);
+  }
+
+  .modal-header,
+  .modal-body {
+    padding: 16px 20px;
+  }
+}

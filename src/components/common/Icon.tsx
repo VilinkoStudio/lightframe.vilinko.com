@@ -3,7 +3,7 @@
  * 用于渲染 SVG 图标
  */
 
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
 import type { SvgIcon } from "~/types";
 
 export interface IconProps {

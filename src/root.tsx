@@ -1,6 +1,6 @@
-import { component$ } from "@builder.io/qwik";
-import { isDev } from "@builder.io/qwik";
-import { QwikCityProvider, RouterOutlet } from "@builder.io/qwik-city";
+import { component$ } from "@qwik.dev/core";
+import { isDev } from "@qwik.dev/core";
+import { QwikRouterProvider, RouterOutlet } from "@qwik.dev/router";
 import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
@@ -15,7 +15,7 @@ export default component$(() => {
    */
 
   return (
-    <QwikCityProvider>
+    <QwikRouterProvider>
       <head>
         <meta charset="utf-8" />
         <title>轻框 | LightFrame - 以轻量的方式定义自己喜欢的桌面</title>
@@ -32,6 +32,6 @@ export default component$(() => {
       <body lang="zh-CN">
         <RouterOutlet />
       </body>
-    </QwikCityProvider>
+    </QwikRouterProvider>
   );
 });

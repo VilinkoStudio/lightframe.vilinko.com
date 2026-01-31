@@ -243,8 +243,8 @@ Data/Config (Data Layer)
 ## 📦 Dependencies
 
 ### Core
-- **@builder.io/qwik**: ^1.17.2 - Qwik framework
-- **@builder.io/qwik-city**: ^1.17.2 - Routing and SSR
+- **@qwik.dev/core**: ^1.17.2 - Qwik framework
+- **@qwik.dev/router**: ^1.17.2 - Routing and SSR
 
 ### Development
 - **TypeScript**: 5.4.5 - Type safety

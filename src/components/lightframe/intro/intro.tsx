@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@qwik.dev/core";
 import { introConfig } from "~/config";
 import { Icon } from "~/components/common/Icon";
 import type { IntroView } from "~/types";
