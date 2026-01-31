@@ -69,8 +69,8 @@
 }
 
 .download-link {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: auto;
   background: #c6c6c6;
   border: 4px solid #000;
   box-shadow:
@@ -79,9 +79,9 @@
   color: #fff;
   text-shadow: 2px 2px 0 #3f3f3f;
   font-family: var(--font-family-minecraft);
-  font-size: 18px;
+  font-size: 1.25rem;
   cursor: pointer;
-  padding: 15px 20px;
+  padding: 12px 32px;
   border-radius: 0;
   margin-bottom: 15px;
   text-align: center;
@@ -89,6 +89,13 @@
   position: relative;
   transition: all 0.1s ease;
   image-rendering: pixelated;
+}
+
+.modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .download-link:not(:disabled):hover {
@@ -102,6 +109,16 @@
     inset -4px -4px 0 #fff;
   padding-top: 17px;
   padding-bottom: 13px;
+}
+
+.download-link.disabled {
+  color: #777;
+  text-shadow: none;
+  background: #888;
+  box-shadow: inset 4px 4px 0 #555;
+  cursor: not-allowed;
+  opacity: 1;
+  pointer-events: none;
 }
 
 .download-link:disabled {

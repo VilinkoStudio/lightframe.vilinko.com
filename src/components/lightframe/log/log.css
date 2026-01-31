@@ -20,10 +20,11 @@
 
 .log-container {
   max-height: clamp(300px, 40vh, 400px);
-  overflow: hidden;
+  overflow: visible !important;
+  clip-path: inset(-100px -100px 0 -100px);
   transition: max-height var(--transition-slow) var(--transition-ease);
   position: relative;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .log-container::before {
@@ -41,7 +42,8 @@
 
 .log-container.expanded {
   max-height: none;
-  overflow: visible;
+  clip-path: none;
+  overflow: visible !important;
 }
 
 .log-item.timeline {
@@ -54,11 +56,14 @@
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  max-width: 700px;
 }
 
 .log-item.timeline:hover {
+  transform: scale(1.02);
   box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
   border-color: var(--lf-primary-color);
+  z-index: 5;
 }
 
 .log-item.timeline::before {
@@ -66,22 +71,20 @@
   position: absolute;
   left: -39px;
   top: 28px;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background: var(--lf-primary-color);
   border: 2px solid var(--lf-background-color);
-  outline: 2px solid var(--lf-primary-color);
-  outline-offset: 2px;
   border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 0 0 4px var(--lf-background-color);
+  box-shadow: 0 0 0 2px var(--lf-primary-color);
 }
 
 .log-item.timeline::after {
   content: "";
   position: absolute;
   left: -32px;
-  top: 33px;
+  top: 35px;
   width: 32px;
   height: 2px;
   background: var(--lf-border-color);
@@ -97,6 +100,7 @@
   }
 
   .log-item.timeline:hover {
+    transform: scale(1.02);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
     border-color: var(--lf-primary-color);
   }
@@ -155,8 +159,6 @@
   margin-top: clamp(20px, 4vw, 30px);
 }
 
-/* toggle-btn 样式已移动到 common/css */
-
 .log-container:not(.expanded)::after {
   content: "";
   position: absolute;
@@ -169,12 +171,7 @@
   z-index: 10;
 }
 
-/* Container queries for responsive optimization */
 @container (max-width: 480px) {
-  .log-container {
-    max-height: clamp(400px, 50vh, 700px);
-  }
-
   .log-item.timeline {
     padding-left: 30px;
   }
@@ -198,14 +195,12 @@
   }
 }
 
-/* High contrast mode support */
 @media (prefers-contrast: high) {
   .log-item.timeline::before {
     border-width: 3px;
   }
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .log-container {
     transition: none;

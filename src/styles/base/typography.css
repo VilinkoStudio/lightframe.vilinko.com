@@ -6,7 +6,7 @@
 /* ==================== 字体定义 ==================== */
 @font-face {
   font-family: "Minecraft";
-  src: url("/fonts/minecraftfont.woff") format("woff");
+  src: url("/fonts/unifont_subset.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

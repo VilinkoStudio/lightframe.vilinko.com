@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
 .dashboard-container {
   width: 100%;
   max-width: 1600px;
@@ -25,6 +23,7 @@
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
 }
 
 .dashboard-card:hover {
@@ -35,25 +34,28 @@
 }
 
 .star-card {
-  background-color: #262626;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
   padding: 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: visible !important;
   position: relative;
-  z-index: 1;
+  z-index: 10;
+}
+
+.star-card:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .star-canvas {
   position: absolute;
-  top: -50px;
-  right: -50px;
-  bottom: -50px;
-  left: -50px;
-  width: calc(100% + 100px);
-  height: calc(100% + 100px);
+  top: -1000px;
+  left: -1000px;
+  width: 3000px;
+  height: 3000px;
   object-fit: contain;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 @media (max-width: 1200px) {
@@ -117,7 +119,6 @@
   background-color: transparent !important;
   box-shadow: none !important;
   border: none !important;
-  height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -150,7 +151,7 @@
   color: #fff;
   text-shadow: 2px 2px 0 #3f3f3f;
   font-family: var(--font-family-minecraft);
-  font-size: 2.2rem;
+  font-size: 1.25rem;
   image-rendering: pixelated;
   transition: all 0.1s ease;
 }
@@ -183,7 +184,7 @@
   justify-content: center;
   font-family: var(--font-family-primary, sans-serif);
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   transition: transform 0.2s ease;
   color: #e2e2e2;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);

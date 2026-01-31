@@ -45,12 +45,10 @@
   transition: all 0.2s ease;
 }
 
-
 .recent-list .contributor-name.highlight.empty {
   font-style: italic;
   opacity: 0.6;
 }
-
 
 .loading-recent {
   color: var(--lf-text-color);
@@ -63,7 +61,6 @@
   font-size: var(--font-size-sm);
   opacity: 0.6;
 }
-
 
 /* 详细贡献者信息 */
 .contributors-container {
@@ -105,7 +102,8 @@
   font-size: var(--font-size-sm);
 }
 
-.contributor-list, .sponsor-list {
+.contributor-list,
+.sponsor-list {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(8px, 1.5vw, 10px);
@@ -126,8 +124,6 @@
   cursor: default;
 }
 
-
-
 .contribution-link {
   text-align: center;
 }
@@ -144,7 +140,6 @@
   position: relative;
   font-size: var(--font-size-sm);
 }
-
 
 .loading {
   color: var(--lf-text-color);
@@ -169,7 +164,7 @@
 
 /* 添加渐变遮罩效果 */
 .contributors-container:not(.expanded)::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -238,8 +233,7 @@
   .contributors-grid {
     gap: var(--spacing-lg);
   }
-
-  }
+}
 
 /* 高对比度模式支持 */
 @media (prefers-contrast: high) {
@@ -263,13 +257,11 @@
   .recent-list .contributor-name.highlight {
     transition: none;
   }
-
-  }
+}
 
 /* 触摸设备优化 */
 @media (hover: none) and (pointer: coarse) {
   .toggle-btn {
     min-height: clamp(48px, 7vw, 56px);
   }
-
-  }
+}
