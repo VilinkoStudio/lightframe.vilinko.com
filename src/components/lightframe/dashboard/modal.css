@@ -71,51 +71,46 @@
 .download-link {
   display: block;
   width: 100%;
-  background: transparent;
-  border: 1px solid var(--lf-border-color);
-  color: var(--lf-text-color);
-  font-size: 16px;
-  font-weight: normal;
+  background: #c6c6c6;
+  border: 4px solid #000;
+  box-shadow:
+    inset 4px 4px 0 #fff,
+    inset -4px -4px 0 #555;
+  color: #fff;
+  text-shadow: 2px 2px 0 #3f3f3f;
+  font-family: var(--font-family-minecraft);
+  font-size: 18px;
   cursor: pointer;
   padding: 15px 20px;
-  border-radius: 8px;
+  border-radius: 0;
   margin-bottom: 15px;
   text-align: center;
   text-decoration: none;
   position: relative;
   transition: all 0.1s ease;
+  image-rendering: pixelated;
 }
 
 .download-link:not(:disabled):hover {
-  color: var(--lf-background-color);
-  background-color: var(--lf-primary-color);
-  border-color: var(--lf-primary-color);
+  background-color: #999;
+  color: #ffff55;
+}
+
+.download-link:not(:disabled):active {
+  box-shadow:
+    inset 4px 4px 0 #555,
+    inset -4px -4px 0 #fff;
+  padding-top: 17px;
+  padding-bottom: 13px;
 }
 
 .download-link:disabled {
-  color: var(--lf-text-color);
-  border-color: var(--lf-border-color);
+  color: #777;
+  text-shadow: none;
+  background: #888;
+  box-shadow: inset 4px 4px 0 #555;
   cursor: not-allowed;
-  opacity: 0.6;
-  background: transparent;
-  position: relative;
-  overflow: hidden;
-  filter: none;
-}
-
-.download-link:disabled::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(128, 128, 128, 0.1),
-    rgba(128, 128, 128, 0.1) 1px,
-    transparent 1px,
-    transparent 6px
-  );
-  background-size: 10px 10px;
+  opacity: 1;
 }
 
 .terms-container {

@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-/* Import User Provided Minecraft Font */
-@font-face {
-  font-family: "Minecraft";
-  src: url("/fonts/minecraftfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .dashboard-container {
   width: 100%;
   max-width: 1600px;
@@ -16,7 +7,7 @@
   padding: 140px 40px 60px;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   align-items: stretch;
 }
@@ -41,6 +32,28 @@
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.star-card {
+  background-color: #262626;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
+}
+
+.star-canvas {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  bottom: -50px;
+  left: -50px;
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  object-fit: contain;
+  pointer-events: none;
 }
 
 @media (max-width: 1200px) {
@@ -120,11 +133,11 @@
 
 .click-btn {
   flex: 1.2;
-  background: #999 url("https://i.ibb.co/rb2TWXL/bgbtn.png") center / cover;
-  border: 2px solid #000000;
+  background-color: #c6c6c6;
+  border: 4px solid #000;
   box-shadow:
-    inset 2px 2px 0px rgba(255, 255, 255, 0.2),
-    inset -2px -2px 0px rgba(0, 0, 0, 0.4);
+    inset 4px 4px 0 #fff,
+    inset -4px -4px 0 #555;
   width: 100%;
   display: flex;
   align-items: center;
@@ -134,27 +147,24 @@
   position: relative;
   overflow: hidden;
   padding: 0;
-  image-rendering: pixelated;
   color: #fff;
-  text-shadow: 3px 3px 0px #3f3f3f;
-  font-family: "Minecraft", "Press Start 2P", monospace;
-  font-size: 26px;
+  text-shadow: 2px 2px 0 #3f3f3f;
+  font-family: var(--font-family-minecraft);
+  font-size: 2.2rem;
+  image-rendering: pixelated;
+  transition: all 0.1s ease;
 }
 
 .click-btn:hover {
-  filter: brightness(1.1);
+  background-color: #999;
+  color: #ffff55;
 }
 
 .click-btn:active {
-  filter: brightness(0.8);
   box-shadow:
-    inset 2px 2px 0px rgba(0, 0, 0, 0.4),
-    inset -2px -2px 0px rgba(255, 255, 255, 0.2);
-  transform: translateY(0);
-}
-
-.mc-text {
-  text-shadow: inherit;
+    inset 4px 4px 0 #555,
+    inset -4px -4px 0 #fff;
+  padding-top: 4px;
 }
 
 .date-row {

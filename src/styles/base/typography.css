@@ -1,0 +1,337 @@
+/**
+ * 基础排版样式
+ * 包含HTML元素重置、字体设置、文本样式
+ */
+
+/* ==================== 字体定义 ==================== */
+@font-face {
+  font-family: "Minecraft";
+  src: url("/fonts/minecraftfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==================== HTML & Body 重置 ==================== */
+html {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--lf-background-color);
+  color: var(--lf-text-color);
+  font-weight: var(--font-weight-normal);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ==================== 标题样式 ==================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  color: var(--lf-text-color);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+}
+
+h6 {
+  font-size: var(--font-size-md);
+}
+
+/* ==================== 文本元素 ==================== */
+p {
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: var(--line-height-relaxed);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* 链接 */
+a {
+  color: var(--lf-text-color);
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+a:hover {
+  color: var(--lf-primary-color);
+}
+
+a:focus {
+  outline: 2px solid var(--lf-outline-color);
+  outline-offset: 2px;
+}
+
+/* 列表 */
+ul,
+ol {
+  margin: 0;
+  padding-left: var(--spacing-6);
+}
+
+li {
+  margin-bottom: var(--spacing-2);
+  line-height: var(--line-height-relaxed);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== 语义化文本 ==================== */
+strong,
+b {
+  font-weight: var(--font-weight-semibold);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color);
+  opacity: 0.8;
+}
+
+mark {
+  background: var(--lf-warning-color);
+  color: var(--lf-background-color);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-sm);
+}
+
+code {
+  font-family: var(--font-family-mono);
+  font-size: 0.875em;
+  background: var(--lf-hover-bg);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-sm);
+  color: var(--lf-text-color);
+}
+
+pre {
+  font-family: var(--font-family-mono);
+  background: var(--lf-secondary-color);
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ==================== 引用块 ==================== */
+blockquote {
+  margin: var(--spacing-6) 0;
+  padding: var(--spacing-4) var(--spacing-6);
+  border-left: 4px solid var(--lf-border-color);
+  background: var(--lf-secondary-color);
+  border-radius: var(--border-radius-md);
+  font-style: italic;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== 分隔线 ==================== */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--lf-border-color);
+  margin: var(--spacing-8) 0;
+  opacity: 0.3;
+}
+
+/* ==================== 选择文本样式 ==================== */
+::selection {
+  background: var(--lf-primary-color);
+  color: var(--lf-background-color);
+}
+
+::-moz-selection {
+  background: var(--lf-primary-color);
+  color: var(--lf-background-color);
+}
+
+/* ==================== 工具类 ==================== */
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+.text-md {
+  font-size: var(--font-size-md);
+}
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+.text-2xl {
+  font-size: var(--font-size-2xl);
+}
+.text-3xl {
+  font-size: var(--font-size-3xl);
+}
+.text-4xl {
+  font-size: var(--font-size-4xl);
+}
+
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.leading-tight {
+  line-height: var(--line-height-tight);
+}
+.leading-normal {
+  line-height: var(--line-height-normal);
+}
+.leading-relaxed {
+  line-height: var(--line-height-relaxed);
+}
+
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+.underline {
+  text-decoration: underline;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.no-underline {
+  text-decoration: none;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==================== 响应式字体 ==================== */
+@media (max-width: 768px) {
+  html {
+    font-size: var(--font-size-sm);
+  }
+
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+  h4 {
+    font-size: var(--font-size-lg);
+  }
+  h5 {
+    font-size: var(--font-size-md);
+  }
+  h6 {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ==================== 高对比度支持 ==================== */
+@media (prefers-contrast: high) {
+  body {
+    font-weight: var(--font-weight-medium);
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  strong,
+  b {
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+/* ==================== 减少动画支持 ==================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

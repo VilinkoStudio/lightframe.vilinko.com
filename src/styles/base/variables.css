@@ -1,0 +1,208 @@
+/**
+ * CSS 自定义属性 - LightFrame 设计系统
+ * 定义所有设计令牌：颜色、间距、字体、动画等
+ */
+
+/* ==================== 主题色彩 ==================== */
+:root {
+  /* 主要色彩 */
+  --lf-primary-color: #333333;
+  --lf-secondary-color: #f0f0f0;
+  --lf-background-color: #ffffff;
+  --lf-text-color: #000000;
+  --lf-card-bg: #ffffff;
+  --lf-border-color: #000000;
+  --lf-glass-bg: rgba(255, 255, 255, 0.8);
+  --lf-hover-bg: rgba(20, 20, 20, 0.1);
+  --lf-shadow-color: rgba(0, 0, 0, 0.3);
+  --lf-outline-color: #000000;
+
+  /* 功能色彩 */
+  --lf-success-color: #28a745;
+  --lf-warning-color: #ffc107;
+  --lf-error-color: #dc3545;
+  --lf-info-color: #17a2b8;
+
+  /* 渐变色 */
+  --lf-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --lf-gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* 暗色主题 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lf-primary-color: #ffffff;
+    --lf-secondary-color: #1a1a1a;
+    --lf-background-color: #141414;
+    --lf-text-color: #ffffff;
+    --lf-card-bg: #1e1e1e;
+    --lf-border-color: #ffffff;
+    --lf-glass-bg: rgba(20, 20, 20, 0.8);
+    --lf-hover-bg: rgba(255, 255, 255, 0.1);
+    --lf-shadow-color: rgba(255, 255, 255, 0.1);
+    --lf-outline-color: #ffffff;
+  }
+}
+
+/* ==================== 字体系统 ==================== */
+:root {
+  /* 字体族 */
+  --font-family-minecraft:
+    "Minecraft", "Press Start 2P", -apple-system, sans-serif;
+  --font-family-primary:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo,
+    monospace;
+
+  /* 字体大小 */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 48px;
+  --font-size-5xl: 64px;
+
+  /* 字重 */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* 行高 */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+}
+
+/* ==================== 间距系统 ==================== */
+:root {
+  /* 间距比例 */
+  --spacing-0: 0;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+
+  /* 语义化间距 */
+  --spacing-xs: var(--spacing-1);
+  --spacing-sm: var(--spacing-2);
+  --spacing-md: var(--spacing-4);
+  --spacing-lg: var(--spacing-6);
+  --spacing-xl: var(--spacing-8);
+  --spacing-2xl: var(--spacing-12);
+  --spacing-3xl: var(--spacing-16);
+}
+
+/* ==================== 边框圆角 ==================== */
+:root {
+  --border-radius-none: 0;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 24px;
+  --border-radius-full: 50%;
+}
+
+/* ==================== 阴影系统 ==================== */
+:root {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+
+  /* 功能阴影 */
+  --shadow-button: 0 4px 12px var(--lf-shadow-color);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-modal: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== 动画系统 ==================== */
+:root {
+  /* 动画时长 */
+  --transition-fast: 0.15s;
+  --transition-normal: 0.2s;
+  --transition-slow: 0.25s;
+  --transition-slower: 0.3s;
+
+  /* 缓动函数 */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* 组合过渡 */
+  --transition-all: all var(--transition-normal) var(--ease-in-out);
+  --transition-transform: transform var(--transition-normal) var(--ease-in-out);
+  --transition-opacity: opacity var(--transition-normal) var(--ease-in-out);
+  --transition-colors:
+    color var(--transition-normal) var(--ease-in-out),
+    background-color var(--transition-normal) var(--ease-in-out),
+    border-color var(--transition-normal) var(--ease-in-out);
+}
+
+/* ==================== 布局系统 ==================== */
+:root {
+  /* 容器最大宽度 */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+  --container-max: var(--container-xl);
+
+  /* 断点 */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1400px;
+
+  /* Z-index 层级 */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* ==================== 特殊效果 ==================== */
+:root {
+  /* 模糊效果 */
+  --blur-sm: blur(4px);
+  --blur-md: blur(8px);
+  --blur-lg: blur(16px);
+  --blur-xl: blur(24px);
+
+  /* 渐变遮罩 */
+  --gradient-overlay: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.8)
+  );
+  --gradient-overlay-light: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.8)
+  );
+}
