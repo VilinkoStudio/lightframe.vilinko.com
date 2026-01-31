@@ -3,8 +3,8 @@
  * 集中管理所有配置数据
  */
 
-import type { HeaderConfig, IntroConfig, ContributionGroup } from '~/types';
-import { LINKS } from '~/constants';
+import type { HeaderConfig, IntroConfig, ContributionGroup } from "~/types";
+import { LINKS } from "~/constants";
 
 /**
  * 头部导航配置
@@ -22,7 +22,7 @@ export const headerConfig: HeaderConfig = {
     {
       text: "BILIBILI",
       href: LINKS.BILIBILI,
-    }
+    },
   ],
 };
 
@@ -70,16 +70,6 @@ export const introConfig: IntroConfig = {
 /**
  * 贡献者配置
  */
-const author: ContributionGroup = {
-  title: "原作",
-  explain: '是LightFrame的造物主啦~ "Vilinko"是属"CimiMoly"所有的发布载体.',
-  link: {
-    text: "",
-    href: LINKS.GITHUB,
-  },
-  names: ["沫狐奶昔 CimiMoly"],
-};
-
 const participators: ContributionGroup = {
   title: "贡献者",
   explain: "为本项目提供技术上支持的人~",
@@ -88,7 +78,7 @@ const participators: ContributionGroup = {
     href: LINKS.GITHUB,
   },
   names: [
-    "沫狐奶昔 CimiMoly",
+    "沫狐奶昔 CimiMoly (Developer & Designer)",
     "辰落火辉 Haceau-Zoac (vui.parser)",
     "憨包 MeroWindows (vui.dom)",
     "悠瑞 iYoRoy (安装器和资源站)",
@@ -109,8 +99,4 @@ const sponsors: ContributionGroup = {
   names: [""],
 };
 
-export const contributions: ContributionGroup[] = [
-  author,
-  participators,
-  sponsors,
-];
+export const contributions: ContributionGroup[] = [participators, sponsors];
