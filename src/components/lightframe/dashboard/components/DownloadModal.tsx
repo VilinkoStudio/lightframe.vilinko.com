@@ -1,7 +1,7 @@
 import { component$, type Signal, useStyles$ } from "@qwik.dev/core";
 import { DOWNLOAD, LINKS } from "~/constants";
 import { trackDownload } from "~/services/api";
-import modalStyles from "../dashboard/modal.css?inline";
+import modalStyles from "../modal.css?inline";
 
 export interface DownloadModalProps {
   isVisible: Signal<boolean>;
@@ -29,16 +29,28 @@ export const DownloadModal = component$<DownloadModalProps>(
           </div>
           <div class="modal-body">
             <a
-              href={DOWNLOAD.X64}
+              href={agreedToTerms.value ? DOWNLOAD.X64 : undefined}
               class={`download-link ${!agreedToTerms.value ? "disabled" : ""}`}
-              onClick$={() => agreedToTerms.value && trackDownload()}
+              onClick$={(e) => {
+                if (!agreedToTerms.value) {
+                  e.preventDefault();
+                  return;
+                }
+                trackDownload();
+              }}
             >
               Windows x64 (推荐)
             </a>
             <a
-              href={DOWNLOAD.X86}
+              href={agreedToTerms.value ? DOWNLOAD.X86 : undefined}
               class={`download-link ${!agreedToTerms.value ? "disabled" : ""}`}
-              onClick$={() => agreedToTerms.value && trackDownload()}
+              onClick$={(e) => {
+                if (!agreedToTerms.value) {
+                  e.preventDefault();
+                  return;
+                }
+                trackDownload();
+              }}
             >
               Windows x86
             </a>
