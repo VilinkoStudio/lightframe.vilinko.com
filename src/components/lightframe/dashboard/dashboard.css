@@ -39,11 +39,13 @@
   box-sizing: border-box;
 }
 
-.dashboard-card:hover {
-  transform: scale(1.02);
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+@media (hover: hover) {
+  .dashboard-card:hover {
+    transform: scale(1.02);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
 }
 
 .star-card {
@@ -170,9 +172,11 @@
   transition: all 0.1s ease;
 }
 
-.click-btn:hover {
-  background-color: #999;
-  color: #ffff55;
+@media (hover: hover) {
+  .click-btn:hover {
+    background-color: #999;
+    color: #ffff55;
+  }
 }
 
 .click-btn:active {
@@ -208,8 +212,10 @@
   display: block;
 }
 
-.date-box:hover {
-  transform: scale(1.02);
+@media (hover: hover) {
+  .date-box:hover {
+    transform: scale(1.02);
+  }
 }
 
 .month-box {

@@ -25,12 +25,14 @@
   min-height: clamp(44px, 6vw, 52px);
 }
 
-.toggle-btn:hover {
-  color: var(--lf-background-color);
-  background-color: var(--lf-primary-color);
-  border-color: var(--lf-border-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--lf-shadow-color);
+@media (hover: hover) {
+  .toggle-btn:hover {
+    color: var(--lf-background-color);
+    background-color: var(--lf-primary-color);
+    border-color: var(--lf-border-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--lf-shadow-color);
+  }
 }
 
 .toggle-btn:active {

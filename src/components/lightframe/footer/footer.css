@@ -49,18 +49,20 @@
   margin-bottom: 16px;
 }
 
-.brand-initial {
+.brand-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
+  display: block;
+  object-fit: cover;
   box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .brand-icon:hover {
+    transform: scale(1.05);
+  }
 }
 
 .brand-name {
@@ -97,11 +99,13 @@
   backdrop-filter: blur(10px);
 }
 
-.social-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  transform: translateY(-2px); /* 使用全局hover-lift效果 */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+@media (hover: hover) {
+  .social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: translateY(-2px); /* 使用全局hover-lift效果 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
 }
 
 /* 功能区域 */
@@ -182,9 +186,11 @@
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-.support-btn:hover {
-  transform: translateY(-2px); /* 使用全局hover-lift效果 */
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+@media (hover: hover) {
+  .support-btn:hover {
+    transform: translateY(-2px); /* 使用全局hover-lift效果 */
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+  }
 }
 
 .support-btn span:first-child {

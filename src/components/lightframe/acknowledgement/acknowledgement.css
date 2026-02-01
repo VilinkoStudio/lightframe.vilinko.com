@@ -38,10 +38,12 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.acknowledgement-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  border-color: var(--lf-primary-color);
+@media (hover: hover) {
+  .acknowledgement-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--lf-primary-color);
+  }
 }
 
 .acknowledgement-item h3 {

@@ -1,0 +1,412 @@
+/**
+ * 卡片组件样式
+ * 包含各种卡片变体、布局、状态的统一样式
+ */
+
+/* ==================== 基础卡片 ==================== */
+.card {
+  /* 背景 */
+  background: var(--lf-card-bg);
+
+  /* 边框 */
+  border: 1px solid var(--lf-border-color);
+  border-radius: var(--border-radius-lg);
+
+  /* 间距 */
+  padding: var(--spacing-6);
+
+  /* 阴影 */
+  box-shadow: var(--shadow-card);
+
+  /* 布局 */
+  position: relative;
+  overflow: hidden;
+
+  /* 动画 */
+  transition: var(--transition-all);
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.card:focus-within {
+  box-shadow:
+    var(--shadow-lg),
+    0 0 0 3px var(--lf-outline-color);
+}
+
+/* ==================== 卡片尺寸 ==================== */
+.card-sm {
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius-md);
+}
+
+.card-md {
+  padding: var(--spacing-6);
+}
+
+.card-lg {
+  padding: var(--spacing-8);
+  border-radius: var(--border-radius-xl);
+}
+
+.card-xl {
+  padding: var(--spacing-10);
+  border-radius: var(--border-radius-2xl);
+}
+
+/* ==================== 卡片变体 ==================== */
+
+/* 玻璃态卡片 */
+.card-glass {
+  background: var(--lf-glass-bg);
+  backdrop-filter: var(--blur-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: var(--blur-lg);
+}
+
+/* 最小化卡片 */
+.card-minimal {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.card-minimal:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* 浮起卡片 */
+.card-elevated {
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (hover: hover) {
+  .card-elevated:hover {
+    box-shadow: var(--shadow-2xl);
+    transform: translateY(-4px);
+  }
+}
+
+/* 边框卡片 */
+.card-bordered {
+  background: transparent;
+  border: 2px solid var(--lf-border-color);
+  box-shadow: none;
+}
+
+.card-bordered:hover {
+  background: var(--lf-hover-bg);
+  border-color: var(--lf-primary-color);
+}
+
+/* 渐变卡片 */
+.card-gradient {
+  background: var(--lf-gradient-primary);
+  color: white;
+  border: none;
+}
+
+@media (hover: hover) {
+  .card-gradient:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+/* ==================== 可交互卡片 ==================== */
+.card-clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (hover: hover) {
+  .card-clickable:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+.card-clickable:active {
+  transform: translateY(-2px);
+  transition: var(--transition-transform);
+}
+
+/* ==================== 卡片头部 ==================== */
+.card-header {
+  padding-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--lf-border-color);
+}
+
+.card-header:last-child {
+  margin-bottom: 0;
+}
+
+.card-title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--lf-text-color);
+}
+
+.card-subtitle {
+  margin: var(--spacing-2) 0 0 0;
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color);
+  opacity: 0.8;
+}
+
+/* ==================== 卡片内容 ==================== */
+.card-content {
+  margin-bottom: var(--spacing-4);
+}
+
+.card-content:last-child {
+  margin-bottom: 0;
+}
+
+.card-text {
+  margin: 0 0 var(--spacing-3) 0;
+  line-height: var(--line-height-relaxed);
+  color: var(--lf-text-color);
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== 卡片底部 ==================== */
+.card-footer {
+  padding-top: var(--spacing-4);
+  margin-top: var(--spacing-4);
+  border-top: 1px solid var(--lf-border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+}
+
+.card-footer:last-child {
+  margin-top: 0;
+}
+
+/* ==================== 卡片图片 ==================== */
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.card-image-top {
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.card-image-bottom {
+  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+}
+
+.card-image-full {
+  border-radius: var(--border-radius-lg);
+}
+
+/* ==================== 图标卡片 ==================== */
+.card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-3);
+  background: var(--lf-primary-color);
+  color: var(--lf-background-color);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+}
+
+.card-icon-sm {
+  width: 40px;
+  height: 40px;
+  font-size: var(--font-size-lg);
+}
+
+.card-icon-lg {
+  width: 56px;
+  height: 56px;
+  font-size: var(--font-size-2xl);
+}
+
+/* ==================== 统计卡片 ==================== */
+.card-stats {
+  text-align: center;
+}
+
+.card-stat-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--lf-text-color);
+  line-height: 1;
+  margin-bottom: var(--spacing-2);
+}
+
+.card-stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color);
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-stat-change {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--spacing-2);
+}
+
+.card-stat-change.positive {
+  color: var(--lf-success-color);
+}
+
+.card-stat-change.negative {
+  color: var(--lf-error-color);
+}
+
+/* ==================== 时间线卡片 ==================== */
+.card-timeline {
+  border-radius: 0;
+  border-left: none;
+  position: relative;
+  padding-left: var(--spacing-8);
+}
+
+.card-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: var(--spacing-6);
+  bottom: var(--spacing-6);
+  width: 2px;
+  background: var(--lf-border-color);
+}
+
+.card-timeline::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: var(--spacing-6);
+  width: 12px;
+  height: 12px;
+  background: var(--lf-primary-color);
+  border: 2px solid var(--lf-background-color);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==================== 加载状态卡片 ==================== */
+.card-loading {
+  pointer-events: none;
+  user-select: none;
+}
+
+.card-loading .card-content,
+.card-loading .card-title,
+.card-loading .card-text {
+  background: var(--lf-secondary-color);
+  color: transparent;
+  border-radius: var(--border-radius-sm);
+}
+
+.card-loading .card-title {
+  height: 24px;
+  width: 60%;
+}
+
+.card-loading .card-text {
+  height: 16px;
+  margin-bottom: var(--spacing-2);
+}
+
+.card-loading .card-text:last-child {
+  width: 40%;
+}
+
+/* ==================== 响应式卡片 ==================== */
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-4);
+  }
+
+  .card-lg {
+    padding: var(--spacing-6);
+  }
+
+  .card-xl {
+    padding: var(--spacing-8);
+  }
+
+  .card-image {
+    height: 150px;
+  }
+
+  .card-stat-value {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* ==================== 暗色主题适配 ==================== */
+@media (prefers-color-scheme: dark) {
+  .card-glass {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .card-glass:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .card-bordered {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ==================== 辅助功能支持 ==================== */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover,
+  .card-clickable:hover,
+  .card-gradient:hover {
+    transform: none;
+  }
+
+  .card-clickable:active {
+    transform: none;
+  }
+}
+
+/* ==================== 高对比度支持 ==================== */
+@media (prefers-contrast: high) {
+  .card {
+    border-width: 2px;
+  }
+
+  .card-glass {
+    background: var(--lf-background-color);
+    border: 2px solid var(--lf-border-color);
+  }
+}

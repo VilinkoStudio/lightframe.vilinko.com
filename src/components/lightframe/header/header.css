@@ -32,13 +32,18 @@
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: var(--lf-text-color);
   white-space: nowrap;
+  font-weight: bold;
   text-overflow: ellipsis;
   flex-shrink: 0;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, var(--lf-text-color) 0%, var(--lf-primary-color) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--lf-text-color) 0%,
+    var(--lf-primary-color) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -56,9 +61,11 @@
   z-index: 1002;
 }
 
-.menu-toggle:hover {
-  background: rgba(0, 0, 0, 0.1);
-  transform: scale(1.05);
+@media (hover: hover) {
+  .menu-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
 }
 
 .menu-toggle:active {
@@ -121,7 +128,7 @@
 }
 
 .item::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -140,7 +147,6 @@
   outline-offset: 2px;
 }
 
-
 @media (max-width: 768px) {
 }
 
@@ -150,7 +156,11 @@
 }
 
 .donate-btn {
-  background: linear-gradient(135deg, var(--lf-primary-color), var(--lf-primary-color));
+  background: linear-gradient(
+    135deg,
+    var(--lf-primary-color),
+    var(--lf-primary-color)
+  );
   border: 1px solid var(--lf-primary-color);
   color: var(--lf-background-color);
   font-size: clamp(12px, 2.5vw, 14px);
@@ -167,9 +177,11 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.donate-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+@media (hover: hover) {
+  .donate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .donate-btn:active {
@@ -225,8 +237,6 @@
     border-bottom: none;
   }
 
-  
-  
   .menu-overlay {
     position: fixed;
     inset: 0;
@@ -290,7 +300,6 @@
     border-bottom-color: rgba(255, 255, 255, 0.05);
   }
 
-  
   .menu-overlay {
     background: rgba(0, 0, 0, 0.5);
   }

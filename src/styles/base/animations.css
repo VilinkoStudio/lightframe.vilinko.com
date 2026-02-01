@@ -1,0 +1,478 @@
+/**
+ * 动画和过渡效果
+ * 包含全局动画工具类、关键帧动画、交互效果
+ */
+
+/* ==================== 全局过渡 ==================== */
+.transition-none {
+  transition: none;
+}
+
+.transition-all {
+  transition: all var(--transition-all);
+}
+
+.transition-colors {
+  transition:
+    color var(--transition-normal) var(--ease-in-out),
+    background-color var(--transition-normal) var(--ease-in-out),
+    border-color var(--transition-normal) var(--ease-in-out);
+}
+
+.transition-transform {
+  transition: transform var(--transition-transform);
+}
+
+.transition-opacity {
+  transition: opacity var(--transition-opacity);
+}
+
+.transition-shadow {
+  transition: box-shadow var(--transition-normal) var(--ease-in-out);
+}
+
+/* ==================== 变换效果 ==================== */
+.scale-95 {
+  transform: scale(0.95);
+}
+.scale-100 {
+  transform: scale(1);
+}
+.scale-105 {
+  transform: scale(1.05);
+}
+.scale-110 {
+  transform: scale(1.1);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+.translate-y-1 {
+  transform: translateY(-4px);
+}
+.translate-y-2 {
+  transform: translateY(-8px);
+}
+.translate-y-4 {
+  transform: translateY(-16px);
+}
+
+.translate-x-1 {
+  transform: translateX(-4px);
+}
+.translate-x-2 {
+  transform: translateX(-8px);
+}
+.translate-x-4 {
+  transform: translateX(-16px);
+}
+
+/* ==================== 悬停效果 ==================== */
+@media (hover: hover) {
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-rotate:hover {
+    transform: rotate(5deg);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px var(--lf-primary-color);
+  }
+}
+
+/* ==================== 焦点效果 ==================== */
+.focus-ring:focus {
+  outline: 2px solid var(--lf-outline-color);
+  outline-offset: 2px;
+}
+
+.focus-ring-offset:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--lf-primary-color);
+}
+
+/* ==================== 关键帧动画 ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* ==================== 动画工具类 ==================== */
+.animate-fade-in {
+  animation: fadeIn var(--transition-slow) var(--ease-out);
+}
+.animate-fade-out {
+  animation: fadeOut var(--transition-slow) var(--ease-out);
+}
+.animate-slide-up {
+  animation: slideInUp var(--transition-slow) var(--ease-out);
+}
+.animate-slide-down {
+  animation: slideInDown var(--transition-slow) var(--ease-out);
+}
+.animate-slide-left {
+  animation: slideInLeft var(--transition-slow) var(--ease-out);
+}
+.animate-slide-right {
+  animation: slideInRight var(--transition-slow) var(--ease-out);
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out;
+}
+
+/* ==================== 延迟和时长类 ==================== */
+.animate-delay-75 {
+  animation-delay: 75ms;
+}
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+.animate-delay-150 {
+  animation-delay: 150ms;
+}
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+.animate-delay-700 {
+  animation-delay: 700ms;
+}
+.animate-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.duration-fast {
+  animation-duration: var(--transition-fast);
+}
+.duration-normal {
+  animation-duration: var(--transition-normal);
+}
+.duration-slow {
+  animation-duration: var(--transition-slow);
+}
+.duration-slower {
+  animation-duration: var(--transition-slower);
+}
+
+/* ==================== 缓动函数类 ==================== */
+.ease-linear {
+  animation-timing-function: var(--ease-linear);
+}
+.ease-in {
+  animation-timing-function: var(--ease-in);
+}
+.ease-out {
+  animation-timing-function: var(--ease-out);
+}
+.ease-in-out {
+  animation-timing-function: var(--ease-in-out);
+}
+.ease-bounce {
+  animation-timing-function: var(--ease-bounce);
+}
+
+/* ==================== 循环和方向 ==================== */
+.animate-infinite {
+  animation-iteration-count: infinite;
+}
+.animate-once {
+  animation-iteration-count: 1;
+}
+
+.animate-alternate {
+  animation-direction: alternate;
+}
+.animate-reverse {
+  animation-direction: reverse;
+}
+
+/* ==================== 暂停和播放 ==================== */
+.animate-paused {
+  animation-play-state: paused;
+}
+.animate-running {
+  animation-play-state: running;
+}
+
+/* ==================== 填充模式 ==================== */
+.animate-forwards {
+  animation-fill-mode: forwards;
+}
+.animate-backwards {
+  animation-fill-mode: backwards;
+}
+.animate-both {
+  animation-fill-mode: both;
+}
+
+/* ==================== 交互状态动画 ==================== */
+.hover-fade:hover {
+  opacity: 0.8;
+  transition: var(--transition-opacity);
+}
+
+.active-scale:active {
+  transform: scale(0.98);
+  transition: var(--transition-transform);
+}
+
+.focus-slide:focus {
+  transform: translateY(-1px);
+  transition: var(--transition-transform);
+}
+
+/* ==================== 加载动画 ==================== */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--lf-secondary-color) 25%,
+    var(--lf-hover-bg) 50%,
+    var(--lf-secondary-color) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.05s !important;
+    transition-delay: 0s !important;
+  }
+
+  .animate-bounce,
+  .animate-pulse,
+  .animate-spin,
+  .animate-wiggle,
+  .loading-shimmer,
+  .skeleton,
+  .animate-slide-up,
+  .animate-slide-down,
+  .animate-slide-left,
+  .animate-slide-right {
+    animation: fadeIn 0.1s ease-out forwards !important;
+  }
+
+  .hover-lift:hover,
+  .hover-scale:hover,
+  .hover-rotate:hover,
+  .active-scale:active,
+  .dashboard-card:hover,
+  .intro-item:hover,
+  .log-item.timeline:hover,
+  .acknowledgement-item:hover,
+  .donate-btn:hover,
+  .toggle-btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ==================== 辅助功能支持 ==================== */
+@media (prefers-reduced-motion: reduce) {
+  /* 禁用所有动画 */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-in,
+  .animate-fade-out,
+  .animate-slide-up,
+  .animate-slide-down,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-bounce,
+  .animate-pulse,
+  .animate-spin,
+  .animate-wiggle {
+    animation: none !important;
+  }
+}

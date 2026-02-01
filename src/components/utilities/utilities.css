@@ -29,7 +29,6 @@
   transition: all 0.2s ease;
 }
 
-
 .btn-text {
   margin-left: 8px;
 }
@@ -47,7 +46,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 0 0;
 }
 
 .text-center {
@@ -55,22 +54,40 @@
 }
 
 /* 间距工具类 */
-.mb-20 { margin-bottom: 20px; }
-.mb-30 { margin-bottom: 30px; }
-.mb-40 { margin-bottom: 40px; }
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
 
-.mt-20 { margin-top: 20px; }
-.mt-30 { margin-top: 30px; }
-.mt-40 { margin-top: 40px; }
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mt-40 {
+  margin-top: 40px;
+}
 
-.py-20 { padding: 20px 0; }
-.py-40 { padding: 40px 0; }
-.py-60 { padding: 60px 0; }
+.py-20 {
+  padding: 20px 0;
+}
+.py-40 {
+  padding: 40px 0;
+}
+.py-60 {
+  padding: 60px 0;
+}
 
 /* 响应式工具类 */
 @media (max-width: 768px) {
   .container {
-    padding: 0 16px;
+    padding: 0 16px 0 0;
   }
 
   .btn {

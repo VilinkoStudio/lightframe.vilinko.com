@@ -20,8 +20,7 @@
 
 .log-container {
   max-height: clamp(300px, 40vh, 400px);
-  overflow: visible !important;
-  clip-path: inset(-100px -100px 0 -100px);
+  overflow: hidden;
   transition: max-height var(--transition-slow) var(--transition-ease);
   position: relative;
   padding: 20px 0;
@@ -42,8 +41,7 @@
 
 .log-container.expanded {
   max-height: none;
-  clip-path: none;
-  overflow: visible !important;
+  overflow: visible;
 }
 
 .log-item.timeline {
@@ -59,11 +57,13 @@
   max-width: 700px;
 }
 
-.log-item.timeline:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
-  border-color: var(--lf-primary-color);
-  z-index: 5;
+@media (hover: hover) {
+  .log-item.timeline:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--lf-primary-color);
+    z-index: 5;
+  }
 }
 
 .log-item.timeline::before {
@@ -99,10 +99,12 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 
-  .log-item.timeline:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-    border-color: var(--lf-primary-color);
+  @media (prefers-color-scheme: dark) and (hover: hover) {
+    .log-item.timeline:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+      border-color: var(--lf-primary-color);
+    }
   }
 }
 
@@ -176,53 +178,33 @@
 }
 
 @container (max-width: 480px) {
-  .log-item.timeline {
-    padding: 16px;
-    margin-left: 20px;
-    margin-bottom: 16px;
-    border-radius: 12px;
-  }
-
   .log-container::before {
-    left: 8px;
-    top: 20px;
-    bottom: 20px;
+    display: none;
   }
 
-  .log-item.timeline::before {
-    left: -16px;
-    top: 24px;
-    width: 8px;
-    height: 8px;
-    box-shadow: 0 0 0 2px var(--lf-primary-color);
+  .log-item.timeline {
+    margin-left: 0;
+    text-align: left;
+    padding: 20px;
+    border-radius: 16px;
   }
 
+  .log-item.timeline::before,
   .log-item.timeline::after {
-    left: -12px;
-    top: 27px;
-    width: 12px;
-  }
-
-  .log-version {
-    padding: 2px 8px;
-    font-size: 12px;
-    margin-bottom: 6px;
-  }
-
-  .log-date {
-    font-size: 12px;
-    margin-bottom: 8px;
+    display: none;
   }
 
   .log-item h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .log-item ul {
+    text-align: left;
+    max-width: 100%;
   }
 
   .log-item ul li {
-    padding: 4px 0;
-    padding-left: 12px;
-    font-size: 13px;
+    padding-left: 15px;
   }
 }
 

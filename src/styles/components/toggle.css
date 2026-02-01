@@ -1,0 +1,430 @@
+/**
+ * 切换组件样式
+ * 包含各种按钮、开关、展开/收起功能的统一样式
+ */
+
+/* ==================== 切换容器 ==================== */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.toggle-container.start {
+  justify-content: flex-start;
+}
+
+.toggle-container.end {
+  justify-content: flex-end;
+}
+
+/* ==================== 切换按钮基础样式 ==================== */
+.toggle-btn {
+  /* 使用新的模块化按钮系统作为基础 */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+
+  /* 尺寸 */
+  padding: var(--spacing-3) var(--spacing-5);
+  min-height: 50px;
+
+  /* 字体 */
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+
+  /* 外观 */
+  color: var(--lf-text-color);
+  background: transparent;
+  border: 2px solid var(--lf-border-color);
+  border-radius: var(--border-radius-md);
+
+  /* 交互 */
+  cursor: pointer;
+  user-select: none;
+
+  /* 动画 */
+  transition: var(--transition-all);
+
+  /* 布局 */
+  position: relative;
+}
+
+.toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--lf-outline-color);
+}
+
+.toggle-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ==================== 切换按钮状态 ==================== */
+@media (hover: hover) {
+  .toggle-btn:hover:not(:disabled) {
+    color: var(--lf-background-color);
+    background-color: var(--lf-primary-color);
+    border-color: var(--lf-primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-button);
+  }
+}
+
+.toggle-btn:active:not(:disabled) {
+  transform: translateY(0);
+  transition: var(--transition-transform);
+}
+
+/* 激活状态 */
+.toggle-btn.active {
+  background-color: var(--lf-primary-color);
+  color: var(--lf-background-color);
+  border-color: var(--lf-primary-color);
+}
+
+.toggle-btn.active:hover {
+  background-color: var(--lf-border-color);
+  border-color: var(--lf-border-color);
+}
+
+/* ==================== 切换按钮尺寸 ==================== */
+.toggle-btn-sm {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  min-height: 40px;
+  gap: var(--spacing-1);
+}
+
+.toggle-btn-lg {
+  padding: var(--spacing-4) var(--spacing-6);
+  font-size: var(--font-size-lg);
+  min-height: 60px;
+  gap: var(--spacing-3);
+}
+
+/* ==================== 切换按钮变体 ==================== */
+
+/* 主要风格 */
+.toggle-btn-primary {
+  border-color: var(--lf-primary-color);
+  color: var(--lf-primary-color);
+}
+
+.toggle-btn-primary:hover:not(:disabled) {
+  background: var(--lf-primary-color);
+  color: var(--lf-background-color);
+}
+
+/* 次要风格 */
+.toggle-btn-secondary {
+  border-color: var(--lf-border-color);
+  color: var(--lf-text-color);
+}
+
+/* 幽灵风格 */
+.toggle-btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--lf-text-color);
+}
+
+.toggle-btn-ghost:hover:not(:disabled) {
+  background: var(--lf-hover-bg);
+  border-color: var(--lf-border-color);
+}
+
+/* ==================== 切换图标 ==================== */
+.toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-transform);
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.toggle-icon.up {
+  transform: rotate(180deg);
+}
+
+.toggle-icon.down {
+  transform: rotate(0deg);
+}
+
+.toggle-icon.left {
+  transform: rotate(90deg);
+}
+
+.toggle-icon.right {
+  transform: rotate(-90deg);
+}
+
+/* 图标尺寸 */
+.toggle-icon-sm {
+  font-size: var(--font-size-xs);
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-icon-md {
+  font-size: var(--font-size-sm);
+  width: 20px;
+  height: 20px;
+}
+
+.toggle-icon-lg {
+  font-size: var(--font-size-md);
+  width: 24px;
+  height: 24px;
+}
+
+/* ==================== 切换开关 ==================== */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--lf-secondary-color);
+  border: 2px solid var(--lf-border-color);
+  transition: var(--transition-all);
+  border-radius: var(--border-radius-full);
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background: var(--lf-background-color);
+  transition: var(--transition-all);
+  border-radius: var(--border-radius-full);
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translateX(24px);
+}
+
+/* 大尺寸开关 */
+.toggle-switch-lg {
+  width: 60px;
+  height: 32px;
+}
+
+.toggle-switch-lg .toggle-slider:before {
+  height: 24px;
+  width: 24px;
+}
+
+.toggle-switch-lg input:checked + .toggle-slider:before {
+  transform: translateX(28px);
+}
+
+/* ==================== 展开/收起动画 ==================== */
+.toggle-content {
+  overflow: hidden;
+  transition: max-height var(--transition-normal) var(--ease-in-out);
+}
+
+.toggle-content.collapsed {
+  max-height: 0;
+}
+
+.toggle-content.expanded {
+  max-height: 2000px; /* 足够大的值以容纳内容 */
+}
+
+/* 渐变遮罩 */
+.toggle-content:not(.expanded)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--gradient-overlay);
+  pointer-events: none;
+}
+
+/* ==================== 手风琴组件 ==================== */
+.accordion {
+  border: 1px solid var(--lf-border-color);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--lf-border-color);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-4) var(--spacing-6);
+  background: var(--lf-card-bg);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-colors);
+  font-weight: var(--font-weight-medium);
+}
+
+.accordion-header:hover {
+  background: var(--lf-hover-bg);
+}
+
+.accordion-header:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--lf-outline-color);
+}
+
+.accordion-content {
+  padding: 0 var(--spacing-6);
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height var(--transition-normal) var(--ease-in-out),
+    padding var(--transition-normal) var(--ease-in-out);
+}
+
+.accordion-item.active .accordion-content {
+  padding: var(--spacing-4) var(--spacing-6);
+  max-height: 1000px;
+}
+
+/* ==================== 标签切换 ==================== */
+.tab-group {
+  display: flex;
+  border-bottom: 2px solid var(--lf-border-color);
+  margin-bottom: var(--spacing-6);
+}
+
+.tab-item {
+  padding: var(--spacing-3) var(--spacing-6);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  color: var(--lf-text-color);
+  transition: var(--transition-all);
+  position: relative;
+}
+
+.tab-item:hover {
+  color: var(--lf-primary-color);
+  background: var(--lf-hover-bg);
+}
+
+.tab-item.active {
+  color: var(--lf-primary-color);
+  border-bottom-color: var(--lf-primary-color);
+}
+
+.tab-item:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 var(--lf-outline-color);
+}
+
+/* ==================== 响应式设计 ==================== */
+
+/* 小屏幕优化 */
+@media (max-width: 640px) {
+  .toggle-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: var(--spacing-4) var(--spacing-6);
+    font-size: var(--font-size-sm);
+  }
+
+  .toggle-container {
+    margin: var(--spacing-md) 0;
+  }
+
+  .tab-group {
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 2px solid var(--lf-border-color);
+  }
+
+  .tab-item {
+    border-bottom: 1px solid var(--lf-border-color);
+    border-right: 3px solid transparent;
+  }
+
+  .tab-item.active {
+    border-right-color: var(--lf-primary-color);
+    border-bottom-color: transparent;
+  }
+}
+
+/* ==================== 辅助功能支持 ==================== */
+
+/* 键盘导航支持 */
+.toggle-btn:focus-visible,
+.toggle-switch:focus-visible .toggle-slider,
+.accordion-header:focus-visible {
+  outline: 2px solid var(--lf-outline-color);
+  outline-offset: 2px;
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .toggle-btn {
+    border-width: 3px;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .toggle-slider {
+    border-width: 3px;
+  }
+
+  .accordion-item {
+    border-width: 2px;
+  }
+}
+
+/* 减少动画支持 */
+@media (prefers-reduced-motion: reduce) {
+  .toggle-btn,
+  .toggle-icon,
+  .toggle-slider,
+  .toggle-slider:before,
+  .accordion-content,
+  .tab-item {
+    transition: none;
+  }
+
+  .toggle-content {
+    transition: none;
+  }
+}

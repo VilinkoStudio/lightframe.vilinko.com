@@ -31,7 +31,6 @@ body {
   color: var(--lf-text-color);
   font-weight: var(--font-weight-normal);
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 /* ==================== 标题样式 ==================== */

@@ -95,24 +95,16 @@ const DownloadModal = ({ isVisible }: { isVisible: Signal<boolean> }) => {
                   agreedToTerms.value = !agreedToTerms.value;
                 }}
               />
-              在使用前您需要阅读并同意我们的
-              <a
-                href={LINKS.TOS}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="terms-link"
-              >
-                《服务条款》
-              </a>
-              和
-              <a
-                href={LINKS.PRIVACY}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="terms-link"
-              >
-                《隐私政策》
-              </a>
+              <span class="terms-text">
+                在使用前您需要阅读并同意我们的
+                <a href="/terms" class="terms-link">
+                  《服务条款》
+                </a>
+                和
+                <a href="/privacy" class="terms-link">
+                  《隐私政策》
+                </a>
+              </span>
             </label>
           </div>
         </div>
