@@ -2,6 +2,19 @@ import { component$ } from "@qwik.dev/core";
 import { LINKS, APP_META } from "~/constants";
 import "./footer.css";
 
+const FOOTER_LINKS = {
+  product: [
+    { text: "官方网站", href: LINKS.MAIN_SITE },
+    { text: "壁纸库", href: LINKS.WALLPAPER },
+    { text: "使用文档", href: LINKS.DOCS },
+  ],
+  community: [
+    { text: "Bilibili", href: LINKS.BILIBILI },
+    { text: "GitHub", href: LINKS.GITHUB },
+    { text: "爱发电", href: LINKS.AFDIAN },
+  ],
+};
+
 export default component$(() => {
   const currentYear = new Date().getFullYear();
 
@@ -27,66 +40,34 @@ export default component$(() => {
             <div class="footer-section">
               <h3>产品</h3>
               <ul>
-                <li>
-                  <a
-                    href={LINKS.MAIN_SITE}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    官方网站
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={LINKS.WALLPAPER}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    壁纸库
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={LINKS.DOCS}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    使用文档
-                  </a>
-                </li>
+                {FOOTER_LINKS.product.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.text}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div class="footer-section">
               <h3>社区</h3>
               <ul>
-                <li>
-                  <a
-                    href={LINKS.BILIBILI}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Bilibili
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={LINKS.GITHUB}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={LINKS.AFDIAN}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    爱发电
-                  </a>
-                </li>
+                {FOOTER_LINKS.community.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.text}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
