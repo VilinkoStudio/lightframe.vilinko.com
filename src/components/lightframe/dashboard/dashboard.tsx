@@ -49,9 +49,9 @@ export default component$(() => {
 
   return (
     <div class="dashboard-container">
-      <StarCard starCardRef={starCardRef} />
       <MeetCard />
       <ClockCard time={time} />
+      <StarCard starCardRef={starCardRef} />
       <ActionCard month={month} dateStr={dateStr} showModal={showModal} />
       {showModal.value && (
         <DownloadModal isVisible={showModal} agreedToTerms={agreedToTerms} />
