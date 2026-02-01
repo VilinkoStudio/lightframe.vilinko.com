@@ -185,6 +185,11 @@
   transform-origin: left;
 }
 
+.link-wrapper {
+  display: contents;
+  outline: none;
+}
+
 @media (max-width: 768px) {
   .modal-content {
     margin: 20px;

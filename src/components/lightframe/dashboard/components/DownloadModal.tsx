@@ -30,29 +30,21 @@ export const DownloadModal = component$<DownloadModalProps>(
           <div class="modal-body">
             <a
               href={agreedToTerms.value ? DOWNLOAD.X64 : undefined}
-              class={`download-link ${!agreedToTerms.value ? "disabled" : ""}`}
-              onClick$={(e) => {
-                if (!agreedToTerms.value) {
-                  e.preventDefault();
-                  return;
-                }
-                trackDownload();
-              }}
+              class="link-wrapper"
+              onClick$={() => trackDownload()}
             >
-              Windows x64 (推荐)
+              <button class="download-link" disabled={!agreedToTerms.value}>
+                Windows x64 (推荐)
+              </button>
             </a>
             <a
               href={agreedToTerms.value ? DOWNLOAD.X86 : undefined}
-              class={`download-link ${!agreedToTerms.value ? "disabled" : ""}`}
-              onClick$={(e) => {
-                if (!agreedToTerms.value) {
-                  e.preventDefault();
-                  return;
-                }
-                trackDownload();
-              }}
+              class="link-wrapper"
+              onClick$={() => trackDownload()}
             >
-              Windows x86
+              <button class="download-link" disabled={!agreedToTerms.value}>
+                Windows x86
+              </button>
             </a>
             <div class="terms-container">
               <label class="terms-label">
