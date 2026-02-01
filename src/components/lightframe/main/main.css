@@ -39,23 +39,107 @@
   transition: all 0.1s ease;
 }
 
-@media (hover: hover) {
-  .body-button-container .btn:hover {
-    color: var(--lf-background-color);
-    background-color: var(--lf-primary-color);
-    border-color: var(--lf-primary-color);
-  }
+.body-button-container .btn:hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
+}
 
-  .close-btn:hover {
-    color: var(--lf-background-color);
-    background-color: var(--lf-primary-color);
-  }
+/* 支持按钮样式继承自 body-button，这里无需重复定义 */
 
-  .download-link:not(:disabled):hover {
-    color: var(--lf-background-color);
-    background-color: var(--lf-primary-color);
-    border-color: var(--lf-primary-color);
-  }
+/* 模态框样式 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--lf-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* 模态框滚动锁定由JavaScript控制，这里只保留必要的样式 */
+
+.modal-content {
+  background: var(--lf-background-color);
+  border: 1px solid var(--lf-border-color);
+  border-radius: 12px;
+  padding: 0;
+  max-width: min(500px, 90vw);
+  width: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--lf-border-color);
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: var(--lf-text-color);
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--lf-text-color);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.05s ease;
+}
+
+.close-btn:hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.download-link {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--lf-border-color);
+  color: var(--lf-text-color);
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.1s ease;
+}
+
+.download-link:not(:disabled):hover {
+  color: var(--lf-background-color);
+  background-color: var(--lf-primary-color);
+  border-color: var(--lf-primary-color);
 }
 
 .download-link:disabled {
@@ -105,10 +189,6 @@
   flex-shrink: 0;
 }
 
-.terms-text {
-  flex: 1;
-}
-
 .terms-link {
   color: var(--lf-primary-color);
   text-decoration: none;
@@ -131,16 +211,14 @@
   transition: transform 0.3s ease;
 }
 
-@media (hover: hover) {
-  .terms-link:hover {
-    color: var(--lf-primary-color);
-    opacity: 1;
-  }
+.terms-link:hover {
+  color: var(--lf-primary-color);
+  opacity: 1;
+}
 
-  .terms-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
+.terms-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* 响应式设计 */
