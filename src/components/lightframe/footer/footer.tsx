@@ -11,7 +11,13 @@ export default component$(() => {
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="brand-logo">
-              <span class="brand-initial">L</span>
+              <img
+                src="/images/logo.webp"
+                alt="LightFrame Logo"
+                width={32}
+                height={32}
+                class="brand-logo-img"
+              />
               <span class="brand-name">{APP_META.TITLE}</span>
             </div>
             <p class="brand-description">{APP_META.SUBTITLE}</p>

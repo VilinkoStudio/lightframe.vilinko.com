@@ -49,18 +49,18 @@
   margin-bottom: 16px;
 }
 
-.brand-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+.brand-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   display: block;
   object-fit: cover;
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
   transition: transform 0.3s ease;
 }
 
 @media (hover: hover) {
-  .brand-icon:hover {
+  .brand-logo-img:hover {
     transform: scale(1.05);
   }
 }

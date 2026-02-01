@@ -23,13 +23,13 @@
   overflow: hidden;
   transition: max-height var(--transition-slow) var(--transition-ease);
   position: relative;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 
 .log-container::before {
   content: "";
   position: absolute;
-  left: 28px;
+  left: 38px;
   top: 40px;
   bottom: 40px;
   width: 2px;
@@ -58,7 +58,7 @@
 }
 
 @media (hover: hover) {
-  .log-item.timeline:hover {
+  .log-container.expanded .log-item.timeline:hover {
     transform: scale(1.02);
     box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
     border-color: var(--lf-primary-color);
@@ -100,7 +100,7 @@
   }
 
   @media (prefers-color-scheme: dark) and (hover: hover) {
-    .log-item.timeline:hover {
+    .log-container.expanded .log-item.timeline:hover {
       transform: scale(1.02);
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
       border-color: var(--lf-primary-color);

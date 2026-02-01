@@ -8,7 +8,7 @@
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--spacing-4) 0 0;
+  padding: 0 var(--spacing-4);
 }
 
 .container-sm {
@@ -34,7 +34,7 @@
 /* 流体容器 */
 .container-fluid {
   width: 100%;
-  padding: 0 var(--spacing-4) 0 0;
+  padding: 0 var(--spacing-4);
 }
 
 /* 全宽容器 */
@@ -545,7 +545,7 @@
 /* 小屏幕 (< 640px) */
 @media (max-width: 639px) {
   .container {
-    padding: 0 var(--spacing-3) 0 0;
+    padding: 0 var(--spacing-3);
   }
 
   .flex-col-sm {
@@ -587,7 +587,7 @@
 /* 大屏幕 (1024px+) */
 @media (min-width: 1024px) {
   .container {
-    padding: 0 var(--spacing-6) 0 0;
+    padding: 0 var(--spacing-6);
   }
 
   .grid-cols-3-lg {
