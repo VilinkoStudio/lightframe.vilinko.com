@@ -32,8 +32,7 @@ async function fetchApi<T>(
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const text = await response.text();
-    const data = JSON.parse(text);
+    const data = await response.json();
     console.log("FETCH resolved");
 
     return data;
