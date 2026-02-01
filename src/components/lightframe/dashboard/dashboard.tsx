@@ -30,14 +30,10 @@ const ClockCard = ({ time }: { time: Signal<string> }) => (
 );
 
 const StarCard = ({
-  canvasRef,
+  starCardRef,
 }: {
-  canvasRef: Signal<HTMLCanvasElement | undefined>;
-}) => (
-  <div class="dashboard-card star-card">
-    <canvas ref={canvasRef} class="star-canvas" />
-  </div>
-);
+  starCardRef: Signal<HTMLDivElement | undefined>;
+}) => <div ref={starCardRef} class="dashboard-card star-card"></div>;
 
 const DownloadModal = ({
   isVisible,
@@ -143,6 +139,7 @@ export default component$(() => {
   const agreedToTerms = useSignal(false);
 
   const canvasRef = useSignal<HTMLCanvasElement>();
+  const starCardRef = useSignal<HTMLDivElement>();
   const pointsRef = useSignal<{ x: number; y: number }[]>([]);
   const rectRef = useSignal<{ l: number; t: number; r: number; b: number }>({
     l: 0,
@@ -182,16 +179,24 @@ export default component$(() => {
       ctx.clearRect(0, 0, w, h);
       const r = rectRef.value;
 
+      const isDarkTheme = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+
       ctx.save();
-      ctx.shadowColor = "rgba(0, 0, 0, 0.3)";
+      ctx.shadowColor = isDarkTheme
+        ? "rgba(0, 0, 0, 0.3)"
+        : "rgba(0, 0, 0, 0.1)";
       ctx.shadowBlur = 30;
       ctx.shadowOffsetY = 10;
       ctx.beginPath();
       ctx.rect(r.l, r.t, r.r - r.l, r.b - r.t);
-      ctx.fillStyle = "#262626";
+      ctx.fillStyle = isDarkTheme ? "#262626" : "#ffffff";
       ctx.fill();
       ctx.shadowBlur = 0;
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.05)";
+      ctx.strokeStyle = isDarkTheme
+        ? "rgba(255, 255, 255, 0.05)"
+        : "rgba(0, 0, 0, 0.05)";
       ctx.lineWidth = 1;
       ctx.stroke();
       ctx.restore();
@@ -211,14 +216,19 @@ export default component$(() => {
 
       const pts = pointsRef.value;
       if (pts.length > 0) {
+        const isDarkTheme = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
         ctx.beginPath();
         pts.forEach((p, i) =>
           i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y),
         );
         ctx.closePath();
-        ctx.fillStyle = "rgba(42, 42, 42, 0.6)";
+        ctx.fillStyle = isDarkTheme
+          ? "rgba(42, 42, 42, 0.6)"
+          : "rgba(220, 220, 220, 0.4)";
         ctx.fill();
-        ctx.strokeStyle = "#9ca3af";
+        ctx.strokeStyle = isDarkTheme ? "#9ca3af" : "#6b7280";
         ctx.lineWidth = 2;
         ctx.stroke();
         ctx.fillStyle = "#818cf8";
@@ -257,34 +267,34 @@ export default component$(() => {
     const resize = () => {
       const canvas = canvasRef.value;
       if (!canvas) return;
-      const parent = canvas.parentElement;
-      if (!parent) return;
+      const targetCard = starCardRef.value;
+      if (!targetCard) return;
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
       const rect = canvas.getBoundingClientRect();
-      const parentRect = parent.getBoundingClientRect();
+      const cardRect = targetCard.getBoundingClientRect();
       const dpr = window.devicePixelRatio || 1;
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
       ctx.scale(dpr, dpr);
-      const px = parentRect.left - rect.left;
-      const py = parentRect.top - rect.top;
+      const px = cardRect.left - rect.left;
+      const py = cardRect.top - rect.top;
 
       if (rectRef.value.l === 0) {
         rectRef.value = {
           l: px,
           t: py,
-          r: px + parentRect.width,
-          b: py + parentRect.height,
+          r: px + cardRect.width,
+          b: py + cardRect.height,
         };
       }
       if (pointsRef.value.length === 0) {
         pointsRef.value = generateRandomPoints(
-          px + parentRect.width * 0.85,
-          py + parentRect.height * 0.22,
-          Math.min(parentRect.width, parentRect.height) * 0.34,
-          Math.min(parentRect.width, parentRect.height) * 0.24,
+          px + cardRect.width * 0.85,
+          py + cardRect.height * 0.22,
+          Math.min(cardRect.width, cardRect.height) * 0.34,
+          Math.min(cardRect.width, cardRect.height) * 0.24,
         );
       }
       draw();
@@ -373,6 +383,10 @@ export default component$(() => {
     updateTime();
     const interval = setInterval(updateTime, 1000);
 
+    const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleThemeChange = () => draw();
+    themeMediaQuery.addEventListener("change", handleThemeChange);
+
     window.addEventListener("mousedown", handleMouseDown, true);
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
@@ -381,6 +395,7 @@ export default component$(() => {
 
     cleanup(() => {
       clearInterval(interval);
+      themeMediaQuery.removeEventListener("change", handleThemeChange);
       window.removeEventListener("mousedown", handleMouseDown, true);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
@@ -391,9 +406,10 @@ export default component$(() => {
 
   return (
     <div class="dashboard-container">
+      <canvas ref={canvasRef} class="star-canvas" />
       <MeetCard />
       <ClockCard time={time} />
-      <StarCard canvasRef={canvasRef} />
+      <StarCard starCardRef={starCardRef} />
       <ActionCard month={month} dateStr={dateStr} showModal={showModal} />
       {showModal.value && (
         <DownloadModal isVisible={showModal} agreedToTerms={agreedToTerms} />

@@ -8,6 +8,18 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   align-items: stretch;
+  position: relative;
+}
+
+.star-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 5;
 }
 
 .dashboard-card {
@@ -50,10 +62,10 @@
 
 .star-canvas {
   position: absolute;
-  top: -1000px;
-  left: -1000px;
-  width: 3000px;
-  height: 3000px;
+  top: -50px;
+  left: -50px;
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
   object-fit: contain;
   pointer-events: none;
 }
@@ -94,7 +106,8 @@
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: #d1d1d1;
+  color: var(--lf-text-color);
+  opacity: 0.6;
   margin-top: 2rem;
 }
 
@@ -151,7 +164,7 @@
   color: #fff;
   text-shadow: 2px 2px 0 #3f3f3f;
   font-family: var(--font-family-minecraft);
-  font-size: 1.25rem;
+  font-size: 2rem;
   image-rendering: pixelated;
   transition: all 0.1s ease;
 }
@@ -222,5 +235,19 @@
 
   .clock-text {
     opacity: 0.85;
+  }
+
+  .meet-text {
+    opacity: 0.8;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .clock-text {
+    opacity: 0.8;
+  }
+
+  .meet-text {
+    opacity: 0.7;
   }
 }

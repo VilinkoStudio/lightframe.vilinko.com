@@ -70,7 +70,9 @@
 
 .download-link {
   display: inline-block;
-  width: auto;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
   background: #c6c6c6;
   border: 4px solid #000;
   box-shadow:
