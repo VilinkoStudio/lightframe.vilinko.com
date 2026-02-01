@@ -45,7 +45,6 @@
   border-color: var(--lf-primary-color);
 }
 
-
 /* 支持按钮样式继承自 body-button，这里无需重复定义 */
 
 /* 模态框样式 */
@@ -65,9 +64,7 @@
   overflow: hidden;
 }
 
-
 /* 模态框滚动锁定由JavaScript控制，这里只保留必要的样式 */
-
 
 .modal-content {
   background: var(--lf-background-color);
@@ -117,7 +114,6 @@
   background-color: var(--lf-primary-color);
 }
 
-
 .modal-body {
   padding: 24px;
 }
@@ -146,62 +142,84 @@
   border-color: var(--lf-primary-color);
 }
 
-
 .download-link:disabled {
   color: var(--lf-text-color);
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: var(--lf-border-color);
   cursor: not-allowed;
-  opacity: 0.7;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05));
+  opacity: 0.6;
+  background: transparent;
   position: relative;
+  overflow: hidden;
 }
 
 .download-link:disabled::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(0, 0, 0, 0.03) 10px,
-    rgba(0, 0, 0, 0.03) 20px
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(128, 128, 128, 0.1),
+    rgba(128, 128, 128, 0.1) 1px,
+    transparent 1px,
+    transparent 6px
   );
-  border-radius: 10px;
+  background-size: 10px 10px;
 }
 
 .terms-container {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid var(--lf-border-color);
+  font-size: 14px;
+  color: var(--lf-text-color);
+  opacity: 0.8;
 }
 
 .terms-label {
   cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
 }
 
 .terms-label input[type="checkbox"] {
-  /*margin-top: 2px;*/
-  transform: scale(0.9);
-  vertical-align: baseline;
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 .terms-link {
   color: var(--lf-primary-color);
   text-decoration: none;
-  margin: 0 4px;
-  transition: all 0.1s ease;
+  position: relative;
+  transition: color 0.2s ease;
+  padding-bottom: 1px;
+  display: inline;
+}
+
+.terms-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--lf-primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
 
 .terms-link:hover {
-  color: var(--lf-background-color);
-  background-color: var(--lf-primary-color);
-  padding: 2px 6px;
-  border-radius: 4px;
+  color: var(--lf-primary-color);
+  opacity: 1;
 }
 
-
-
+.terms-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
 /* 响应式设计 */
 @media (max-width: 768px) {
@@ -233,7 +251,8 @@
     box-sizing: border-box;
   }
 
-  .modal-header, .modal-body {
+  .modal-header,
+  .modal-body {
     padding: 16px 20px;
   }
 }

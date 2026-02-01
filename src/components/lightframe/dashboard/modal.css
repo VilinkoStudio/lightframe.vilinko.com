@@ -160,6 +160,7 @@
   position: relative;
   transition: color 0.2s ease;
   padding-bottom: 1px;
+  display: inline;
 }
 
 .terms-link::after {

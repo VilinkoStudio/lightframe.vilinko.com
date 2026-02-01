@@ -165,27 +165,64 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: clamp(40px, 6vw, 60px);
-  background: linear-gradient(transparent, var(--lf-background-color));
+  height: 150px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--lf-background-color) 85%
+  );
   pointer-events: none;
   z-index: 10;
 }
 
 @container (max-width: 480px) {
   .log-item.timeline {
-    padding-left: 30px;
+    padding: 16px;
+    margin-left: 20px;
+    margin-bottom: 16px;
+    border-radius: 12px;
   }
 
   .log-container::before {
-    left: 21px;
+    left: 8px;
+    top: 20px;
+    bottom: 20px;
+  }
+
+  .log-item.timeline::before {
+    left: -16px;
+    top: 24px;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 0 0 2px var(--lf-primary-color);
+  }
+
+  .log-item.timeline::after {
+    left: -12px;
+    top: 27px;
+    width: 12px;
+  }
+
+  .log-version {
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .log-date {
+    font-size: 12px;
+    margin-bottom: 8px;
   }
 
   .log-item h3 {
-    font-size: var(--font-size-lg);
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   .log-item ul li {
-    padding-left: var(--spacing-md);
+    padding: 4px 0;
+    padding-left: 12px;
+    font-size: 13px;
   }
 }
 

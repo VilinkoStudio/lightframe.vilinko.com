@@ -1,11 +1,12 @@
 .footer {
-  background:  #000;
+  background: #000;
   margin-top: 120px;
   position: relative;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -141,7 +142,7 @@
 }
 
 .footer-section a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
