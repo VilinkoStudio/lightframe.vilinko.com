@@ -300,14 +300,14 @@ export default component$(() => {
       draw();
     };
 
-    const getMousePos = (e: MouseEvent) => {
+    const getMousePos = (e: MouseEvent | PointerEvent) => {
       const canvas = canvasRef.value;
       if (!canvas) return { x: 0, y: 0 };
       const rect = canvas.getBoundingClientRect();
       return { x: e.clientX - rect.left, y: e.clientY - rect.top };
     };
 
-    const handleMouseDown = (e: MouseEvent) => {
+    const handlePointerDown = (e: PointerEvent) => {
       const pos = getMousePos(e);
       const r = rectRef.value;
       const handles = [
@@ -316,7 +316,7 @@ export default component$(() => {
         { x: r.r, y: r.b, id: "rect-br" },
       ];
       for (const h of handles) {
-        if (Math.sqrt((pos.x - h.x) ** 2 + (pos.y - h.y) ** 2) < 15) {
+        if (Math.sqrt((pos.x - h.x) ** 2 + (pos.y - h.y) ** 2) < 25) {
           dragRef.value = h.id;
           e.preventDefault();
           e.stopPropagation();
@@ -325,7 +325,7 @@ export default component$(() => {
       }
       const pts = pointsRef.value;
       for (let i = 0; i < pts.length; i++) {
-        if (Math.sqrt((pos.x - pts[i].x) ** 2 + (pos.y - pts[i].y) ** 2) < 15) {
+        if (Math.sqrt((pos.x - pts[i].x) ** 2 + (pos.y - pts[i].y) ** 2) < 25) {
           dragRef.value = i;
           e.preventDefault();
           e.stopPropagation();
@@ -334,7 +334,7 @@ export default component$(() => {
       }
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handlePointerMove = (e: PointerEvent) => {
       const pos = getMousePos(e);
       const r = { ...rectRef.value };
       const pts = pointsRef.value;
@@ -347,12 +347,12 @@ export default component$(() => {
       ];
       if (
         handles.some(
-          (h) => Math.sqrt((pos.x - h.x) ** 2 + (pos.y - h.y) ** 2) < 15,
+          (h) => Math.sqrt((pos.x - h.x) ** 2 + (pos.y - h.y) ** 2) < 25,
         )
       )
         isOver = true;
       if (
-        pts.some((p) => Math.sqrt((pos.x - p.x) ** 2 + (pos.y - p.y) ** 2) < 15)
+        pts.some((p) => Math.sqrt((pos.x - p.x) ** 2 + (pos.y - p.y) ** 2) < 25)
       )
         isOver = true;
       document.documentElement.style.cursor =
@@ -372,7 +372,7 @@ export default component$(() => {
       draw();
     };
 
-    const handleMouseUp = () => {
+    const handlePointerUp = () => {
       if (dragRef.value !== null) {
         dragRef.value = null;
         document.documentElement.style.cursor = "";
@@ -387,18 +387,18 @@ export default component$(() => {
     const handleThemeChange = () => draw();
     themeMediaQuery.addEventListener("change", handleThemeChange);
 
-    window.addEventListener("mousedown", handleMouseDown, true);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("pointerdown", handlePointerDown, true);
+    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerup", handlePointerUp);
     window.addEventListener("resize", resize);
     resize();
 
     cleanup(() => {
       clearInterval(interval);
       themeMediaQuery.removeEventListener("change", handleThemeChange);
-      window.removeEventListener("mousedown", handleMouseDown, true);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("pointerdown", handlePointerDown, true);
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerup", handlePointerUp);
       window.removeEventListener("resize", resize);
       document.documentElement.style.cursor = "";
     });
