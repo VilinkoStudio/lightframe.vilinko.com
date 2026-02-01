@@ -1,10 +1,15 @@
-import { component$, useResource$, Resource } from "@qwik.dev/core";
+import {
+  component$,
+  useResource$,
+  Resource,
+  useStylesScoped$,
+} from "@qwik.dev/core";
 import { contributions } from "~/config";
 import { getSponsors, getRecentContributors } from "~/services/api";
 import { useToggle } from "~/hooks/useToggle";
 import { ToggleButton } from "~/components/common/ToggleButton";
 import type { SponsorsData } from "~/types";
-import "./contributors.css";
+import styles from "./contributors.css?inline";
 
 const LoadingState = () => <div class="loading">加载中...</div>;
 const ErrorState = ({ message }: { message: string }) => (
@@ -52,6 +57,8 @@ const ContributorList = ({ names }: { names: string[] }) => (
 );
 
 export default component$(() => {
+  useStylesScoped$(styles);
+
   const { value: isExpanded } = useToggle(false);
 
   const sponsorsResource = useResource$<SponsorsData>(async ({ cleanup }) => {

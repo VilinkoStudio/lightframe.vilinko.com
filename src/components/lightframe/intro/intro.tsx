@@ -1,10 +1,12 @@
-import { component$ } from "@qwik.dev/core";
+import { component$, useStylesScoped$ } from "@qwik.dev/core";
 import { introConfig } from "~/config";
 import { Icon } from "~/components/common/Icon";
 import type { IntroView } from "~/types";
-import "./intro.css";
+import styles from "./intro.css?inline";
 
 export default component$(() => {
+  useStylesScoped$(styles);
+
   return (
     <div class="intro">
       <div class="intro-grid">

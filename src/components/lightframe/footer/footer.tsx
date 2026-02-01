@@ -1,6 +1,6 @@
-import { component$ } from "@qwik.dev/core";
+import { component$, useStylesScoped$ } from "@qwik.dev/core";
 import { LINKS, APP_META } from "~/constants";
-import "./footer.css";
+import styles from "./footer.css?inline";
 
 const FOOTER_LINKS = {
   product: [
@@ -16,6 +16,8 @@ const FOOTER_LINKS = {
 };
 
 export default component$(() => {
+  useStylesScoped$(styles);
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -30,6 +32,8 @@ export default component$(() => {
                 width={32}
                 height={32}
                 class="brand-logo-img"
+                loading="lazy"
+                decoding="async"
               />
               <span class="brand-name">{APP_META.TITLE}</span>
             </div>
