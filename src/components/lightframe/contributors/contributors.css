@@ -81,12 +81,6 @@
   padding: 32px;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.contributor-group:hover {
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
-  transform: translateY(-4px);
 }
 
 .contributor-group h3 {

@@ -53,28 +53,11 @@
   font-weight: 500;
   opacity: 0.8;
   transition: all 0.2s ease;
-  position: relative;
 }
 
 .nav-link:hover {
   opacity: 1;
   color: var(--lf-primary-color);
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--lf-primary-color);
-  transition: width 0.3s ease;
-  border-radius: 2px;
-}
-
-.nav-link:hover::after {
-  width: 100%;
 }
 
 .mobile-menu-btn {

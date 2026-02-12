@@ -101,7 +101,7 @@
 
 .acknowledgement-item:hover .item-icon {
   background: var(--lf-primary-color);
-  color: #fff;
+  color: var(--lf-background-color);
   transform: scale(1.1);
 }
 
