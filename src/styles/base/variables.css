@@ -7,9 +7,11 @@
 :root {
   /* 主要色彩 */
   --lf-primary-color: #333333;
+  --lf-primary-rgb: 51, 51, 51;
   --lf-secondary-color: #f0f0f0;
   --lf-background-color: #ffffff;
   --lf-text-color: #000000;
+  --lf-text-color-secondary: #666666;
   --lf-card-bg: #ffffff;
   --lf-border-color: #000000;
   --lf-glass-bg: rgba(255, 255, 255, 0.8);
@@ -32,9 +34,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --lf-primary-color: #ffffff;
+    --lf-primary-rgb: 255, 255, 255;
     --lf-secondary-color: #1a1a1a;
     --lf-background-color: #141414;
     --lf-text-color: #ffffff;
+    --lf-text-color-secondary: #a1a1aa;
     --lf-card-bg: #1e1e1e;
     --lf-border-color: #ffffff;
     --lf-glass-bg: rgba(20, 20, 20, 0.8);

@@ -88,16 +88,17 @@
 
 @media (prefers-color-scheme: dark) {
   .intro-item {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--lf-card-bg);
     border-color: rgba(255, 255, 255, 0.05);
   }
 
   .intro-item:hover {
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    border-color: var(--lf-primary-color);
   }
 
   .intro-item p {
-    color: #a1a1aa;
+    color: var(--lf-text-color-secondary);
   }
 }
 

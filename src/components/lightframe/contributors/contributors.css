@@ -176,23 +176,23 @@
 @media (prefers-color-scheme: dark) {
   .recent-contributors,
   .contributor-group {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--lf-card-bg);
     border-color: rgba(255, 255, 255, 0.05);
   }
 
   .recent-contributors h3,
   .contributor-group h3 {
-    color: #fff;
+    color: var(--lf-text-color);
   }
 
   .contributor-group p {
-    color: #a1a1aa;
+    color: var(--lf-text-color-secondary);
   }
 
   .contributor-name {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.1);
-    color: #e4e4e7;
+    color: var(--lf-text-color-secondary);
   }
 
   .contributor-name:hover {
@@ -204,11 +204,15 @@
   .loading,
   .error {
     background: rgba(255, 255, 255, 0.05);
-    color: #a1a1aa;
+    color: var(--lf-text-color-secondary);
   }
 
   .contributors-container:not(.expanded)::after {
-    background: linear-gradient(to bottom, transparent, #000);
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--lf-background-color)
+    );
   }
 }
 

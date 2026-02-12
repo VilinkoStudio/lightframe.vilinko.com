@@ -145,13 +145,13 @@
 
 @media (prefers-color-scheme: dark) {
   .header {
-    background: rgba(10, 10, 10, 0.8);
+    background: var(--lf-glass-bg);
     border-bottom-color: rgba(255, 255, 255, 0.05);
   }
 
   .mobile-menu {
-    background: #111;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    background: var(--lf-background-color);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
   }
 
   .mobile-nav-link {

@@ -130,21 +130,21 @@
   }
 
   .acknowledgement-intro {
-    color: #a1a1aa;
+    color: var(--lf-text-color-secondary);
   }
 
   .acknowledgement-item {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--lf-card-bg);
     border-color: rgba(255, 255, 255, 0.05);
   }
 
   .acknowledgement-item:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--lf-card-bg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   }
 
   .acknowledgement-item p {
-    color: #a1a1aa;
+    color: var(--lf-text-color-secondary);
   }
 
   .item-icon {
