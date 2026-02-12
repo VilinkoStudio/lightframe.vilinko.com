@@ -9,26 +9,18 @@ import { getSponsors, getRecentContributors } from "~/services/api";
 import { useToggle } from "~/hooks/useToggle";
 import { ToggleButton } from "~/components/common/ToggleButton";
 import type { SponsorsData } from "~/types";
+import { Icon } from "~/components/common/Icon";
 import styles from "./contributors.css?inline";
 
 const LoadingState = () => <div class="loading">加载中...</div>;
 const ErrorState = ({ message }: { message: string }) => (
-  <span class="contributor-name empty">{message}</span>
+  <span class="contributor-name error">{message}</span>
 );
 
-const ContributorNames = ({
-  names,
-  highlight = false,
-}: {
-  names: string[];
-  highlight?: boolean;
-}) => (
+const ContributorNames = ({ names }: { names: string[] }) => (
   <>
     {names.map((name, index) => (
-      <span
-        key={index}
-        class={`contributor-name ${highlight ? "highlight" : ""}`}
-      >
+      <span key={index} class="contributor-name">
         {name}
       </span>
     ))}
@@ -87,7 +79,7 @@ export default component$(() => {
                 names.length === 1 && names[0] === "呜呜呜，还没有～" ? (
                   <ErrorState message="呜呜呜，还没有～" />
                 ) : (
-                  <ContributorNames names={names} highlight />
+                  <ContributorNames names={names} />
                 )
               }
             />
@@ -99,7 +91,7 @@ export default component$(() => {
         >
           <div class="contributors-grid">
             {contributions.map((group) => (
-              <div key={group.title} class="contributor-group modern-card">
+              <div key={group.title} class="contributor-group">
                 <h3>{group.title}</h3>
                 <p>{group.explain}</p>
 
@@ -124,6 +116,11 @@ export default component$(() => {
                       rel="noopener noreferrer"
                     >
                       {group.link.text}
+                      <Icon
+                        paths={["M5.8 3.6l6 6-6 6"]}
+                        width={16}
+                        height={16}
+                      />
                     </a>
                   </div>
                 )}

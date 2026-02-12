@@ -1,72 +1,67 @@
 .contributors {
-  padding: 60px 0;
+  padding: 80px 0;
   background: var(--lf-background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .section-title {
   text-align: center;
-  font-size: 32px;
-  font-weight: normal;
-  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 60px;
   color: var(--lf-text-color);
+  letter-spacing: -0.02em;
 }
 
-/* 最近贡献者部分 */
 .recent-contributors {
   text-align: center;
-  margin-bottom: clamp(25px, 4vw, 40px);
+  margin-bottom: 48px;
+  background: var(--lf-card-bg);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .recent-contributors h3 {
   color: var(--lf-text-color);
-  font-size: clamp(20px, 4vw, 24px);
-  margin-bottom: clamp(15px, 3vw, 20px);
-  font-weight: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
 .recent-list {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(10px, 2vw, 15px);
+  gap: 12px;
   justify-content: center;
-  align-items: center;
 }
 
-.recent-list .contributor-name.highlight {
-  background: transparent;
+.contributor-name {
+  padding: 8px 16px;
+  background: rgba(var(--lf-primary-rgb), 0.05);
+  border: 1px solid rgba(var(--lf-primary-rgb), 0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
   color: var(--lf-text-color);
-  padding: 6px 12px;
-  border: 1px solid var(--lf-border-color);
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: normal;
-  position: relative;
-  cursor: default;
   transition: all 0.2s ease;
 }
 
-.recent-list .contributor-name.highlight.empty {
-  font-style: italic;
-  opacity: 0.6;
+.contributor-name:hover {
+  background: var(--lf-primary-color);
+  color: #fff;
+  border-color: var(--lf-primary-color);
+  transform: translateY(-2px);
 }
 
-.loading-recent {
-  color: var(--lf-text-color);
-  font-style: italic;
-  padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px);
-  background: transparent;
-  border: 1px solid var(--lf-border-color);
-  border-radius: var(--border-radius-md);
-  cursor: default;
-  font-size: var(--font-size-sm);
-  opacity: 0.6;
-}
-
-/* 详细贡献者信息 */
 .contributors-container {
-  max-height: clamp(300px, 40vh, 400px);
+  max-height: 400px;
   overflow: hidden;
-  transition: max-height var(--transition-slow) var(--transition-ease);
+  transition: max-height 0.5s ease-in-out;
   position: relative;
 }
 
@@ -77,191 +72,152 @@
 
 .contributors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: clamp(20px, 4vw, 30px);
-  max-width: min(1200px, 90vw);
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .contributor-group {
-  padding: clamp(20px, 5vw, 30px);
-  container-type: inline-size;
+  background: var(--lf-card-bg);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.contributor-group:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
 }
 
 .contributor-group h3 {
-  color: var(--lf-primary-color);
-  font-size: clamp(18px, 4vw, 24px);
-  margin: 0 0 clamp(8px, 2vw, 10px) 0;
-  font-weight: normal;
+  color: var(--lf-text-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contributor-group h3::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 16px;
+  background: var(--lf-primary-color);
+  border-radius: 2px;
 }
 
 .contributor-group p {
-  color: var(--lf-text-color);
-  margin: 0 0 clamp(15px, 3vw, 20px) 0;
-  line-height: 1.6;
-  font-size: var(--font-size-sm);
+  color: var(--lf-text-color-secondary, #666);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
 }
 
 .contributor-list,
 .sponsor-list {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(8px, 1.5vw, 10px);
-  margin-bottom: clamp(15px, 3vw, 20px);
-  min-height: clamp(36px, 5vw, 40px);
-  align-items: center;
-}
-
-.contributor-name {
-  background: transparent;
-  color: var(--lf-text-color);
-  padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
-  border: 1px solid var(--lf-border-color);
-  border-radius: var(--border-radius-sm);
-  font-size: var(--font-size-sm);
-  transition: all var(--transition-normal) var(--transition-ease);
-  position: relative;
-  cursor: default;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
 .contribution-link {
-  text-align: center;
+  text-align: right;
+  margin-top: auto;
 }
 
 .contribution-link a {
-  color: var(--lf-text-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--lf-primary-color);
   text-decoration: none;
-  font-weight: normal;
-  padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px);
-  border: 1px solid var(--lf-border-color);
-  border-radius: var(--border-radius-md);
-  transition: all var(--transition-normal) var(--transition-ease);
-  display: inline-block;
-  position: relative;
-  font-size: var(--font-size-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: gap 0.2s ease;
 }
 
-.loading {
-  color: var(--lf-text-color);
-  font-style: italic;
-  padding: clamp(15px, 3vw, 20px);
-  text-align: center;
-  font-size: var(--font-size-sm);
-  opacity: 0.6;
+.contribution-link a:hover {
+  gap: 10px;
 }
 
-/* 展开/收起按钮 */
 .contributors-toggle {
   text-align: center;
-  margin-top: clamp(20px, 4vw, 30px);
+  margin-top: 32px;
 }
 
-/* toggle-btn 和 toggle-icon 样式已移动到 src/components/common/common.css */
-
-.toggle-icon.down {
-  transform: rotate(0deg);
-}
-
-/* 添加渐变遮罩效果 */
 .contributors-container:not(.expanded)::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: clamp(40px, 6vw, 60px);
-  background: linear-gradient(transparent, var(--lf-background-color));
+  height: 150px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--lf-background-color)
+  );
   pointer-events: none;
 }
 
-/* 容器查询 - 小屏幕优化 */
-@container (max-width: 480px) {
-  .recent-contributors h3 {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-sm);
-  }
+.loading,
+.error {
+  padding: 12px 24px;
+  color: var(--lf-text-color-secondary, #666);
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  display: inline-block;
+}
 
-  .recent-list {
-    gap: var(--spacing-sm);
-  }
-
-  .recent-list .contributor-name.highlight {
-    font-size: var(--font-size-sm);
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
-
-  .contributors-container {
-    max-height: clamp(250px, 35vh, 300px);
-  }
-
-  .contributors-grid {
-    gap: var(--spacing-md);
-  }
-
+@media (prefers-color-scheme: dark) {
+  .recent-contributors,
   .contributor-group {
-    padding: clamp(15px, 3vw, 20px);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.05);
   }
 
+  .recent-contributors h3,
   .contributor-group h3 {
-    font-size: var(--font-size-lg);
+    color: #fff;
   }
 
-  .toggle-btn {
-    font-size: var(--font-size-sm);
-    padding: var(--spacing-sm) var(--spacing-md);
-    min-height: clamp(40px, 5.5vw, 48px);
-  }
-}
-
-/* 容器查询 - 中等屏幕优化 */
-@container (min-width: 481px) and (max-width: 768px) {
-  .contributors-container {
-    max-height: clamp(280px, 38vh, 350px);
+  .contributor-group p {
+    color: #a1a1aa;
   }
 
-  .contributors-grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(280px, 50%), 1fr));
-  }
-}
-
-/* 容器查询 - 大屏幕优化 */
-@container (min-width: 1200px) {
-  .contributors-container {
-    max-height: clamp(350px, 30vh, 400px);
-  }
-
-  .contributors-grid {
-    gap: var(--spacing-lg);
-  }
-}
-
-/* 高对比度模式支持 */
-@media (prefers-contrast: high) {
-  .contributor-group,
-  .toggle-btn,
   .contributor-name {
-    border-width: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #e4e4e7;
   }
 
-  .recent-list .contributor-name.highlight {
-    border-width: 2px;
+  .contributor-name:hover {
+    background: var(--lf-primary-color);
+    border-color: var(--lf-primary-color);
+    color: #fff;
+  }
+
+  .loading,
+  .error {
+    background: rgba(255, 255, 255, 0.05);
+    color: #a1a1aa;
+  }
+
+  .contributors-container:not(.expanded)::after {
+    background: linear-gradient(to bottom, transparent, #000);
   }
 }
 
-/* 减少动画模式 */
-@media (prefers-reduced-motion: reduce) {
-  .contributors-container,
-  .toggle-btn,
-  .toggle-icon,
-  .contributor-name,
-  .recent-list .contributor-name.highlight {
-    transition: none;
+@media (max-width: 768px) {
+  .contributors-grid {
+    grid-template-columns: 1fr;
   }
-}
 
-/* 触摸设备优化 */
-@media (hover: none) and (pointer: coarse) {
-  .toggle-btn {
-    min-height: clamp(48px, 7vw, 56px);
+  .recent-contributors {
+    padding: 24px;
   }
 }

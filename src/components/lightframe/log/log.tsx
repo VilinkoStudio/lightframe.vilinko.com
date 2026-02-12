@@ -1,10 +1,11 @@
-import { component$ } from "@qwik.dev/core";
+import { component$, useStylesScoped$ } from "@qwik.dev/core";
 import { useToggle } from "~/hooks/useToggle";
 import { ToggleButton } from "~/components/common/ToggleButton";
 import { logs } from "~/data/logs";
-import "./log.css";
+import styles from "./log.css?inline";
 
 export default component$(() => {
+  useStylesScoped$(styles);
   const { value: isExpanded } = useToggle(false);
 
   return (
@@ -12,12 +13,13 @@ export default component$(() => {
       <div class="container">
         <h2 class="section-title">更新日志</h2>
         <div class="log-content">
-          <div class={`log-container ${isExpanded.value ? 'expanded' : ''}`}>
+          <div class={`log-container ${isExpanded.value ? "expanded" : ""}`}>
             {logs.map((log, index) => (
-              <div key={`${log.version}-${index}`} class="log-item modern-card timeline">
-                <div class="connector-line"></div>
-                <div class="log-version">{log.version}</div>
-                <div class="log-date">{log.date}</div>
+              <div key={`${log.version}-${index}`} class="log-item">
+                <div class="log-header">
+                  <div class="log-version">{log.version}</div>
+                  <div class="log-date">{log.date}</div>
+                </div>
                 <h3>{log.title}</h3>
                 <ul>
                   {log.items.map((item, itemIndex) => (

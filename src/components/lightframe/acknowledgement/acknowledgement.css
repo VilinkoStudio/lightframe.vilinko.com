@@ -1,92 +1,168 @@
 .acknowledgement {
-  padding: clamp(40px, 8vw, 80px) 0;
+  padding: 80px 0;
   background: var(--lf-background-color);
-  container-type: inline-size;
+  position: relative;
+  overflow: hidden;
+}
+
+.acknowledgement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.05),
+    transparent
+  );
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .section-title {
   text-align: center;
-  font-size: clamp(28px, 5vw, 36px);
-  font-weight: normal;
-  margin-bottom: clamp(30px, 6vw, 50px);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 60px;
   color: var(--lf-text-color);
+  letter-spacing: -0.02em;
 }
 
 .acknowledgement-content {
-  max-width: min(1300px, 90vw);
-  margin: 0 auto;
   text-align: center;
-  padding: 0 var(--spacing-md);
 }
 
-.acknowledgement-content > p {
-  font-size: clamp(16px, 3vw, 18px);
+.acknowledgement-intro {
+  font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--lf-text-color);
-  margin-bottom: clamp(30px, 6vw, 40px);
+  color: var(--lf-text-color-secondary, #666);
+  max-width: 800px;
+  margin: 0 auto 60px;
 }
 
 .acknowledgement-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-  gap: clamp(20px, 4vw, 30px);
-  margin-top: clamp(30px, 6vw, 40px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
 }
 
 .acknowledgement-item {
+  background: var(--lf-card-bg);
+  padding: 40px 32px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
   text-align: center;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-@media (hover: hover) {
-  .acknowledgement-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    border-color: var(--lf-primary-color);
-  }
+.acknowledgement-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--lf-primary-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.acknowledgement-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.acknowledgement-item:hover::before {
+  opacity: 1;
+}
+
+.item-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  background: rgba(var(--lf-primary-rgb), 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lf-primary-color);
+  transition: all 0.3s ease;
+}
+
+.acknowledgement-item:hover .item-icon {
+  background: var(--lf-primary-color);
+  color: #fff;
+  transform: scale(1.1);
 }
 
 .acknowledgement-item h3 {
-  font-size: clamp(18px, 3.5vw, 20px);
-  margin: 0 0 clamp(12px, 2vw, 15px) 0;
-  font-weight: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
   color: var(--lf-text-color);
 }
 
 .acknowledgement-item p {
-  color: var(--lf-text-color);
-  margin: 0;
+  color: var(--lf-text-color-secondary, #666);
+  font-size: 0.95rem;
   line-height: 1.6;
-  font-size: var(--font-size-sm);
+  margin: 0;
 }
 
-/* 容器查询 - 小屏幕优化 */
-@container (max-width: 480px) {
-  .acknowledgement-content {
-    padding: 0 var(--spacing-sm);
+@media (prefers-color-scheme: dark) {
+  .acknowledgement::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
   }
 
-  .acknowledgement-grid {
-    gap: var(--spacing-md);
+  .acknowledgement-intro {
+    color: #a1a1aa;
   }
 
   .acknowledgement-item {
-    text-align: left;
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.05);
   }
 
-  .acknowledgement-item h3 {
-    font-size: var(--font-size-lg);
+  .acknowledgement-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   }
 
   .acknowledgement-item p {
-    font-size: var(--font-size-xs);
+    color: #a1a1aa;
+  }
+
+  .item-icon {
+    background: rgba(255, 255, 255, 0.05);
   }
 }
 
-/* 打印样式 */
-@media print {
+@media (max-width: 768px) {
+  .acknowledgement {
+    padding: 60px 0;
+  }
+
+  .acknowledgement-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .acknowledgement-item {
-    box-shadow: none !important;
-    border: 1px solid #000 !important;
+    padding: 32px 24px;
   }
 }

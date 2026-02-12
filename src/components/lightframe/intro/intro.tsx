@@ -19,9 +19,9 @@ export default component$(() => {
 });
 
 const IntroItem = component$<IntroView>(({ icon, word, intro }) => (
-  <div class="intro-item modern-card">
+  <div class="intro-item">
     <div class="intro-icon">
-      <Icon paths={icon} width={42} height={42} />
+      <Icon paths={icon} width={28} height={28} />
     </div>
     <h3>{word}</h3>
     <p>{intro}</p>
