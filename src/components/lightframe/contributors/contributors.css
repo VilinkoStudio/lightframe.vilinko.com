@@ -190,15 +190,17 @@
   }
 
   .contributor-name {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
-    color: var(--lf-text-color-secondary);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 500;
   }
 
   .contributor-name:hover {
-    background: var(--lf-primary-color);
-    border-color: var(--lf-primary-color);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    transform: translateY(-2px);
   }
 
   .loading,
