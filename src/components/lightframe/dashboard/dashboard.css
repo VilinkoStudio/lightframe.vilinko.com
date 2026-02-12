@@ -82,6 +82,7 @@
 @media (max-width: 640px) {
   .dashboard-container {
     grid-template-columns: 1fr;
+    padding: 100px 20px 40px;
   }
 }
 

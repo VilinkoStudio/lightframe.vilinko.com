@@ -10,7 +10,7 @@
   gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--spacing-4);
 }
 
 .intro-item {
