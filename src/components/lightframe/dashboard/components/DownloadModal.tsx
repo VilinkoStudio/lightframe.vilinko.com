@@ -1,4 +1,10 @@
-import { component$, type Signal, useStyles$ } from "@qwik.dev/core";
+import {
+  component$,
+  type Signal,
+  useStyles$,
+  useResource$,
+  Resource,
+} from "@qwik.dev/core";
 import { DOWNLOAD, LINKS } from "~/constants";
 import { trackDownload } from "~/services/api";
 import modalStyles from "../modal.css?inline";
@@ -8,9 +14,39 @@ export interface DownloadModalProps {
   agreedToTerms: Signal<boolean>;
 }
 
+interface VersionData {
+  name: string;
+  version: string;
+  last_updated: string;
+  changelog: string;
+}
+
 export const DownloadModal = component$<DownloadModalProps>(
   ({ isVisible, agreedToTerms }) => {
     useStyles$(modalStyles);
+
+    const versionResource = useResource$<VersionData[]>(async () => {
+      try {
+        const response = await fetch("https://down1.vilinko.com/version.json");
+        const text = await response.text();
+        // Try parsing as normal JSON first
+        try {
+          const data = JSON.parse(text);
+          return Array.isArray(data) ? data : [data];
+        } catch {
+          // If it fails, try wrapping in array (for comma-separated objects)
+          try {
+            return JSON.parse(`[${text}]`);
+          } catch (e2) {
+            console.error("Failed to parse version info", e2);
+            return [];
+          }
+        }
+      } catch (e) {
+        console.error("Failed to fetch version info", e);
+        return [];
+      }
+    });
 
     return (
       <div
@@ -28,6 +64,24 @@ export const DownloadModal = component$<DownloadModalProps>(
             </button>
           </div>
           <div class="modal-body">
+            <Resource
+              value={versionResource}
+              onPending={() => (
+                <div class="version-info">正在获取版本信息...</div>
+              )}
+              onRejected={() => (
+                <div class="version-info">获取版本信息失败</div>
+              )}
+              onResolved={(versions) => {
+                const latest = versions.find((v) => v.name === "LightFrame");
+                if (!latest) return null;
+                return (
+                  <div class="version-info">
+                    最新版本: {latest.version} (更新于 {latest.last_updated})
+                  </div>
+                );
+              }}
+            />
             <a
               href={agreedToTerms.value ? DOWNLOAD.X64 : undefined}
               class="link-wrapper"

@@ -66,6 +66,17 @@
 
 .modal-body {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.version-info {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--lf-text-color);
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 .download-link {
