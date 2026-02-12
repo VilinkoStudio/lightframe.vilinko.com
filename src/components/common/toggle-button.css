@@ -1,7 +1,3 @@
-/**
- * 通用组件样式
- */
-
 /* ToggleButton 样式 */
 .toggle-container {
   display: flex;
@@ -58,19 +54,6 @@
 
 .toggle-icon.up {
   transform: rotate(180deg);
-}
-
-/* Icon 组件样式 */
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon svg {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 /* 响应式优化 */

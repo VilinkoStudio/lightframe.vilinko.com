@@ -4,8 +4,8 @@
   left: 0;
   right: 0;
   height: 64px;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
+  z-index: var(--z-fixed);
+  background: var(--lf-glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -13,10 +13,10 @@
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: var(--container-xl);
   height: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--spacing-6);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,7 @@
   letter-spacing: -0.02em;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-2);
 }
 
 .logo span {
@@ -42,7 +42,7 @@
 
 .nav-desktop {
   display: flex;
-  gap: 32px;
+  gap: var(--spacing-8);
   align-items: center;
 }
 

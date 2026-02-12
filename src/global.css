@@ -20,9 +20,6 @@
 @import "./styles/utilities/spacing.css";
 
 /* ==================== 兼容性导入 ==================== */
-/* 保留现有的utilities和common模块以确保向后兼容 */
-@import "./components/utilities/utilities.css";
-@import "./components/common/common.css";
 
 /* ==================== 全局浏览器样式 ==================== */
 
@@ -36,20 +33,6 @@
 
 .main-content {
   flex: 1;
-}
-
-/* 选择文本样式 */
-::selection {
-  background: rgba(102, 126, 234, 0.3);
-  color: inherit;
-}
-
-/* 暗色模式选择文本 */
-@media (prefers-color-scheme: dark) {
-  ::selection {
-    background: rgba(102, 126, 234, 0.4);
-    color: #ffffff;
-  }
 }
 
 /* ==================== 移动端优化 ==================== */
