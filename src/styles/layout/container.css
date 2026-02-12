@@ -8,7 +8,7 @@
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--spacing-4);
+  padding: 0;
 }
 
 .container-sm {
@@ -545,7 +545,7 @@
 /* 小屏幕 (< 640px) */
 @media (max-width: 639px) {
   .container {
-    padding: 0 var(--spacing-3);
+    padding: 0;
   }
 
   .flex-col-sm {
@@ -587,7 +587,7 @@
 /* 大屏幕 (1024px+) */
 @media (min-width: 1024px) {
   .container {
-    padding: 0 var(--spacing-6);
+    padding: 0;
   }
 
   .grid-cols-3-lg {

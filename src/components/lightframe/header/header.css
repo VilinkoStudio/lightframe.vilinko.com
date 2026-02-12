@@ -94,16 +94,16 @@
   width: 100%;
   max-width: none;
   height: auto;
-  min-height: 300px;
   background: var(--lf-background-color);
   z-index: 999;
-  padding: 80px 24px 24px;
+  padding: 80px 24px 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-100%);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   gap: 24px;
+  align-items: center;
 }
 
 .mobile-menu.open {
@@ -111,12 +111,14 @@
 }
 
 .mobile-nav-link {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--lf-text-color);
   text-decoration: none;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: none;
+  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
