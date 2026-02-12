@@ -567,6 +567,10 @@
 
 /* 中等屏幕 (640px - 1023px) */
 @media (min-width: 640px) and (max-width: 1023px) {
+  .container {
+    padding: 0;
+  }
+
   .flex-row-md {
     flex-direction: row;
   }
