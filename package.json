@@ -11,6 +11,7 @@
     "build": "qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.static": "vite build --config adapters/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
     "deploy": "echo 'Run \"bun qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
