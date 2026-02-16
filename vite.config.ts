@@ -27,7 +27,10 @@ export default defineConfig((): UserConfig => {
     optimizeDeps: {
       // Put problematic deps that break bundling here, mostly those with binaries.
       // For example ['better-sqlite3'] if you use that in server functions.
-      exclude: [],
+      exclude: ["@qwik.dev/core", "@qwik.dev/router"],
+    },
+    resolve: {
+      noExternal: ["@qwik.dev/core", "@qwik.dev/router"],
     },
 
     /**
