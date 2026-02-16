@@ -12,7 +12,6 @@
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "qwik check-client src dist && vite build -c adapters/ssg/vite.config.ts",
-    "build.static": "vite build --config adapters/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
     "deploy": "echo 'Run \"bun qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
