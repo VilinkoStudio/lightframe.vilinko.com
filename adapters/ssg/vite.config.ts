@@ -12,7 +12,7 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       ssgAdapter({
-        origin: "https://yoursite.qwik.dev",
+        origin: "https://lightframe.vilinko.com",
       }),
     ],
   };
