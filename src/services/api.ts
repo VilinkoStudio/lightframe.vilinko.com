@@ -22,7 +22,6 @@ async function fetchApi<T>(
   const url = `${API.BASE_URL}${endpoint}`;
 
   try {
-    console.log("FETCH", url);
     const response = await fetch(url, {
       ...fetchOptions,
       signal: controller?.signal,
@@ -33,7 +32,6 @@ async function fetchApi<T>(
     }
 
     const data = await response.json();
-    console.log("FETCH resolved");
 
     return data;
   } catch (error) {
@@ -110,11 +108,9 @@ export async function incrementCounter(id: number = 1): Promise<void> {
     window.location.hostname === "lightframe.vilinko.com"
   ) {
     try {
-      await fetch(`${API.BASE_URL}${API.ENDPOINTS.COUNTER_ADD}?id=${id}`).catch(
-        (err) => console.log("统计请求失败:", err),
-      );
-    } catch (error) {
-      console.log("统计调用错误:", error);
+      await fetch(`${API.BASE_URL}${API.ENDPOINTS.COUNTER_ADD}?id=${id}`);
+    } catch {
+      // 统计失败静默处理，不影响主要功能
     }
   }
 }
