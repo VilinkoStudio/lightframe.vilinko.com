@@ -1,15 +1,16 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "my-qwik-basic-starter",
       "devDependencies": {
         "@eslint/js": "latest",
-        "@qwik.dev/core": "2.0.0-beta.18",
-        "@qwik.dev/router": "2.0.0-beta.18",
+        "@qwik.dev/core": "2.0.0-beta.23",
+        "@qwik.dev/router": "2.0.0-beta.23",
         "@types/node": "20.19.0",
         "eslint": "9.32.0",
-        "eslint-plugin-qwik": "2.0.0-beta.18",
+        "eslint-plugin-qwik": "2.0.0-beta.23",
         "globals": "16.4.0",
         "prettier": "3.6.2",
         "typescript": "5.4.5",
@@ -222,9 +223,9 @@
 
     "@parcel/watcher-win32-x64": ["@parcel/watcher-win32-x64@2.5.1", "", { "os": "win32", "cpu": "x64" }, "sha512-9lHBdJITeNR++EvSQVUcaZoWupyHfXe1jZvGZ06O/5MflPcuPLtEphScIBL+AiCWBO46tDSHzWyD0uDmmZqsgA=="],
 
-    "@qwik.dev/core": ["@qwik.dev/core@2.0.0-beta.18", "", { "dependencies": { "csstype": "^3.2.3", "launch-editor": "^2.12.0", "rollup": "^4.55.1", "ts-morph": "27.0.2" }, "peerDependencies": { "prettier": "3.6.2", "vite": ">=5 <8", "vitest": ">=2 <4" }, "optionalPeers": ["prettier", "vitest"], "bin": { "qwik": "qwik-cli.mjs" } }, "sha512-wq6HLKkJpTTJ+q4a9Mw4r+gJK4aOghox6B9g2F7L9IBwMAHviz3o9WutU4Ow8FACtJVEJMj7C74ZAsjBgOBzkA=="],
+    "@qwik.dev/core": ["@qwik.dev/core@2.0.0-beta.23", "https://registry.npmmirror.com/@qwik.dev/core/-/core-2.0.0-beta.23.tgz", { "dependencies": { "csstype": "^3.2.3", "launch-editor": "^2.12.0", "rollup": "^4.55.1", "ts-morph": "27.0.2" }, "peerDependencies": { "prettier": "3.6.2", "vite": ">=5 <8", "vitest": ">=2 <4" }, "optionalPeers": ["prettier", "vitest"], "bin": { "qwik": "qwik-cli.mjs" } }, "sha512-Zk1ffEVJA7d8oA025ZPGbinnDC8xls670sUJNOOVJvRfVnmQy+E8Fp2ggIYdRUSYUWiQMWmt5D+teLf77kVMIA=="],
 
-    "@qwik.dev/router": ["@qwik.dev/router@2.0.0-beta.18", "", { "dependencies": { "@azure/functions": "3.5.1", "@mdx-js/mdx": "^3.1.1", "@netlify/edge-functions": "^2.17.0", "@types/mdx": "^2.0.13", "estree-util-value-to-estree": "^3.5.0", "github-slugger": "^2.0.0", "hast-util-heading-rank": "^2.1.1", "hast-util-to-string": "^2.0.0", "kleur": "^4.1.5", "marked": "^12.0.2", "mdast-util-mdx": "^3.0.0", "refractor": "^4.8.1", "rehype-autolink-headings": "^7.1.0", "remark-frontmatter": "^5.0.0", "remark-gfm": "^4.0.1", "set-cookie-parser": "^2.7.2", "source-map": "^0.7.6", "svgo": "^3.3.2", "unified": "^11.0.5", "unist-util-visit": "^5.0.0", "valibot": ">=0.36.0 <2", "vfile": "6.0.3", "vite": ">=5 <8", "vite-imagetools": "9.0.0", "yaml": "^2.8.2", "zod": "^3.25.48" }, "peerDependencies": { "@qwik.dev/core": "^2.0.0-beta.18" } }, "sha512-k6Hozb2KFJgKi5qLF/N1HIz6lReAiTh0lxX+CszblxQO4l1N2047y662ilTgHZiyb+6J+jIgfZ+pfzh0sbZOKQ=="],
+    "@qwik.dev/router": ["@qwik.dev/router@2.0.0-beta.23", "https://registry.npmmirror.com/@qwik.dev/router/-/router-2.0.0-beta.23.tgz", { "dependencies": { "@azure/functions": "3.5.1", "@mdx-js/mdx": "^3.1.1", "@netlify/edge-functions": "^2.17.0", "@types/mdx": "^2.0.13", "estree-util-value-to-estree": "^3.5.0", "github-slugger": "^2.0.0", "hast-util-heading-rank": "^2.1.1", "hast-util-to-string": "^2.0.0", "kleur": "^4.1.5", "marked": "^12.0.2", "mdast-util-mdx": "^3.0.0", "refractor": "^4.8.1", "rehype-autolink-headings": "^7.1.0", "remark-frontmatter": "^5.0.0", "remark-gfm": "^4.0.1", "set-cookie-parser": "^2.7.2", "source-map": "^0.7.6", "svgo": "^3.3.2", "unified": "^11.0.5", "unist-util-visit": "^5.0.0", "valibot": ">=0.36.0 <2", "vfile": "6.0.3", "vite": ">=5 <8", "vite-imagetools": "9.0.0", "yaml": "^2.8.2", "zod": "^3.25.48" }, "peerDependencies": { "@qwik.dev/core": "^2.0.0-beta.23" } }, "sha512-RZSQuG6v21v0owrUT9ViXLQiata4fda2pe2oo/zBb+v74rCCcb8i9Nkbjn8RNya+/Ej6WaLn/OaWnqpWUyyK+Q=="],
 
     "@rollup/pluginutils": ["@rollup/pluginutils@5.3.0", "", { "dependencies": { "@types/estree": "^1.0.0", "estree-walker": "^2.0.2", "picomatch": "^4.0.2" }, "peerDependencies": { "rollup": "^1.20.0||^2.0.0||^3.0.0||^4.0.0" }, "optionalPeers": ["rollup"] }, "sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q=="],
 
@@ -514,7 +515,7 @@
 
     "eslint": ["eslint@9.32.0", "", { "dependencies": { "@eslint-community/eslint-utils": "^4.2.0", "@eslint-community/regexpp": "^4.12.1", "@eslint/config-array": "^0.21.0", "@eslint/config-helpers": "^0.3.0", "@eslint/core": "^0.15.0", "@eslint/eslintrc": "^3.3.1", "@eslint/js": "9.32.0", "@eslint/plugin-kit": "^0.3.4", "@humanfs/node": "^0.16.6", "@humanwhocodes/module-importer": "^1.0.1", "@humanwhocodes/retry": "^0.4.2", "@types/estree": "^1.0.6", "@types/json-schema": "^7.0.15", "ajv": "^6.12.4", "chalk": "^4.0.0", "cross-spawn": "^7.0.6", "debug": "^4.3.2", "escape-string-regexp": "^4.0.0", "eslint-scope": "^8.4.0", "eslint-visitor-keys": "^4.2.1", "espree": "^10.4.0", "esquery": "^1.5.0", "esutils": "^2.0.2", "fast-deep-equal": "^3.1.3", "file-entry-cache": "^8.0.0", "find-up": "^5.0.0", "glob-parent": "^6.0.2", "ignore": "^5.2.0", "imurmurhash": "^0.1.4", "is-glob": "^4.0.0", "json-stable-stringify-without-jsonify": "^1.0.1", "lodash.merge": "^4.6.2", "minimatch": "^3.1.2", "natural-compare": "^1.4.0", "optionator": "^0.9.3" }, "peerDependencies": { "jiti": "*" }, "optionalPeers": ["jiti"], "bin": { "eslint": "bin/eslint.js" } }, "sha512-LSehfdpgMeWcTZkWZVIJl+tkZ2nuSkyyB9C27MZqFWXuph7DvaowgcTvKqxvpLW1JZIk8PN7hFY3Rj9LQ7m7lg=="],
 
-    "eslint-plugin-qwik": ["eslint-plugin-qwik@2.0.0-beta.18", "", { "dependencies": { "@typescript-eslint/utils": "^8.52.0", "jsx-ast-utils": "^3.3.5" }, "peerDependencies": { "eslint": "^8.57.0 || ^9.0.0" } }, "sha512-m++BITwEIF/ymcQfhcrwQfZuqCQHXZb+3rELwMFtww04KJPxoODMj+qs11uyXnID1D0fWFMc2VYVnL4SEi8/rA=="],
+    "eslint-plugin-qwik": ["eslint-plugin-qwik@2.0.0-beta.23", "https://registry.npmmirror.com/eslint-plugin-qwik/-/eslint-plugin-qwik-2.0.0-beta.23.tgz", { "dependencies": { "@typescript-eslint/utils": "^8.52.0", "jsx-ast-utils": "^3.3.5" }, "peerDependencies": { "eslint": "^8.57.0 || ^9.0.0" } }, "sha512-PNnvw6e4uIIAZ6cWh2XoeRzDcDxWgMDBWZFeHKiGGmXUiG2Q6wVXOcAtZ5ONDLlwhUZUdQj58VaLA/yQGre8lg=="],
 
     "eslint-scope": ["eslint-scope@8.4.0", "", { "dependencies": { "esrecurse": "^4.3.0", "estraverse": "^5.2.0" } }, "sha512-sNXOfKCn74rt8RICKMvJS7XKV/Xk9kA7DyJr8mJik3S7Cwgy3qlkkmyS2uQB3jiJg6VNdZd/pDBJu0nvG2NlTg=="],
 
