@@ -37,7 +37,7 @@ jobs:
         run: bun install
 
       - name: Build Static Site
-        run: bun run build.static
+        run: bun run build.server
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -45,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/lightframe.vilinko.com
+          path: ./dist
 
   deploy:
     environment:

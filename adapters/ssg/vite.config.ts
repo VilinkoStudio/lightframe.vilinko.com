@@ -1,6 +1,6 @@
-import { staticAdapter } from "@qwik.dev/router/adapters/static/vite";
+import { ssgAdapter } from "@qwik.dev/router/adapters/ssg/vite";
 import { extendConfig } from "@qwik.dev/router/vite";
-import baseConfig from "../../vite.config";
+import baseConfig from "../../vite.config.ts";
 
 export default extendConfig(baseConfig, () => {
   return {
@@ -11,9 +11,8 @@ export default extendConfig(baseConfig, () => {
       },
     },
     plugins: [
-      staticAdapter({
-        origin: "https://vilinko.github.io",
-        base: "/lightframe.vilinko.com/",
+      ssgAdapter({
+        origin: "https://yoursite.qwik.dev",
       }),
     ],
   };
