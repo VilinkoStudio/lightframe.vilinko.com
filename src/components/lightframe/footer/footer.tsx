@@ -85,6 +85,13 @@ export default component$(() => {
             <div class="footer-bottom-links">
               <a href="/privacy">隐私政策</a>
               <a href="/terms">服务条款</a>
+              <a
+                href="https://beian.miit.gov.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                粤ICP备2025454076号
+              </a>
             </div>
           </div>
         </div>
