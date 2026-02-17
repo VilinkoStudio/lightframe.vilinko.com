@@ -18,6 +18,7 @@ export default component$(() => {
     <QwikRouterProvider>
       <head>
         <meta charset="utf-8" />
+        <link rel="icon" href="/images/logo.webp" type="image/webp" />
         <title>轻框 | LightFrame - 以轻量的方式定义自己喜欢的桌面</title>
         <meta
           name="description"

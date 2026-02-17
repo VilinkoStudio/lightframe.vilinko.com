@@ -1,10 +1,9 @@
 import { ssgAdapter } from "@qwik.dev/router/adapters/ssg/vite";
 import { extendConfig } from "@qwik.dev/router/vite";
-import baseConfig from "../../vite.config.ts";
+import baseConfig from "../../vite.config";
 
 export default extendConfig(baseConfig, () => {
   return {
-    base: "/",
     build: {
       ssr: true,
       rollupOptions: {

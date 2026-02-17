@@ -8,10 +8,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "qwik build",
+    "build": "qwik check-client src dist && vite build -c adapters/ssg/vite.config.ts",
+    "build.static": "vite build -c adapters/ssg/vite.config.ts",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.server": "qwik check-client src dist && vite build -c adapters/ssg/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
     "deploy": "echo 'Run \"bun qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "@eslint/js": "latest",
+    "@qwik.dev/core": "2.0.0-beta.23",
+    "@qwik.dev/router": "2.0.0-beta.23",
     "@types/node": "20.19.0",
     "eslint": "9.32.0",
     "eslint-plugin-qwik": "2.0.0-beta.23",
@@ -35,9 +37,7 @@
     "typescript-plugin-css-modules": "latest",
     "undici": "*",
     "vite": "7.1.11",
-    "vite-tsconfig-paths": "^4.2.1",
-    "@qwik.dev/router": "2.0.0-beta.23",
-    "@qwik.dev/core": "2.0.0-beta.23"
+    "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
     "kdljs": "^0.3.0"
