@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 如果你的主要分支不是 "main"，请相应地更改为你的主要分支名称
+      - old-ui  # 如果你的主要分支不是 "main"，请相应地更改为你的主要分支名称
 
 jobs:
   deploy:
