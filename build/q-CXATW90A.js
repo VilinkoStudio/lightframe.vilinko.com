@@ -1,0 +1,1 @@
+import{l as t,H as r}from"./q-BVGk4Zpa.js";import{l as d}from"./q-BrtTncdL.js";const n=async()=>{const a=t[0],o=t[1],s=t[2];if(o[a]===r){const l=await d(s,{loaderIds:[a]});o[a]=l?.loaders[a]??r}return o[a]};export{n as s_LRYIAjb9kaI};

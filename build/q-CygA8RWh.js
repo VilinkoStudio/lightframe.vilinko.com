@@ -1,0 +1,1 @@
+import{I as i}from"./q-DXqc_JWA.js";import{J as l,p as o}from"./q-BVGk4Zpa.js";const s=n=>l("div",{"q-e:mousemove":n.onMouseMove$},{class:"intro-item"},[l("div",null,{class:"intro-icon"},l(i,null,{paths:o(n,"icon"),width:24,height:24},null,3,"49_1"),1,null),l("h3",null,null,o(n,"word"),1,null),l("p",null,null,o(n,"intro"),1,null)],0,"49_2");export{s as s_Dh3YbS8EtTo};

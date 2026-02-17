@@ -1,0 +1,1 @@
+import{J as l}from"./q-BVGk4Zpa.js";const u=()=>l("div",null,{class:"dashboard-card meet-card"},[l("div",null,{class:"meet-line"},null,3,null),l("div",null,{class:"meet-text"},["Meet.",l("br",null,null,null,3,null),"Inspire.",l("br",null,null,null,3,null),"Create."],3,null)],3,"bD_0");export{u as s_zufMjcCCEtM};

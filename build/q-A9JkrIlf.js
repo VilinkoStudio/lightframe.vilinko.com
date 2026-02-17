@@ -1,0 +1,1 @@
+import{_ as t}from"./q-xbjexvGE.js";import{t as o,g as i}from"./q-BVGk4Zpa.js";const s=()=>t(()=>import("./q-0mcNWTYH.js"),[]),r=o(i(s,"s_pqzcFslIhHM")),a={title:"服务条款 - Vilinko Studio"};export{r as default,a as head};
