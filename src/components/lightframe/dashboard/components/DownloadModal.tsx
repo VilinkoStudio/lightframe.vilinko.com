@@ -33,7 +33,7 @@ export const DownloadModal = component$<DownloadModalProps>(
       try {
         const response = await fetch("https://down1.vilinko.com/version.json");
         const text = await response.text();
-        versions.value = JSON.parse(`[${text}]`);
+        versions.value = JSON.parse(text);
       } catch (e) {
         console.error("Failed to fetch or parse version info", e);
         versionError.value = true;
