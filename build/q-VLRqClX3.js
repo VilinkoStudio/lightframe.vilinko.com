@@ -1,0 +1,1 @@
+import{_ as t,i as _}from"./q-xbjexvGE.js";const o=()=>t(()=>import("./q-DRo2x_kR.js"),[]),r=[["/",[o,()=>t(()=>import("./q-C1-MnST3.js"),[])]],["privacy/",[o,()=>t(()=>import("./q-CjclJwUF.js"),[])]],["terms/",[o,()=>t(()=>import("./q-A9JkrIlf.js"),[])]]],e=[];const i=!_;export{i as c,e as m,r};
