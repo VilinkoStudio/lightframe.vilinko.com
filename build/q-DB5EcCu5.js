@@ -1,0 +1,1 @@
+import{l as s}from"./q-BVGk4Zpa.js";const a=async()=>{const r=s[0],o=s[1];try{const t=await(await fetch("https://down1.vilinko.com/version.json")).text();o.value=JSON.parse(`[${t}]`)}catch(e){console.error("Failed to fetch or parse version info",e),r.value=!0,o.value=[]}};export{a as s_YI0WmmRWlRU};

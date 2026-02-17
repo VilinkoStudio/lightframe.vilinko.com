@@ -1,6 +1,6 @@
 {
 	"version": "1",
-	"manifestHash": "aryk0r",
+	"manifestHash": "hvu79p",
 	"options": {
 		"target": "client",
 		"buildMode": "production",
@@ -11,7 +11,7 @@
 	"core": "q-BVGk4Zpa.js",
 	"preloader": "q-xbjexvGE.js",
 	"qwikLoader": "q-11AyauCl.js",
-	"bundleGraphAsset": "assets/BunrZMYI-bundle-graph.json",
+	"bundleGraphAsset": "assets/CrJ77bNz-bundle-graph.json",
 	"injections": [
 		{
 			"tag": "link",
@@ -23,28 +23,29 @@
 		}
 	],
 	"mapping": {
-		"s_9UQWCwwVVOk": "q-bLbD2TEV.js",
-		"s_SzLI4j04M0k": "q-B8y3uYUO.js",
+		"s_9UQWCwwVVOk": "q-DbPdSIas.js",
+		"s_SzLI4j04M0k": "q-CRECcw4i.js",
 		"s_TluEOCfJ0qo": "q-Crlp_Dok.js",
-		"s_YhqKeI3bVAA": "q-bLbD2TEV.js",
-		"s_yuz0KrXr53M": "q-68s8gq12.js",
+		"s_YhqKeI3bVAA": "q-DbPdSIas.js",
+		"s_yuz0KrXr53M": "q-3aLxehOf.js",
 		"s_zbUWSaTnPc8": "q-BE6HF5Nm.js",
-		"s_BzWm8bC8wHw": "q-bLbD2TEV.js",
-		"s_QmtAUaKL0K0": "q-Ct1bk5t9.js",
+		"s_BzWm8bC8wHw": "q-DbPdSIas.js",
+		"s_QmtAUaKL0K0": "q-BLr4WSuO.js",
 		"s_kHcJupKgsR0": "q-B-enGYK6.js",
 		"s_PW2Wd0zV6P8": "q-DByyTuLF.js",
 		"s_FrrMZrW2LIM": "q-C8ATuTwa.js",
 		"s_KtvkZgVTcnU": "q-aVBd5Lps.js",
 		"s_MaEwSiFgavk": "q-DzN85TW6.js",
+		"s_YI0WmmRWlRU": "q-DB5EcCu5.js",
 		"s_09oY7c1btaM": "q-BORWA_lF.js",
-		"s_0PNjSDSXof0": "q-Yubj1Aj9.js",
-		"s_0PvRYFu7F2o": "q-BgpxwVTV.js",
+		"s_0PNjSDSXof0": "q-DybYBsW9.js",
+		"s_0PvRYFu7F2o": "q-RtZmXwUn.js",
 		"s_1tIo6IyDfGA": "q-Crlp_Dok.js",
 		"s_2C7kkWReqZs": "q-xhzi-y0x.js",
-		"s_3HgoKMyArRM": "q-Cq-zO-OO.js",
+		"s_3HgoKMyArRM": "q-DSWsmDJa.js",
 		"s_4jwkKqs3rfs": "q-BJuLS7fC.js",
-		"s_7EhipFpWK0Y": "q-DQiBl1gK.js",
-		"s_7mN2zaUGE0o": "q--aIHbCRO.js",
+		"s_7EhipFpWK0Y": "q-Bb1eYbF_.js",
+		"s_7mN2zaUGE0o": "q-4Q-SPzCf.js",
 		"s_AmjFExZDDrU": "q-C0Omf-eN.js",
 		"s_BDCEMhBEwAE": "q-CH1YHe_i.js",
 		"s_Dh3YbS8EtTo": "q-CygA8RWh.js",
@@ -53,33 +54,33 @@
 		"s_HccUjOl1GPc": "q-C7H8an5s.js",
 		"s_JOmqCvWmlY0": "q-CbF5ocTC.js",
 		"s_PhFn0YhfkmA": "q-14F0FS_b.js",
-		"s_UFBWsiqfjEQ": "q-DR1GGmoG.js",
-		"s_Ygjzg8WB2WY": "q-DMWrswRL.js",
-		"s_aXZ6b0EIZpU": "q-bLbD2TEV.js",
+		"s_UFBWsiqfjEQ": "q-ixL-_u6a.js",
+		"s_Ygjzg8WB2WY": "q-D5HPX8it.js",
+		"s_aXZ6b0EIZpU": "q-DbPdSIas.js",
 		"s_kdoffU2g0xM": "q-vNRih8VC.js",
 		"s_ljVYcDTckKk": "q-CbtOnnrC.js",
-		"s_poDIf1IDDp8": "q-DnlY2aZk.js",
+		"s_poDIf1IDDp8": "q-BLNQWZq2.js",
 		"s_pqzcFslIhHM": "q-0mcNWTYH.js",
-		"s_vLavd10ZPMw": "q-DX3vL-I1.js",
-		"s_wA35dXReQuE": "q-D5fx4n5Q.js",
+		"s_vLavd10ZPMw": "q-VsltExCb.js",
+		"s_wA35dXReQuE": "q-CmyLMJVw.js",
 		"s_wgicyRxyQXs": "q-BE6HF5Nm.js",
 		"s_zufMjcCCEtM": "q-BQyiRoMc.js",
-		"s_OWDvw0JhwHs": "q-Ct1bk5t9.js",
-		"s_1azw0r0Jby4": "q-bLbD2TEV.js",
+		"s_OWDvw0JhwHs": "q-BLr4WSuO.js",
+		"s_1azw0r0Jby4": "q-DbPdSIas.js",
 		"s_JIS1H0V9Fig": "q-BJuLS7fC.js",
-		"s_eJD062YWLyQ": "q--aIHbCRO.js",
+		"s_eJD062YWLyQ": "q-4Q-SPzCf.js",
 		"s_mmFaKxK5ldM": "q-0mcNWTYH.js",
-		"s_03MtoPh1cAQ": "q-D5fx4n5Q.js",
-		"s_3yu6ce1RvX4": "q-BgpxwVTV.js",
-		"s_J8EVUFxpWUI": "q-Yubj1Aj9.js",
-		"s_K0GBipownN0": "q-DX3vL-I1.js",
+		"s_03MtoPh1cAQ": "q-CmyLMJVw.js",
+		"s_3yu6ce1RvX4": "q-RtZmXwUn.js",
+		"s_J8EVUFxpWUI": "q-DybYBsW9.js",
+		"s_K0GBipownN0": "q-VsltExCb.js",
 		"s_L2J3j3Atkqw": "q-C7H8an5s.js",
 		"s_V3K0tmnzjV0": "q-Crlp_Dok.js",
 		"s_dWZisQZIDZ4": "q-CbtOnnrC.js",
-		"s_eKx8vnQwsbI": "q-DQiBl1gK.js",
+		"s_eKx8vnQwsbI": "q-Bb1eYbF_.js",
 		"s_3l2mAo0nHiY": "q-DFAAjMhg.js",
 		"s_Bxhd1C5lfD4": "q-DBo-ivai.js",
-		"s_LDcpesjcjsM": "q-Ct1bk5t9.js",
+		"s_LDcpesjcjsM": "q-BLr4WSuO.js",
 		"s_LRYIAjb9kaI": "q-CXATW90A.js",
 		"s_R4yOttYduIc": "q-DGkOUnEu.js",
 		"s_SMX0V0YjLcc": "q-B-enGYK6.js",
@@ -89,41 +90,29 @@
 		"_run": "q-BVGk4Zpa.js",
 		"_task": "q-BVGk4Zpa.js",
 		"_val": "q-BVGk4Zpa.js",
-		"s_mP0Qwvt2uxQ": "q-Ct1bk5t9.js",
+		"s_mP0Qwvt2uxQ": "q-BLr4WSuO.js",
 		"s_ouYh0hZiboc": "q-VUH2WGZe.js",
-		"s_0KL1VkllYxY": "q-DQiBl1gK.js",
+		"s_0KL1VkllYxY": "q-Bb1eYbF_.js",
 		"s_5GFankzTzNk": "q-CbF5ocTC.js",
-		"s_7bS34wf0xz0": "q-DX3vL-I1.js",
-		"s_9DuWm0LbDfU": "q-BgpxwVTV.js",
+		"s_7bS34wf0xz0": "q-VsltExCb.js",
+		"s_9DuWm0LbDfU": "q-RtZmXwUn.js",
 		"s_EaY0kIokQpE": "q-Se646OoF.js",
-		"s_Qsa1s0pEggg": "q-DX3vL-I1.js",
+		"s_Qsa1s0pEggg": "q-VsltExCb.js",
+		"s_WKjKnSx5T5U": "q-DybYBsW9.js",
 		"s_aKM0rayU9PU": "q-CbF5ocTC.js",
 		"s_iRNltF16IHs": "q-BORWA_lF.js",
 		"s_nGAqHij99v8": "q-Se646OoF.js",
-		"s_oLxZzFGtnaU": "q-DQiBl1gK.js",
-		"s_wbdVA0Gjl44": "q-CbF5ocTC.js",
-		"s_yTYXkkFgn7c": "q-bLbD2TEV.js"
+		"s_oLxZzFGtnaU": "q-Bb1eYbF_.js",
+		"s_wbdVA0Gjl44": "q-CbF5ocTC.js"
 	},
 	"bundles": {
-		"q--aIHbCRO.js": {
-			"size": 984,
-			"total": 5203,
-			"imports": [
-				"q-BIf5q9Ln.js",
-				"q-BTapkWsD.js"
-			],
-			"dynamicImports": [
-				"q-DzN85TW6.js"
-			],
+		"q-0cQNh0A5.js": {
+			"size": 874,
+			"total": 874,
 			"origins": [
-				"src/components/lightframe/dashboard/dashboard.tsx_dashboard_component_7mN2zaUGE0o.js",
-				"src/components/lightframe/dashboard/dashboard.tsx_dashboard_component_useStyles_eJD062YWLyQ.js"
+				"src/constants/index.ts"
 			],
-			"symbols": [
-				"s_7mN2zaUGE0o",
-				"s_eJD062YWLyQ"
-			],
-			"interactivity": 2
+			"interactivity": 0
 		},
 		"q-0mcNWTYH.js": {
 			"size": 3112,
@@ -160,11 +149,11 @@
 			],
 			"interactivity": 2
 		},
-		"q-68s8gq12.js": {
+		"q-3aLxehOf.js": {
 			"size": 80,
-			"total": 1959,
+			"total": 149558,
 			"imports": [
-				"q-vfpmXe0C.js"
+				"q-BUJ_X-k4.js"
 			],
 			"origins": [
 				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_a_q_e_click_1_yuz0KrXr53M.js"
@@ -173,6 +162,26 @@
 				"s_yuz0KrXr53M"
 			],
 			"interactivity": 5
+		},
+		"q-4Q-SPzCf.js": {
+			"size": 984,
+			"total": 5203,
+			"imports": [
+				"q-BNBia8yv.js",
+				"q-BTapkWsD.js"
+			],
+			"dynamicImports": [
+				"q-DzN85TW6.js"
+			],
+			"origins": [
+				"src/components/lightframe/dashboard/dashboard.tsx_dashboard_component_7mN2zaUGE0o.js",
+				"src/components/lightframe/dashboard/dashboard.tsx_dashboard_component_useStyles_eJD062YWLyQ.js"
+			],
+			"symbols": [
+				"s_7mN2zaUGE0o",
+				"s_eJD062YWLyQ"
+			],
+			"interactivity": 2
 		},
 		"q-A9JkrIlf.js": {
 			"size": 219,
@@ -209,30 +218,28 @@
 			],
 			"interactivity": 3
 		},
-		"q-B8y3uYUO.js": {
-			"size": 80,
-			"total": 1959,
+		"q-Bb1eYbF_.js": {
+			"size": 2665,
+			"total": 19952,
 			"imports": [
-				"q-vfpmXe0C.js"
+				"q-BMvzrJ9o.js",
+				"q-CKgSZdfT.js",
+				"q-Cni7KU0_.js",
+				"q-DXqc_JWA.js"
 			],
 			"origins": [
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_a_q_e_click_SzLI4j04M0k.js"
+				"src/components/lightframe/header/header.tsx_header_component_7EhipFpWK0Y.js",
+				"src/components/lightframe/header/header.tsx_header_component_closeMenu_oLxZzFGtnaU.js",
+				"src/components/lightframe/header/header.tsx_header_component_toggleMenu_0KL1VkllYxY.js",
+				"src/components/lightframe/header/header.tsx_header_component_useStylesScoped_eKx8vnQwsbI.js"
 			],
 			"symbols": [
-				"s_SzLI4j04M0k"
+				"s_0KL1VkllYxY",
+				"s_7EhipFpWK0Y",
+				"s_eKx8vnQwsbI",
+				"s_oLxZzFGtnaU"
 			],
-			"interactivity": 5
-		},
-		"q-Bb64Emrc.js": {
-			"size": 169,
-			"total": 169,
-			"dynamicImports": [
-				"q-DR1GGmoG.js"
-			],
-			"origins": [
-				"src/components/router-head/router-head.tsx"
-			],
-			"interactivity": 0
+			"interactivity": 2
 		},
 		"q-BE6HF5Nm.js": {
 			"size": 796,
@@ -247,26 +254,6 @@
 			],
 			"interactivity": 5
 		},
-		"q-BgpxwVTV.js": {
-			"size": 997,
-			"total": 7269,
-			"imports": [
-				"q-CBmPPxAw.js",
-				"q-Dxw8Pwjn.js",
-				"q-zWEJGQcM.js"
-			],
-			"origins": [
-				"src/components/lightframe/intro/intro.tsx_intro_component_0PvRYFu7F2o.js",
-				"src/components/lightframe/intro/intro.tsx_intro_component_handleMouseMove_9DuWm0LbDfU.js",
-				"src/components/lightframe/intro/intro.tsx_intro_component_useStylesScoped_3yu6ce1RvX4.js"
-			],
-			"symbols": [
-				"s_0PvRYFu7F2o",
-				"s_3yu6ce1RvX4",
-				"s_9DuWm0LbDfU"
-			],
-			"interactivity": 2
-		},
 		"q-BgqDkReX.js": {
 			"size": 3599,
 			"total": 3599,
@@ -275,21 +262,14 @@
 			],
 			"interactivity": 0
 		},
-		"q-BIf5q9Ln.js": {
-			"size": 477,
-			"total": 477,
+		"q-BIADFjDk.js": {
+			"size": 182,
+			"total": 182,
 			"dynamicImports": [
-				"q-BE6HF5Nm.js",
-				"q-bLbD2TEV.js",
-				"q-BQyiRoMc.js",
-				"q-C0Omf-eN.js",
-				"q-eAotBmGr.js"
+				"q-Bb1eYbF_.js"
 			],
 			"origins": [
-				"src/components/lightframe/dashboard/components/ActionCard.tsx",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx",
-				"src/components/lightframe/dashboard/components/InfoCards.tsx",
-				"src/components/lightframe/dashboard/components/StarCard.tsx"
+				"src/components/lightframe/header/header.tsx"
 			],
 			"interactivity": 0
 		},
@@ -306,59 +286,71 @@
 			],
 			"interactivity": 2
 		},
-		"q-BKhv3lUn.js": {
-			"size": 429,
-			"total": 1245,
+		"q-BLNQWZq2.js": {
+			"size": 405,
+			"total": 2118,
 			"imports": [
-				"q-PVCjzz3w.js"
-			],
-			"dynamicImports": [
-				"q-D5fx4n5Q.js"
+				"q-Bth2LfCd.js",
+				"q-DRuj14o9.js",
+				"q-DuYfvhhd.js",
+				"q-Ku29TMV_.js"
 			],
 			"origins": [
-				"src/components/lightframe/footer/footer.tsx"
+				"src/routes/index.tsx_routes_component_poDIf1IDDp8.js"
+			],
+			"symbols": [
+				"s_poDIf1IDDp8"
+			],
+			"interactivity": 2
+		},
+		"q-BLr4WSuO.js": {
+			"size": 5974,
+			"total": 22354,
+			"imports": [
+				"q-BrtTncdL.js",
+				"q-Cni7KU0_.js",
+				"q-DObOjdzm.js"
+			],
+			"origins": [
+				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_goto_mP0Qwvt2uxQ.js",
+				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_registerPreventNav_LDcpesjcjsM.js",
+				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_useStyles_OWDvw0JhwHs.js",
+				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_useTask_QmtAUaKL0K0.js"
+			],
+			"symbols": [
+				"s_LDcpesjcjsM",
+				"s_mP0Qwvt2uxQ",
+				"s_OWDvw0JhwHs",
+				"s_QmtAUaKL0K0"
+			],
+			"interactivity": 3
+		},
+		"q-BMvzrJ9o.js": {
+			"size": 3228,
+			"total": 4102,
+			"imports": [
+				"q-0cQNh0A5.js"
+			],
+			"origins": [
+				"src/config.ts"
 			],
 			"interactivity": 0
 		},
-		"q-bLbD2TEV.js": {
-			"size": 3430,
-			"total": 7285,
-			"imports": [
-				"q-DZ0eJeMq.js",
-				"q-PVCjzz3w.js"
-			],
+		"q-BNBia8yv.js": {
+			"size": 477,
+			"total": 477,
 			"dynamicImports": [
-				"q-68s8gq12.js",
-				"q-B8y3uYUO.js"
+				"q-BE6HF5Nm.js",
+				"q-BQyiRoMc.js",
+				"q-C0Omf-eN.js",
+				"q-DbPdSIas.js",
+				"q-eAotBmGr.js"
 			],
 			"origins": [
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_aXZ6b0EIZpU.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_button_q_e_click_9UQWCwwVVOk.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_div_label_input_q_e_change_BzWm8bC8wHw.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_q_e_click_YhqKeI3bVAA.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_useStyles_1azw0r0Jby4.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_versionResource_useResource_yTYXkkFgn7c.js"
-			],
-			"symbols": [
-				"s_1azw0r0Jby4",
-				"s_9UQWCwwVVOk",
-				"s_aXZ6b0EIZpU",
-				"s_BzWm8bC8wHw",
-				"s_YhqKeI3bVAA",
-				"s_yTYXkkFgn7c"
-			],
-			"interactivity": 5
-		},
-		"q-BMeJs1dC.js": {
-			"size": 170,
-			"total": 170,
-			"dynamicImports": [
-				"q-DMWrswRL.js"
-			],
-			"origins": [
-				"src/global.css",
-				"src/root.tsx",
-				"src/styles/modern-layout.css"
+				"src/components/lightframe/dashboard/components/ActionCard.tsx",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx",
+				"src/components/lightframe/dashboard/components/InfoCards.tsx",
+				"src/components/lightframe/dashboard/components/StarCard.tsx"
 			],
 			"interactivity": 0
 		},
@@ -374,14 +366,6 @@
 				"s_iRNltF16IHs"
 			],
 			"interactivity": 2
-		},
-		"q-BowxvNJr.js": {
-			"size": 1313,
-			"total": 1313,
-			"origins": [
-				"src/data/logs.ts"
-			],
-			"interactivity": 0
 		},
 		"q-BQyiRoMc.js": {
 			"size": 314,
@@ -414,6 +398,303 @@
 			],
 			"interactivity": 0
 		},
+		"q-Bth2LfCd.js": {
+			"size": 400,
+			"total": 400,
+			"dynamicImports": [
+				"q-DybYBsW9.js"
+			],
+			"origins": [
+				"src/components/lightframe/log/log.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-BUJ_X-k4.js": {
+			"size": 148604,
+			"total": 149478,
+			"imports": [
+				"q-0cQNh0A5.js"
+			],
+			"origins": [
+				"node_modules/@chevrotain/gast/lib/src/helpers.js",
+				"node_modules/@chevrotain/gast/lib/src/model.js",
+				"node_modules/@chevrotain/gast/lib/src/visitor.js",
+				"node_modules/@chevrotain/regexp-to-ast/lib/src/base-regexp-visitor.js",
+				"node_modules/@chevrotain/regexp-to-ast/lib/src/character-classes.js",
+				"node_modules/@chevrotain/regexp-to-ast/lib/src/regexp-parser.js",
+				"node_modules/@chevrotain/regexp-to-ast/lib/src/utils.js",
+				"node_modules/@chevrotain/utils/lib/src/print.js",
+				"node_modules/@chevrotain/utils/lib/src/timer.js",
+				"node_modules/@chevrotain/utils/lib/src/to-fast-properties.js",
+				"node_modules/chevrotain/lib/src/lang/lang_extensions.js",
+				"node_modules/chevrotain/lib/src/parse/constants.js",
+				"node_modules/chevrotain/lib/src/parse/cst/cst.js",
+				"node_modules/chevrotain/lib/src/parse/cst/cst_visitor.js",
+				"node_modules/chevrotain/lib/src/parse/errors_public.js",
+				"node_modules/chevrotain/lib/src/parse/exceptions_public.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/checks.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/first.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/follow.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/gast/gast_resolver_public.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/interpreter.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/keys.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/llk_lookahead.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/lookahead.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/resolver.js",
+				"node_modules/chevrotain/lib/src/parse/grammar/rest.js",
+				"node_modules/chevrotain/lib/src/parse/parser/parser.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/context_assist.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/error_handler.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/gast_recorder.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/lexer_adapter.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/looksahead.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/perf_tracer.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/recognizer_api.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/recognizer_engine.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/recoverable.js",
+				"node_modules/chevrotain/lib/src/parse/parser/traits/tree_builder.js",
+				"node_modules/chevrotain/lib/src/parse/parser/utils/apply_mixins.js",
+				"node_modules/chevrotain/lib/src/scan/lexer.js",
+				"node_modules/chevrotain/lib/src/scan/lexer_errors_public.js",
+				"node_modules/chevrotain/lib/src/scan/lexer_public.js",
+				"node_modules/chevrotain/lib/src/scan/reg_exp.js",
+				"node_modules/chevrotain/lib/src/scan/reg_exp_parser.js",
+				"node_modules/chevrotain/lib/src/scan/tokens.js",
+				"node_modules/chevrotain/lib/src/scan/tokens_public.js",
+				"node_modules/kdljs/src/formatter.js",
+				"node_modules/kdljs/src/parser/base.js",
+				"node_modules/kdljs/src/parser/index.js",
+				"node_modules/kdljs/src/parser/kdl.js",
+				"node_modules/kdljs/src/parser/kql.js",
+				"node_modules/kdljs/src/parser/tokens.js",
+				"node_modules/lodash-es/_DataView.js",
+				"node_modules/lodash-es/_Hash.js",
+				"node_modules/lodash-es/_ListCache.js",
+				"node_modules/lodash-es/_Map.js",
+				"node_modules/lodash-es/_MapCache.js",
+				"node_modules/lodash-es/_Promise.js",
+				"node_modules/lodash-es/_Set.js",
+				"node_modules/lodash-es/_SetCache.js",
+				"node_modules/lodash-es/_Stack.js",
+				"node_modules/lodash-es/_Symbol.js",
+				"node_modules/lodash-es/_Uint8Array.js",
+				"node_modules/lodash-es/_WeakMap.js",
+				"node_modules/lodash-es/_apply.js",
+				"node_modules/lodash-es/_arrayAggregator.js",
+				"node_modules/lodash-es/_arrayEach.js",
+				"node_modules/lodash-es/_arrayEvery.js",
+				"node_modules/lodash-es/_arrayFilter.js",
+				"node_modules/lodash-es/_arrayIncludes.js",
+				"node_modules/lodash-es/_arrayLikeKeys.js",
+				"node_modules/lodash-es/_arrayMap.js",
+				"node_modules/lodash-es/_arrayPush.js",
+				"node_modules/lodash-es/_arrayReduce.js",
+				"node_modules/lodash-es/_arraySome.js",
+				"node_modules/lodash-es/_assignValue.js",
+				"node_modules/lodash-es/_assocIndexOf.js",
+				"node_modules/lodash-es/_baseAggregator.js",
+				"node_modules/lodash-es/_baseAssign.js",
+				"node_modules/lodash-es/_baseAssignValue.js",
+				"node_modules/lodash-es/_baseClone.js",
+				"node_modules/lodash-es/_baseCreate.js",
+				"node_modules/lodash-es/_baseDifference.js",
+				"node_modules/lodash-es/_baseEach.js",
+				"node_modules/lodash-es/_baseEvery.js",
+				"node_modules/lodash-es/_baseFilter.js",
+				"node_modules/lodash-es/_baseFindIndex.js",
+				"node_modules/lodash-es/_baseFlatten.js",
+				"node_modules/lodash-es/_baseFor.js",
+				"node_modules/lodash-es/_baseForOwn.js",
+				"node_modules/lodash-es/_baseGet.js",
+				"node_modules/lodash-es/_baseGetAllKeys.js",
+				"node_modules/lodash-es/_baseGetTag.js",
+				"node_modules/lodash-es/_baseHas.js",
+				"node_modules/lodash-es/_baseHasIn.js",
+				"node_modules/lodash-es/_baseIndexOf.js",
+				"node_modules/lodash-es/_baseIsArguments.js",
+				"node_modules/lodash-es/_baseIsEqual.js",
+				"node_modules/lodash-es/_baseIsEqualDeep.js",
+				"node_modules/lodash-es/_baseIsMap.js",
+				"node_modules/lodash-es/_baseIsMatch.js",
+				"node_modules/lodash-es/_baseIsNaN.js",
+				"node_modules/lodash-es/_baseIsNative.js",
+				"node_modules/lodash-es/_baseIsRegExp.js",
+				"node_modules/lodash-es/_baseIsSet.js",
+				"node_modules/lodash-es/_baseIsTypedArray.js",
+				"node_modules/lodash-es/_baseIteratee.js",
+				"node_modules/lodash-es/_baseKeys.js",
+				"node_modules/lodash-es/_baseKeysIn.js",
+				"node_modules/lodash-es/_baseMap.js",
+				"node_modules/lodash-es/_baseMatches.js",
+				"node_modules/lodash-es/_baseMatchesProperty.js",
+				"node_modules/lodash-es/_basePickBy.js",
+				"node_modules/lodash-es/_baseProperty.js",
+				"node_modules/lodash-es/_basePropertyDeep.js",
+				"node_modules/lodash-es/_baseReduce.js",
+				"node_modules/lodash-es/_baseRest.js",
+				"node_modules/lodash-es/_baseSet.js",
+				"node_modules/lodash-es/_baseSetToString.js",
+				"node_modules/lodash-es/_baseSlice.js",
+				"node_modules/lodash-es/_baseSome.js",
+				"node_modules/lodash-es/_baseTimes.js",
+				"node_modules/lodash-es/_baseToString.js",
+				"node_modules/lodash-es/_baseTrim.js",
+				"node_modules/lodash-es/_baseUnary.js",
+				"node_modules/lodash-es/_baseUniq.js",
+				"node_modules/lodash-es/_baseValues.js",
+				"node_modules/lodash-es/_cacheHas.js",
+				"node_modules/lodash-es/_castFunction.js",
+				"node_modules/lodash-es/_castPath.js",
+				"node_modules/lodash-es/_cloneArrayBuffer.js",
+				"node_modules/lodash-es/_cloneBuffer.js",
+				"node_modules/lodash-es/_cloneDataView.js",
+				"node_modules/lodash-es/_cloneRegExp.js",
+				"node_modules/lodash-es/_cloneSymbol.js",
+				"node_modules/lodash-es/_cloneTypedArray.js",
+				"node_modules/lodash-es/_copyArray.js",
+				"node_modules/lodash-es/_copyObject.js",
+				"node_modules/lodash-es/_copySymbols.js",
+				"node_modules/lodash-es/_coreJsData.js",
+				"node_modules/lodash-es/_createAggregator.js",
+				"node_modules/lodash-es/_createAssigner.js",
+				"node_modules/lodash-es/_createBaseEach.js",
+				"node_modules/lodash-es/_createBaseFor.js",
+				"node_modules/lodash-es/_createFind.js",
+				"node_modules/lodash-es/_createSet.js",
+				"node_modules/lodash-es/_defineProperty.js",
+				"node_modules/lodash-es/_equalArrays.js",
+				"node_modules/lodash-es/_equalByTag.js",
+				"node_modules/lodash-es/_equalObjects.js",
+				"node_modules/lodash-es/_freeGlobal.js",
+				"node_modules/lodash-es/_getAllKeys.js",
+				"node_modules/lodash-es/_getAllKeysIn.js",
+				"node_modules/lodash-es/_getMapData.js",
+				"node_modules/lodash-es/_getMatchData.js",
+				"node_modules/lodash-es/_getNative.js",
+				"node_modules/lodash-es/_getPrototype.js",
+				"node_modules/lodash-es/_getRawTag.js",
+				"node_modules/lodash-es/_getSymbols.js",
+				"node_modules/lodash-es/_getSymbolsIn.js",
+				"node_modules/lodash-es/_getTag.js",
+				"node_modules/lodash-es/_getValue.js",
+				"node_modules/lodash-es/_hasPath.js",
+				"node_modules/lodash-es/_hashClear.js",
+				"node_modules/lodash-es/_hashDelete.js",
+				"node_modules/lodash-es/_hashGet.js",
+				"node_modules/lodash-es/_hashHas.js",
+				"node_modules/lodash-es/_hashSet.js",
+				"node_modules/lodash-es/_initCloneArray.js",
+				"node_modules/lodash-es/_initCloneByTag.js",
+				"node_modules/lodash-es/_initCloneObject.js",
+				"node_modules/lodash-es/_isFlattenable.js",
+				"node_modules/lodash-es/_isIndex.js",
+				"node_modules/lodash-es/_isIterateeCall.js",
+				"node_modules/lodash-es/_isKey.js",
+				"node_modules/lodash-es/_isKeyable.js",
+				"node_modules/lodash-es/_isMasked.js",
+				"node_modules/lodash-es/_isPrototype.js",
+				"node_modules/lodash-es/_isStrictComparable.js",
+				"node_modules/lodash-es/_listCacheClear.js",
+				"node_modules/lodash-es/_listCacheDelete.js",
+				"node_modules/lodash-es/_listCacheGet.js",
+				"node_modules/lodash-es/_listCacheHas.js",
+				"node_modules/lodash-es/_listCacheSet.js",
+				"node_modules/lodash-es/_mapCacheClear.js",
+				"node_modules/lodash-es/_mapCacheDelete.js",
+				"node_modules/lodash-es/_mapCacheGet.js",
+				"node_modules/lodash-es/_mapCacheHas.js",
+				"node_modules/lodash-es/_mapCacheSet.js",
+				"node_modules/lodash-es/_mapToArray.js",
+				"node_modules/lodash-es/_matchesStrictComparable.js",
+				"node_modules/lodash-es/_memoizeCapped.js",
+				"node_modules/lodash-es/_nativeCreate.js",
+				"node_modules/lodash-es/_nativeKeys.js",
+				"node_modules/lodash-es/_nativeKeysIn.js",
+				"node_modules/lodash-es/_nodeUtil.js",
+				"node_modules/lodash-es/_objectToString.js",
+				"node_modules/lodash-es/_overArg.js",
+				"node_modules/lodash-es/_overRest.js",
+				"node_modules/lodash-es/_root.js",
+				"node_modules/lodash-es/_setCacheAdd.js",
+				"node_modules/lodash-es/_setCacheHas.js",
+				"node_modules/lodash-es/_setToArray.js",
+				"node_modules/lodash-es/_setToString.js",
+				"node_modules/lodash-es/_shortOut.js",
+				"node_modules/lodash-es/_stackClear.js",
+				"node_modules/lodash-es/_stackDelete.js",
+				"node_modules/lodash-es/_stackGet.js",
+				"node_modules/lodash-es/_stackHas.js",
+				"node_modules/lodash-es/_stackSet.js",
+				"node_modules/lodash-es/_strictIndexOf.js",
+				"node_modules/lodash-es/_stringToPath.js",
+				"node_modules/lodash-es/_toKey.js",
+				"node_modules/lodash-es/_toSource.js",
+				"node_modules/lodash-es/_trimmedEndIndex.js",
+				"node_modules/lodash-es/assign.js",
+				"node_modules/lodash-es/clone.js",
+				"node_modules/lodash-es/compact.js",
+				"node_modules/lodash-es/constant.js",
+				"node_modules/lodash-es/defaults.js",
+				"node_modules/lodash-es/difference.js",
+				"node_modules/lodash-es/drop.js",
+				"node_modules/lodash-es/dropRight.js",
+				"node_modules/lodash-es/eq.js",
+				"node_modules/lodash-es/every.js",
+				"node_modules/lodash-es/filter.js",
+				"node_modules/lodash-es/find.js",
+				"node_modules/lodash-es/findIndex.js",
+				"node_modules/lodash-es/flatMap.js",
+				"node_modules/lodash-es/flatten.js",
+				"node_modules/lodash-es/forEach.js",
+				"node_modules/lodash-es/get.js",
+				"node_modules/lodash-es/groupBy.js",
+				"node_modules/lodash-es/has.js",
+				"node_modules/lodash-es/hasIn.js",
+				"node_modules/lodash-es/head.js",
+				"node_modules/lodash-es/identity.js",
+				"node_modules/lodash-es/includes.js",
+				"node_modules/lodash-es/indexOf.js",
+				"node_modules/lodash-es/isArguments.js",
+				"node_modules/lodash-es/isArray.js",
+				"node_modules/lodash-es/isArrayLike.js",
+				"node_modules/lodash-es/isArrayLikeObject.js",
+				"node_modules/lodash-es/isBuffer.js",
+				"node_modules/lodash-es/isEmpty.js",
+				"node_modules/lodash-es/isFunction.js",
+				"node_modules/lodash-es/isLength.js",
+				"node_modules/lodash-es/isMap.js",
+				"node_modules/lodash-es/isObject.js",
+				"node_modules/lodash-es/isObjectLike.js",
+				"node_modules/lodash-es/isRegExp.js",
+				"node_modules/lodash-es/isSet.js",
+				"node_modules/lodash-es/isString.js",
+				"node_modules/lodash-es/isSymbol.js",
+				"node_modules/lodash-es/isTypedArray.js",
+				"node_modules/lodash-es/isUndefined.js",
+				"node_modules/lodash-es/keys.js",
+				"node_modules/lodash-es/keysIn.js",
+				"node_modules/lodash-es/last.js",
+				"node_modules/lodash-es/map.js",
+				"node_modules/lodash-es/memoize.js",
+				"node_modules/lodash-es/negate.js",
+				"node_modules/lodash-es/noop.js",
+				"node_modules/lodash-es/pickBy.js",
+				"node_modules/lodash-es/property.js",
+				"node_modules/lodash-es/reduce.js",
+				"node_modules/lodash-es/reject.js",
+				"node_modules/lodash-es/some.js",
+				"node_modules/lodash-es/stubArray.js",
+				"node_modules/lodash-es/stubFalse.js",
+				"node_modules/lodash-es/toFinite.js",
+				"node_modules/lodash-es/toInteger.js",
+				"node_modules/lodash-es/toNumber.js",
+				"node_modules/lodash-es/toString.js",
+				"node_modules/lodash-es/uniq.js",
+				"node_modules/lodash-es/values.js",
+				"src/services/api.ts"
+			],
+			"interactivity": 0
+		},
 		"q-BVGk4Zpa.js": {
 			"size": 87132,
 			"total": 87132,
@@ -431,6 +712,17 @@
 				"_val"
 			]
 		},
+		"q-BZ3iUjtu.js": {
+			"size": 169,
+			"total": 169,
+			"dynamicImports": [
+				"q-ixL-_u6a.js"
+			],
+			"origins": [
+				"src/components/router-head/router-head.tsx"
+			],
+			"interactivity": 0
+		},
 		"q-C0Omf-eN.js": {
 			"size": 210,
 			"total": 210,
@@ -441,31 +733,6 @@
 				"s_AmjFExZDDrU"
 			],
 			"interactivity": 2
-		},
-		"q-C1-MnST3.js": {
-			"size": 310,
-			"total": 1126,
-			"imports": [
-				"q-PVCjzz3w.js"
-			],
-			"dynamicImports": [
-				"q-DnlY2aZk.js"
-			],
-			"origins": [
-				"src/routes/index.tsx"
-			],
-			"interactivity": 0
-		},
-		"q-C5TbHNHC.js": {
-			"size": 182,
-			"total": 182,
-			"dynamicImports": [
-				"q-DQiBl1gK.js"
-			],
-			"origins": [
-				"src/components/lightframe/header/header.tsx"
-			],
-			"interactivity": 0
 		},
 		"q-C7H8an5s.js": {
 			"size": 759,
@@ -518,18 +785,6 @@
 			],
 			"interactivity": 2
 		},
-		"q-CBmPPxAw.js": {
-			"size": 239,
-			"total": 239,
-			"dynamicImports": [
-				"q-BgpxwVTV.js",
-				"q-CygA8RWh.js"
-			],
-			"origins": [
-				"src/components/lightframe/intro/intro.tsx"
-			],
-			"interactivity": 0
-		},
 		"q-CbtOnnrC.js": {
 			"size": 2464,
 			"total": 5122,
@@ -546,6 +801,20 @@
 				"s_ljVYcDTckKk"
 			],
 			"interactivity": 2
+		},
+		"q-CbwZOWO4.js": {
+			"size": 310,
+			"total": 1184,
+			"imports": [
+				"q-0cQNh0A5.js"
+			],
+			"dynamicImports": [
+				"q-BLNQWZq2.js"
+			],
+			"origins": [
+				"src/routes/index.tsx"
+			],
+			"interactivity": 0
 		},
 		"q-Cgc4GyxH.js": {
 			"size": 3251,
@@ -600,6 +869,24 @@
 			],
 			"interactivity": 0
 		},
+		"q-CmyLMJVw.js": {
+			"size": 2037,
+			"total": 7813,
+			"imports": [
+				"q-0cQNh0A5.js",
+				"q-BgqDkReX.js",
+				"q-Dbyu7xCT.js"
+			],
+			"origins": [
+				"src/components/lightframe/footer/footer.tsx_footer_component_useStylesScoped_03MtoPh1cAQ.js",
+				"src/components/lightframe/footer/footer.tsx_footer_component_wA35dXReQuE.js"
+			],
+			"symbols": [
+				"s_03MtoPh1cAQ",
+				"s_wA35dXReQuE"
+			],
+			"interactivity": 2
+		},
 		"q-Cni7KU0_.js": {
 			"size": 5340,
 			"total": 10711,
@@ -619,6 +906,19 @@
 			],
 			"interactivity": 0
 		},
+		"q-CnsL4K7L.js": {
+			"size": 170,
+			"total": 170,
+			"dynamicImports": [
+				"q-D5HPX8it.js"
+			],
+			"origins": [
+				"src/global.css",
+				"src/root.tsx",
+				"src/styles/modern-layout.css"
+			],
+			"interactivity": 0
+		},
 		"q-COaHPHuO.js": {
 			"size": 142,
 			"total": 142,
@@ -627,20 +927,19 @@
 			],
 			"interactivity": 0
 		},
-		"q-Cq-zO-OO.js": {
-			"size": 337,
-			"total": 1764,
+		"q-CRECcw4i.js": {
+			"size": 80,
+			"total": 149558,
 			"imports": [
-				"q-BKhv3lUn.js",
-				"q-C5TbHNHC.js"
+				"q-BUJ_X-k4.js"
 			],
 			"origins": [
-				"src/routes/layout.tsx_layout_component_3HgoKMyArRM.js"
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_a_q_e_click_SzLI4j04M0k.js"
 			],
 			"symbols": [
-				"s_3HgoKMyArRM"
+				"s_SzLI4j04M0k"
 			],
-			"interactivity": 2
+			"interactivity": 5
 		},
 		"q-Crlp_Dok.js": {
 			"size": 1043,
@@ -659,43 +958,6 @@
 				"s_V3K0tmnzjV0"
 			],
 			"interactivity": 5
-		},
-		"q-Ct1bk5t9.js": {
-			"size": 5974,
-			"total": 22354,
-			"imports": [
-				"q-BrtTncdL.js",
-				"q-Cni7KU0_.js",
-				"q-VLRqClX3.js"
-			],
-			"origins": [
-				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_goto_mP0Qwvt2uxQ.js",
-				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_registerPreventNav_LDcpesjcjsM.js",
-				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_useStyles_OWDvw0JhwHs.js",
-				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_useTask_QmtAUaKL0K0.js"
-			],
-			"symbols": [
-				"s_LDcpesjcjsM",
-				"s_mP0Qwvt2uxQ",
-				"s_OWDvw0JhwHs",
-				"s_QmtAUaKL0K0"
-			],
-			"interactivity": 3
-		},
-		"q-CUwHK2WT.js": {
-			"size": 348,
-			"total": 348,
-			"dynamicImports": [
-				"q--aIHbCRO.js",
-				"q-CbtOnnrC.js",
-				"q-Yubj1Aj9.js"
-			],
-			"origins": [
-				"src/components/lightframe/acknowledgement/acknowledgement.tsx",
-				"src/components/lightframe/dashboard/dashboard.tsx",
-				"src/components/lightframe/log/log.tsx"
-			],
-			"interactivity": 0
 		},
 		"q-CXATW90A.js": {
 			"size": 235,
@@ -725,23 +987,31 @@
 			],
 			"interactivity": 2
 		},
-		"q-D5fx4n5Q.js": {
-			"size": 1921,
-			"total": 7581,
+		"q-D5HPX8it.js": {
+			"size": 587,
+			"total": 11467,
 			"imports": [
-				"q-BgqDkReX.js",
-				"q-BKhv3lUn.js",
-				"q-PVCjzz3w.js"
+				"q-BZ3iUjtu.js",
+				"q-Cni7KU0_.js"
 			],
 			"origins": [
-				"src/components/lightframe/footer/footer.tsx_footer_component_useStylesScoped_03MtoPh1cAQ.js",
-				"src/components/lightframe/footer/footer.tsx_footer_component_wA35dXReQuE.js"
+				"src/root.tsx_root_component_Ygjzg8WB2WY.js"
 			],
 			"symbols": [
-				"s_03MtoPh1cAQ",
-				"s_wA35dXReQuE"
+				"s_Ygjzg8WB2WY"
 			],
 			"interactivity": 2
+		},
+		"q-DB5EcCu5.js": {
+			"size": 301,
+			"total": 301,
+			"origins": [
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_useVisibleTask_YI0WmmRWlRU.js"
+			],
+			"symbols": [
+				"s_YI0WmmRWlRU"
+			],
+			"interactivity": 3
 		},
 		"q-DBo-ivai.js": {
 			"size": 125,
@@ -753,6 +1023,48 @@
 				"s_Bxhd1C5lfD4"
 			],
 			"interactivity": 1
+		},
+		"q-DbPdSIas.js": {
+			"size": 2973,
+			"total": 6886,
+			"imports": [
+				"q-0cQNh0A5.js",
+				"q-DZ0eJeMq.js"
+			],
+			"dynamicImports": [
+				"q-3aLxehOf.js",
+				"q-CRECcw4i.js",
+				"q-DB5EcCu5.js"
+			],
+			"origins": [
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_aXZ6b0EIZpU.js",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_button_q_e_click_9UQWCwwVVOk.js",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_div_label_input_q_e_change_BzWm8bC8wHw.js",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_q_e_click_YhqKeI3bVAA.js",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_useStyles_1azw0r0Jby4.js"
+			],
+			"symbols": [
+				"s_1azw0r0Jby4",
+				"s_9UQWCwwVVOk",
+				"s_aXZ6b0EIZpU",
+				"s_BzWm8bC8wHw",
+				"s_YhqKeI3bVAA"
+			],
+			"interactivity": 5
+		},
+		"q-Dbyu7xCT.js": {
+			"size": 429,
+			"total": 1303,
+			"imports": [
+				"q-0cQNh0A5.js"
+			],
+			"dynamicImports": [
+				"q-CmyLMJVw.js"
+			],
+			"origins": [
+				"src/components/lightframe/footer/footer.tsx"
+			],
+			"interactivity": 0
 		},
 		"q-DByyTuLF.js": {
 			"size": 110,
@@ -791,17 +1103,6 @@
 			],
 			"interactivity": 1
 		},
-		"q-DHbI0TZb.js": {
-			"size": 814,
-			"total": 814,
-			"dynamicImports": [
-				"q-DX3vL-I1.js"
-			],
-			"origins": [
-				"src/components/lightframe/contributors/contributors.tsx"
-			],
-			"interactivity": 0
-		},
 		"q-DI6zxzV1.js": {
 			"size": 1207,
 			"total": 1207,
@@ -810,112 +1111,57 @@
 			],
 			"interactivity": 0
 		},
-		"q-DMWrswRL.js": {
-			"size": 647,
-			"total": 11527,
-			"imports": [
-				"q-Bb64Emrc.js",
-				"q-Cni7KU0_.js"
-			],
-			"origins": [
-				"src/root.tsx_root_component_Ygjzg8WB2WY.js"
-			],
-			"symbols": [
-				"s_Ygjzg8WB2WY"
-			],
-			"interactivity": 2
-		},
-		"q-DnlY2aZk.js": {
-			"size": 376,
-			"total": 1777,
-			"imports": [
-				"q-CBmPPxAw.js",
-				"q-CUwHK2WT.js",
-				"q-DHbI0TZb.js"
-			],
-			"origins": [
-				"src/routes/index.tsx_routes_component_poDIf1IDDp8.js"
-			],
-			"symbols": [
-				"s_poDIf1IDDp8"
-			],
-			"interactivity": 2
-		},
-		"q-DQiBl1gK.js": {
-			"size": 2665,
-			"total": 19894,
-			"imports": [
-				"q-CKgSZdfT.js",
-				"q-Cni7KU0_.js",
-				"q-DXqc_JWA.js",
-				"q-zWEJGQcM.js"
-			],
-			"origins": [
-				"src/components/lightframe/header/header.tsx_header_component_7EhipFpWK0Y.js",
-				"src/components/lightframe/header/header.tsx_header_component_closeMenu_oLxZzFGtnaU.js",
-				"src/components/lightframe/header/header.tsx_header_component_toggleMenu_0KL1VkllYxY.js",
-				"src/components/lightframe/header/header.tsx_header_component_useStylesScoped_eKx8vnQwsbI.js"
-			],
-			"symbols": [
-				"s_0KL1VkllYxY",
-				"s_7EhipFpWK0Y",
-				"s_eKx8vnQwsbI",
-				"s_oLxZzFGtnaU"
-			],
-			"interactivity": 2
-		},
-		"q-DR1GGmoG.js": {
-			"size": 861,
-			"total": 11572,
-			"imports": [
-				"q-Cni7KU0_.js"
-			],
-			"origins": [
-				"src/components/router-head/router-head.tsx_RouterHead_component_UFBWsiqfjEQ.js"
-			],
-			"symbols": [
-				"s_UFBWsiqfjEQ"
-			],
-			"interactivity": 2
-		},
-		"q-DRo2x_kR.js": {
-			"size": 267,
-			"total": 10978,
-			"imports": [
-				"q-Cni7KU0_.js"
-			],
+		"q-DObOjdzm.js": {
+			"size": 298,
+			"total": 298,
 			"dynamicImports": [
-				"q-Cq-zO-OO.js"
+				"q-A9JkrIlf.js",
+				"q-CbwZOWO4.js",
+				"q-CjclJwUF.js",
+				"q-yswPeACv.js"
 			],
 			"origins": [
-				"src/routes/layout.tsx"
+				"@qwik-router-config"
 			],
 			"interactivity": 0
 		},
-		"q-DX3vL-I1.js": {
-			"size": 2666,
-			"total": 13063,
-			"imports": [
-				"q-Cgc4GyxH.js",
-				"q-ChylICwy.js",
-				"q-DHbI0TZb.js",
-				"q-DXqc_JWA.js",
-				"q-vfpmXe0C.js",
-				"q-zWEJGQcM.js"
+		"q-DRuj14o9.js": {
+			"size": 239,
+			"total": 239,
+			"dynamicImports": [
+				"q-CygA8RWh.js",
+				"q-RtZmXwUn.js"
 			],
 			"origins": [
-				"src/components/lightframe/contributors/contributors.tsx_contributors_component_recentContributorsResource_useResource_7bS34wf0xz0.js",
-				"src/components/lightframe/contributors/contributors.tsx_contributors_component_sponsorsResource_useResource_Qsa1s0pEggg.js",
-				"src/components/lightframe/contributors/contributors.tsx_contributors_component_useStylesScoped_K0GBipownN0.js",
-				"src/components/lightframe/contributors/contributors.tsx_contributors_component_vLavd10ZPMw.js"
+				"src/components/lightframe/intro/intro.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-DSWsmDJa.js": {
+			"size": 337,
+			"total": 1822,
+			"imports": [
+				"q-BIADFjDk.js",
+				"q-Dbyu7xCT.js"
+			],
+			"origins": [
+				"src/routes/layout.tsx_layout_component_3HgoKMyArRM.js"
 			],
 			"symbols": [
-				"s_7bS34wf0xz0",
-				"s_K0GBipownN0",
-				"s_Qsa1s0pEggg",
-				"s_vLavd10ZPMw"
+				"s_3HgoKMyArRM"
 			],
 			"interactivity": 2
+		},
+		"q-DuYfvhhd.js": {
+			"size": 814,
+			"total": 814,
+			"dynamicImports": [
+				"q-VsltExCb.js"
+			],
+			"origins": [
+				"src/components/lightframe/contributors/contributors.tsx"
+			],
+			"interactivity": 0
 		},
 		"q-DXqc_JWA.js": {
 			"size": 177,
@@ -935,6 +1181,27 @@
 				"src/components/lightframe/intro/intro.css?inline"
 			],
 			"interactivity": 0
+		},
+		"q-DybYBsW9.js": {
+			"size": 1768,
+			"total": 154295,
+			"imports": [
+				"q-Bth2LfCd.js",
+				"q-BUJ_X-k4.js",
+				"q-ChylICwy.js",
+				"q-GvGEjNQa.js"
+			],
+			"origins": [
+				"src/components/lightframe/log/log.tsx_log_component_0PNjSDSXof0.js",
+				"src/components/lightframe/log/log.tsx_log_component_logsResource_useResource_WKjKnSx5T5U.js",
+				"src/components/lightframe/log/log.tsx_log_component_useStylesScoped_J8EVUFxpWUI.js"
+			],
+			"symbols": [
+				"s_0PNjSDSXof0",
+				"s_J8EVUFxpWUI",
+				"s_WKjKnSx5T5U"
+			],
+			"interactivity": 2
 		},
 		"q-DZ0eJeMq.js": {
 			"size": 3039,
@@ -977,6 +1244,33 @@
 			],
 			"interactivity": 0
 		},
+		"q-ixL-_u6a.js": {
+			"size": 780,
+			"total": 11491,
+			"imports": [
+				"q-Cni7KU0_.js"
+			],
+			"origins": [
+				"src/components/router-head/router-head.tsx_RouterHead_component_UFBWsiqfjEQ.js"
+			],
+			"symbols": [
+				"s_UFBWsiqfjEQ"
+			],
+			"interactivity": 2
+		},
+		"q-Ku29TMV_.js": {
+			"size": 260,
+			"total": 260,
+			"dynamicImports": [
+				"q-4Q-SPzCf.js",
+				"q-CbtOnnrC.js"
+			],
+			"origins": [
+				"src/components/lightframe/acknowledgement/acknowledgement.tsx",
+				"src/components/lightframe/dashboard/dashboard.tsx"
+			],
+			"interactivity": 0
+		},
 		"q-owzuLGmA.js": {
 			"size": 2481,
 			"total": 2481,
@@ -985,13 +1279,25 @@
 			],
 			"interactivity": 0
 		},
-		"q-PVCjzz3w.js": {
-			"size": 816,
-			"total": 816,
-			"origins": [
-				"src/constants/index.ts"
+		"q-RtZmXwUn.js": {
+			"size": 997,
+			"total": 7327,
+			"imports": [
+				"q-BMvzrJ9o.js",
+				"q-DRuj14o9.js",
+				"q-Dxw8Pwjn.js"
 			],
-			"interactivity": 0
+			"origins": [
+				"src/components/lightframe/intro/intro.tsx_intro_component_0PvRYFu7F2o.js",
+				"src/components/lightframe/intro/intro.tsx_intro_component_handleMouseMove_9DuWm0LbDfU.js",
+				"src/components/lightframe/intro/intro.tsx_intro_component_useStylesScoped_3yu6ce1RvX4.js"
+			],
+			"symbols": [
+				"s_0PvRYFu7F2o",
+				"s_3yu6ce1RvX4",
+				"s_9DuWm0LbDfU"
+			],
+			"interactivity": 2
 		},
 		"q-Se646OoF.js": {
 			"size": 1306,
@@ -1011,31 +1317,6 @@
 			],
 			"interactivity": 2
 		},
-		"q-vfpmXe0C.js": {
-			"size": 1063,
-			"total": 1879,
-			"imports": [
-				"q-PVCjzz3w.js"
-			],
-			"origins": [
-				"src/services/api.ts"
-			],
-			"interactivity": 0
-		},
-		"q-VLRqClX3.js": {
-			"size": 298,
-			"total": 298,
-			"dynamicImports": [
-				"q-A9JkrIlf.js",
-				"q-C1-MnST3.js",
-				"q-CjclJwUF.js",
-				"q-DRo2x_kR.js"
-			],
-			"origins": [
-				"@qwik-router-config"
-			],
-			"interactivity": 0
-		},
 		"q-vNRih8VC.js": {
 			"size": 154,
 			"total": 10865,
@@ -1047,6 +1328,31 @@
 			],
 			"symbols": [
 				"s_kdoffU2g0xM"
+			],
+			"interactivity": 2
+		},
+		"q-VsltExCb.js": {
+			"size": 2666,
+			"total": 160720,
+			"imports": [
+				"q-BMvzrJ9o.js",
+				"q-BUJ_X-k4.js",
+				"q-Cgc4GyxH.js",
+				"q-ChylICwy.js",
+				"q-DuYfvhhd.js",
+				"q-DXqc_JWA.js"
+			],
+			"origins": [
+				"src/components/lightframe/contributors/contributors.tsx_contributors_component_recentContributorsResource_useResource_7bS34wf0xz0.js",
+				"src/components/lightframe/contributors/contributors.tsx_contributors_component_sponsorsResource_useResource_Qsa1s0pEggg.js",
+				"src/components/lightframe/contributors/contributors.tsx_contributors_component_useStylesScoped_K0GBipownN0.js",
+				"src/components/lightframe/contributors/contributors.tsx_contributors_component_vLavd10ZPMw.js"
+			],
+			"symbols": [
+				"s_7bS34wf0xz0",
+				"s_K0GBipownN0",
+				"s_Qsa1s0pEggg",
+				"s_vLavd10ZPMw"
 			],
 			"interactivity": 2
 		},
@@ -1084,32 +1390,17 @@
 			],
 			"interactivity": 2
 		},
-		"q-Yubj1Aj9.js": {
-			"size": 1298,
-			"total": 5260,
+		"q-yswPeACv.js": {
+			"size": 267,
+			"total": 10978,
 			"imports": [
-				"q-BowxvNJr.js",
-				"q-ChylICwy.js",
-				"q-GvGEjNQa.js"
+				"q-Cni7KU0_.js"
+			],
+			"dynamicImports": [
+				"q-DSWsmDJa.js"
 			],
 			"origins": [
-				"src/components/lightframe/log/log.tsx_log_component_0PNjSDSXof0.js",
-				"src/components/lightframe/log/log.tsx_log_component_useStylesScoped_J8EVUFxpWUI.js"
-			],
-			"symbols": [
-				"s_0PNjSDSXof0",
-				"s_J8EVUFxpWUI"
-			],
-			"interactivity": 2
-		},
-		"q-zWEJGQcM.js": {
-			"size": 3228,
-			"total": 4044,
-			"imports": [
-				"q-PVCjzz3w.js"
-			],
-			"origins": [
-				"src/config.ts"
+				"src/routes/layout.tsx"
 			],
 			"interactivity": 0
 		}
@@ -1119,9 +1410,9 @@
 			"name": "style.css",
 			"size": 45171
 		},
-		"assets/BunrZMYI-bundle-graph.json": {
+		"assets/CrJ77bNz-bundle-graph.json": {
 			"name": "bundle-graph.json",
-			"size": 415
+			"size": 423
 		}
 	},
 	"symbols": {
@@ -1135,8 +1426,8 @@
 			"parent": "s_aXZ6b0EIZpU",
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				1677,
-				1708
+				1545,
+				1609
 			],
 			"captureNames": [
 				"_rawProps"
@@ -1152,8 +1443,8 @@
 			"parent": "s_aXZ6b0EIZpU",
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				2660,
-				2681
+				2532,
+				2553
 			]
 		},
 		"s_TluEOCfJ0qo": {
@@ -1183,8 +1474,8 @@
 			"parent": "s_aXZ6b0EIZpU",
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				1424,
-				1479
+				1215,
+				1319
 			],
 			"paramNames": [
 				"e",
@@ -1204,8 +1495,8 @@
 			"parent": "s_aXZ6b0EIZpU",
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				2994,
-				3015
+				2943,
+				2964
 			]
 		},
 		"s_zbUWSaTnPc8": {
@@ -1235,8 +1526,8 @@
 			"parent": "s_aXZ6b0EIZpU",
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				3395,
-				3445
+				3421,
+				3512
 			],
 			"captureNames": [
 				"_rawProps"
@@ -1383,6 +1674,24 @@
 				"time"
 			]
 		},
+		"s_YI0WmmRWlRU": {
+			"displayName": "DownloadModal.tsx_DownloadModal_component_useVisibleTask",
+			"hash": "YI0WmmRWlRU",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "DownloadModal.tsx_DownloadModal_component_useVisibleTask_YI0WmmRWlRU",
+			"parent": "s_aXZ6b0EIZpU",
+			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
+			"loc": [
+				775,
+				1139
+			],
+			"captureNames": [
+				"versionError",
+				"versions"
+			]
+		},
 		"s_09oY7c1btaM": {
 			"displayName": "index.qwik.mjs_ErrorBoundary_component",
 			"hash": "09oY7c1btaM",
@@ -1410,8 +1719,8 @@
 			"parent": null,
 			"origin": "components/lightframe/log/log.tsx",
 			"loc": [
-				278,
-				1374
+				697,
+				2488
 			]
 		},
 		"s_0PvRYFu7F2o": {
@@ -1662,7 +1971,7 @@
 			"origin": "components/router-head/router-head.tsx",
 			"loc": [
 				237,
-				1195
+				1128
 			]
 		},
 		"s_Ygjzg8WB2WY": {
@@ -1676,7 +1985,7 @@
 			"origin": "root.tsx",
 			"loc": [
 				310,
-				1202
+				1182
 			]
 		},
 		"s_aXZ6b0EIZpU": {
@@ -1689,8 +1998,8 @@
 			"parent": null,
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				524,
-				3959
+				528,
+				4026
 			],
 			"paramNames": [
 				"_rawProps"
@@ -1780,7 +2089,7 @@
 			"origin": "components/lightframe/footer/footer.tsx",
 			"loc": [
 				535,
-				2722
+				2937
 			]
 		},
 		"s_wgicyRxyQXs": {
@@ -1838,8 +2147,8 @@
 			"parent": "s_aXZ6b0EIZpU",
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				575,
-				586
+				579,
+				590
 			]
 		},
 		"s_JIS1H0V9Fig": {
@@ -1922,8 +2231,8 @@
 			"parent": "s_0PNjSDSXof0",
 			"origin": "components/lightframe/log/log.tsx",
 			"loc": [
-				305,
-				311
+				724,
+				730
 			]
 		},
 		"s_K0GBipownN0": {
@@ -2341,6 +2650,20 @@
 				"_rawProps"
 			]
 		},
+		"s_WKjKnSx5T5U": {
+			"displayName": "log.tsx_log_component_logsResource_useResource",
+			"hash": "WKjKnSx5T5U",
+			"ctxKind": "function",
+			"ctxName": "useResource$",
+			"captures": false,
+			"canonicalFilename": "log.tsx_log_component_logsResource_useResource_WKjKnSx5T5U",
+			"parent": "s_0PNjSDSXof0",
+			"origin": "components/lightframe/log/log.tsx",
+			"loc": [
+				831,
+				882
+			]
+		},
 		"s_aKM0rayU9PU": {
 			"displayName": "index.qwik.mjs_Link_component_handleClientSideNavigation",
 			"hash": "aKM0rayU9PU",
@@ -2436,20 +2759,6 @@
 			"paramNames": [
 				"_",
 				"elm"
-			]
-		},
-		"s_yTYXkkFgn7c": {
-			"displayName": "DownloadModal.tsx_DownloadModal_component_versionResource_useResource",
-			"hash": "yTYXkkFgn7c",
-			"ctxKind": "function",
-			"ctxName": "useResource$",
-			"captures": false,
-			"canonicalFilename": "DownloadModal.tsx_DownloadModal_component_versionResource_useResource_yTYXkkFgn7c",
-			"parent": "s_aXZ6b0EIZpU",
-			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
-			"loc": [
-				646,
-				1348
 			]
 		}
 	},

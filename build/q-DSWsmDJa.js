@@ -1,0 +1,1 @@
+import{a as n}from"./q-Dbyu7xCT.js";import{H as r}from"./q-BIADFjDk.js";import{J as l,h as u}from"./q-BVGk4Zpa.js";const t=()=>l("div",null,{class:"layout-wrapper"},[l(r,null,null,null,3,"R8_0"),l("main",null,{class:"main-content"},l(u,null,null,null,3,"R8_1"),1,null),l(n,null,null,null,3,"R8_2")],1,"R8_3");export{t as s_3HgoKMyArRM};
