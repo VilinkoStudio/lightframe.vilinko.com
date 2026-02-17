@@ -1,9 +1,9 @@
 import {
   component$,
   type Signal,
+  useSignal,
   useStyles$,
-  useResource$,
-  Resource,
+  useVisibleTask$,
 } from "@qwik.dev/core";
 import { DOWNLOAD, LINKS } from "~/constants";
 import { trackDownload } from "~/services/api";
@@ -25,69 +25,72 @@ export const DownloadModal = component$<DownloadModalProps>(
   ({ isVisible, agreedToTerms }) => {
     useStyles$(modalStyles);
 
-    const versionResource = useResource$<VersionData[]>(async () => {
+    const versions = useSignal<VersionData[] | null>(null);
+    const versionError = useSignal(false);
+
+    // eslint-disable-next-line qwik/no-use-visible-task
+    useVisibleTask$(async () => {
       try {
         const response = await fetch("https://down1.vilinko.com/version.json");
         const text = await response.text();
-        // Try parsing as normal JSON first
-        try {
-          const data = JSON.parse(text);
-          return Array.isArray(data) ? data : [data];
-        } catch {
-          // If it fails, try wrapping in array (for comma-separated objects)
-          try {
-            return JSON.parse(`[${text}]`);
-          } catch (e2) {
-            console.error("Failed to parse version info", e2);
-            return [];
-          }
-        }
+        versions.value = JSON.parse(`[${text}]`);
       } catch (e) {
-        console.error("Failed to fetch version info", e);
-        return [];
+        console.error("Failed to fetch or parse version info", e);
+        versionError.value = true;
+        versions.value = [];
       }
     });
 
     return (
       <div
         class="modal-overlay"
-        onClick$={(e, el) => e.target === el && (isVisible.value = false)}
+        onClick$={(e, el) => {
+          if (e.target === el) {
+            isVisible.value = false;
+          }
+        }}
       >
         <div class="modal-content">
           <div class="modal-header">
             <h2>下载 LightFrame</h2>
             <button
               class="close-btn"
-              onClick$={() => (isVisible.value = false)}
+              type="button"
+              onClick$={() => {
+                isVisible.value = false;
+              }}
             >
               ×
             </button>
           </div>
           <div class="modal-body">
-            <Resource
-              value={versionResource}
-              onPending={() => (
-                <div class="version-info">正在获取版本信息...</div>
-              )}
-              onRejected={() => (
-                <div class="version-info">获取版本信息失败</div>
-              )}
-              onResolved={(versions) => {
-                const latest = versions.find((v) => v.name === "LightFrame");
+            {versionError.value ? (
+              <div class="version-info">获取版本信息失败</div>
+            ) : versions.value === null ? (
+              <div class="version-info">正在获取版本信息...</div>
+            ) : (
+              (() => {
+                const latest = versions.value.find(
+                  (version) => version.name === "LightFrame",
+                );
                 if (!latest) return null;
                 return (
                   <div class="version-info">
                     最新版本: {latest.version} (更新于 {latest.last_updated})
                   </div>
                 );
-              }}
-            />
+              })()
+            )}
             <a
               href={agreedToTerms.value ? DOWNLOAD.X64 : undefined}
               class="link-wrapper"
               onClick$={() => trackDownload()}
             >
-              <button class="download-link" disabled={!agreedToTerms.value}>
+              <button
+                class="download-link"
+                disabled={!agreedToTerms.value}
+                type="button"
+              >
                 Windows x64 (推荐)
               </button>
             </a>
@@ -96,7 +99,11 @@ export const DownloadModal = component$<DownloadModalProps>(
               class="link-wrapper"
               onClick$={() => trackDownload()}
             >
-              <button class="download-link" disabled={!agreedToTerms.value}>
+              <button
+                class="download-link"
+                disabled={!agreedToTerms.value}
+                type="button"
+              >
                 Windows x86
               </button>
             </a>
@@ -105,7 +112,9 @@ export const DownloadModal = component$<DownloadModalProps>(
                 <input
                   type="checkbox"
                   checked={agreedToTerms.value}
-                  onChange$={() => (agreedToTerms.value = !agreedToTerms.value)}
+                  onChange$={() => {
+                    agreedToTerms.value = !agreedToTerms.value;
+                  }}
                 />
                 <span class="terms-text">
                   在使用前您需要阅读并同意我们的
