@@ -9,7 +9,7 @@
   gap: 2rem;
   align-items: stretch;
   position: relative;
-  touch-action: none;
+  touch-action: pan-y;
 }
 
 .star-canvas {
