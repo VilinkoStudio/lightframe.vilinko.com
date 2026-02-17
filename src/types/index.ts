@@ -39,9 +39,9 @@ export interface ContributionGroup {
 // 更新日志项类型
 export interface LogItem {
   version: string;
+  build: number;
   date: string;
-  title: string;
-  items: string[];
+  items: { type: "feat" | "fix" | "change" | "perf"; description: string }[];
 }
 
 // API 响应基础类型

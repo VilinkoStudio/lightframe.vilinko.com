@@ -18,6 +18,7 @@ export const API = {
 export const DOWNLOAD = {
   X64: "https://down1.vilinko.com/download/lightframe.zip",
   X86: "https://down1.vilinko.com/download/lightframe_x86.zip",
+  RELEASES: "https://down1.vilinko.com/res/web/releases.kdl",
 } as const;
 
 // 外部链接

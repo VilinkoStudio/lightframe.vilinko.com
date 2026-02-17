@@ -19,14 +19,16 @@ export default component$(() => {
       <head>
         <meta charset="utf-8" />
         <title>轻框 | LightFrame - 以轻量的方式定义自己喜欢的桌面</title>
-        <meta name="description" content="LightFrame - 以轻量的方式定义自己喜欢的桌面。轻量、灵感、沉浸、免费的桌面应用。" />
+        <meta
+          name="description"
+          content="LightFrame - 以轻量的方式定义自己喜欢的桌面。轻量、灵感、沉浸、免费的桌面应用。"
+        />
         {!isDev && (
           <link
             rel="manifest"
             href={`${import.meta.env.BASE_URL}manifest.json`}
           />
         )}
-        <link rel="icon" href="/favicon.ico" />
         <RouterHead />
       </head>
       <body lang="zh-CN">

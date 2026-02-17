@@ -8,8 +8,10 @@ import type {
   SponsorsData,
   ContributorsApiData,
   RecentContributorsApiData,
+  LogItem,
 } from "~/types";
-import { API, MESSAGES } from "~/constants";
+import { API, MESSAGES, DOWNLOAD } from "~/constants";
+import { parse } from "kdljs";
 
 /**
  * 通用的 fetch 封装
@@ -117,4 +119,50 @@ export async function incrementCounter(id: number = 1): Promise<void> {
 
 export async function trackDownload(): Promise<void> {
   await incrementCounter(1);
+}
+
+export async function fetchReleases(): Promise<LogItem[]> {
+  try {
+    const response = await fetch(DOWNLOAD.RELEASES);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const kdlText = await response.text();
+    const result = parse(kdlText);
+
+    if (!result.output) {
+      return [];
+    }
+
+    return result.output.map((node) => {
+      const values = node.values;
+      const version = String(values[0] || "");
+
+      const buildProp = node.properties["build"];
+      const build = Number(buildProp || 0);
+
+      const dateProp = node.properties["date"];
+      const date = String(dateProp || "");
+
+      const items = (node.children || []).map((child) => {
+        const type = child.name as "feat" | "fix" | "change" | "perf";
+        const childArgs = child.values;
+        const description = String(childArgs[0] || "");
+
+        return { type, description };
+      });
+
+      return {
+        version,
+        build,
+        date,
+        items,
+      };
+    });
+  } catch (error) {
+    console.error("获取发布日志失败:", error);
+    return [];
+  }
 }
