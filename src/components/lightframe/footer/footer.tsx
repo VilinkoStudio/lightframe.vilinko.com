@@ -83,8 +83,8 @@ export default component$(() => {
               &copy; {currentYear} {APP_META.TITLE}. All rights reserved.
             </p>
             <div class="footer-bottom-links">
-              <a href="/privacy">隐私政策</a>
-              <a href="/terms">服务条款</a>
+              <a href="https://docs.vilinko.com/agreement/privacy.html">隐私政策</a>
+              <a href="https://docs.vilinko.com/agreement/tos.html">服务条款</a>
               <a
                 href="https://beian.miit.gov.cn/"
                 target="_blank"
