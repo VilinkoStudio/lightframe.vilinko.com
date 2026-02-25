@@ -27,6 +27,7 @@ export const LINKS = {
   WALLPAPER: "https://lfs.vilinko.com",
   DOCS: "https://docs.vilinko.com",
   BILIBILI: "https://space.bilibili.com/373454723",
+  QQPD: "https://pd.qq.com/s/fnd9tarkb",
   GITHUB: "https://github.com/EnderMo/LightFrame",
   AFDIAN: "https://afdian.com/@EnderMo",
   TOS: "https://docs.vilinko.com/agreement/tos.html",

@@ -9,7 +9,7 @@ const FOOTER_LINKS = {
     { text: "使用文档", href: LINKS.DOCS },
   ],
   community: [
-    { text: "Bilibili", href: LINKS.BILIBILI },
+    { text: "QQ 频道", href: LINKS.QQPD },
     { text: "GitHub", href: LINKS.GITHUB },
     { text: "爱发电", href: LINKS.AFDIAN },
   ],
