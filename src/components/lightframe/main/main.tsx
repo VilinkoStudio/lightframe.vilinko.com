@@ -55,11 +55,11 @@ const DownloadModal = ({ isVisible }: { isVisible: Signal<boolean> }) => {
               />
               <span class="terms-text">
                 在使用前您需要阅读并同意我们的
-                <a href="/terms" class="terms-link">
+                <a href="https://docs.vilinko.com/agreement/tos.html" class="terms-link">
                   《服务条款》
                 </a>
                 和
-                <a href="/privacy" class="terms-link">
+                <a href="https://docs.vilinko.com/agreement/privacy.html" class="terms-link">
                   《隐私政策》
                 </a>
               </span>

@@ -80,7 +80,7 @@ export default component$(() => {
         <div class="footer-bottom">
           <div class="footer-bottom-content">
             <p>
-              &copy; {currentYear} {APP_META.TITLE}. All rights reserved.
+              Copyright &copy; {currentYear} Vilinko. All rights reserved.
             </p>
             <div class="footer-bottom-links">
               <a href="https://docs.vilinko.com/agreement/privacy.html">隐私政策</a>

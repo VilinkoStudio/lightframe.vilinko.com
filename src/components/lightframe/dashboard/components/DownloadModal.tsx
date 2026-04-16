@@ -107,6 +107,21 @@ export const DownloadModal = component$<DownloadModalProps>(
                 Windows x86
               </button>
             </a>
+            
+            <button
+              class="download-link"
+              disabled={true}
+              type="button"
+            >
+              LightFrame 2.0 X64
+            </button>
+            <button
+              class="download-link"
+              disabled={true}
+              type="button"
+            >
+              LightFrame 2.0 Arm64
+            </button>
             <div class="terms-container">
               <label class="terms-label">
                 <input
@@ -122,6 +137,7 @@ export const DownloadModal = component$<DownloadModalProps>(
                     《服务条款》
                   </a>
                   和
+
                   <a href={LINKS.PRIVACY} class="terms-link">
                     《隐私政策》
                   </a>
