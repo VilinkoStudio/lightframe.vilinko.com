@@ -32,6 +32,7 @@ export const LINKS = {
   AFDIAN: "https://afdian.com/@EnderMo",
   TOS: "https://docs.vilinko.com/agreement/tos.html",
   PRIVACY: "https://docs.vilinko.com/agreement/privacy.html",
+  SUPPORT: "https://support.vilinko.com",
 } as const;
 
 // UI 相关常量

@@ -7,6 +7,7 @@ const FOOTER_LINKS = {
     { text: "官方网站", href: LINKS.MAIN_SITE },
     { text: "壁纸库", href: LINKS.WALLPAPER },
     { text: "使用文档", href: LINKS.DOCS },
+    { text: "服务支持", href: LINKS.SUPPORT },
   ],
   community: [
     { text: "QQ 频道", href: LINKS.QQPD },
