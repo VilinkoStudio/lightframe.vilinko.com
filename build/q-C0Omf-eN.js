@@ -1,1 +1,0 @@
-import{J as s,N as c}from"./q-BVGk4Zpa.js";const a=l=>l.time.value,r=l=>s("div",null,{class:"dashboard-card clock-card"},s("div",null,{class:"clock-text"},c(a,[l]),1,null),1,"bD_1");export{r as s_AmjFExZDDrU};
