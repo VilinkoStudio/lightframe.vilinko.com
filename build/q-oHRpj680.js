@@ -1,1 +1,0 @@
-import{_ as o}from"./q-xbjexvGE.js";import{t as e,i}from"./q-BBHK_-NB.js";import{A as t}from"./q-B5spF2vV.js";const r=()=>o(()=>import("./q-BCLjeg1Z.js"),[]),p=e(i(r,"s_poDIf1IDDp8")),m={title:`${t.TITLE} - ${t.SUBTITLE}`,meta:[{name:"description",content:t.DESCRIPTION}]};export{p as default,m as head};
