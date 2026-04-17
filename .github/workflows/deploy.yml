@@ -4,6 +4,12 @@ on:
   push:
     branches: ["main"]
 
+permissions:
+  contents: write
+  # 以下是方案一（官方直接部署）所需的权限，目前已注释
+  # pages: write
+  # id-token: write
+
 jobs:
   build_site:
     runs-on: ubuntu-latest
@@ -27,24 +33,30 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
+      # --- 注释 ---
+      # - name: Upload Artifacts
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: "dist/"
+      # --- 之前的内容结束 ---
+
+      # --- 方案二：推送构建产物到 gh-pages 分支 ---
+      - name: Deploy to gh-pages Branch
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: "dist/"
+          folder: dist # 确保这是你 bun run build 生成的文件夹
+          branch: gh-pages # 目标分支名
+      # --- 方案二结束 ---
 
-  deploy:
-    needs: build_site
-    runs-on: ubuntu-latest
-
-    permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # --- deploy job ---
+  # deploy:
+  #   needs: build_site
+  #   runs-on: ubuntu-latest
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   steps:
+  #     - name: Deploy
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
+  # --- deploy job 结束 ---
