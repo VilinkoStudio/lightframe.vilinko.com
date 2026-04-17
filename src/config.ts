@@ -23,6 +23,10 @@ export const headerConfig: HeaderConfig = {
       text: "BILIBILI",
       href: LINKS.BILIBILI,
     },
+     {
+      text: "QQ 频道",
+      href: LINKS.QQPD,
+    },
   ],
 };
 
