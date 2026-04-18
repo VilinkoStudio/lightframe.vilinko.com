@@ -1,6 +1,6 @@
 {
 	"version": "1",
-	"manifestHash": "y0whad",
+	"manifestHash": "9rrb72",
 	"options": {
 		"target": "client",
 		"buildMode": "production",
@@ -11,7 +11,7 @@
 	"core": "q-BBHK_-NB.js",
 	"preloader": "q-xbjexvGE.js",
 	"qwikLoader": "q-11AyauCl.js",
-	"bundleGraphAsset": "assets/UgAkXxI7-bundle-graph.json",
+	"bundleGraphAsset": "assets/CIeKhilP-bundle-graph.json",
 	"injections": [
 		{
 			"tag": "link",
@@ -23,14 +23,14 @@
 		}
 	],
 	"mapping": {
-		"s_9UQWCwwVVOk": "q-CIY9jk7p.js",
+		"s_9UQWCwwVVOk": "q--BNUItE8.js",
 		"s_SzLI4j04M0k": "q-uPxxOlKB.js",
 		"s_TluEOCfJ0qo": "q-o6VqOefu.js",
-		"s_YhqKeI3bVAA": "q-CIY9jk7p.js",
+		"s_YhqKeI3bVAA": "q--BNUItE8.js",
 		"s_yuz0KrXr53M": "q-CiG7yJDu.js",
 		"s_zbUWSaTnPc8": "q-BPv4pfJr.js",
-		"s_BzWm8bC8wHw": "q-CIY9jk7p.js",
-		"s_QmtAUaKL0K0": "q-D4Y1Rtu0.js",
+		"s_BzWm8bC8wHw": "q--BNUItE8.js",
+		"s_QmtAUaKL0K0": "q-Iv0yFetR.js",
 		"s_kHcJupKgsR0": "q-3MgO2LWu.js",
 		"s_PW2Wd0zV6P8": "q-ByyKsWT_.js",
 		"s_FrrMZrW2LIM": "q-Cd5ABCp3.js",
@@ -45,7 +45,7 @@
 		"s_3HgoKMyArRM": "q-C6MdsCh5.js",
 		"s_4jwkKqs3rfs": "q-BdLHOTur.js",
 		"s_7EhipFpWK0Y": "q-CAcbtyUg.js",
-		"s_7mN2zaUGE0o": "q-DPX1KZq4.js",
+		"s_7mN2zaUGE0o": "q-fZ7Wev_b.js",
 		"s_AmjFExZDDrU": "q-BkjNV7d0.js",
 		"s_BDCEMhBEwAE": "q-C9Yxy6sy.js",
 		"s_Dh3YbS8EtTo": "q-B5OvBsMa.js",
@@ -56,19 +56,19 @@
 		"s_PhFn0YhfkmA": "q-mFI0ibxM.js",
 		"s_UFBWsiqfjEQ": "q-Dj6-Wwrw.js",
 		"s_Ygjzg8WB2WY": "q-m5LPybZl.js",
-		"s_aXZ6b0EIZpU": "q-CIY9jk7p.js",
+		"s_aXZ6b0EIZpU": "q--BNUItE8.js",
 		"s_kdoffU2g0xM": "q-v6R1k_pG.js",
 		"s_ljVYcDTckKk": "q-BiUY5KLA.js",
-		"s_poDIf1IDDp8": "q-CCeR6UjW.js",
+		"s_poDIf1IDDp8": "q-Dhy3dq2_.js",
 		"s_pqzcFslIhHM": "q-BRFt0aWL.js",
 		"s_vLavd10ZPMw": "q-B7_KZuth.js",
 		"s_wA35dXReQuE": "q-BzYdt2Z1.js",
 		"s_wgicyRxyQXs": "q-BPv4pfJr.js",
 		"s_zufMjcCCEtM": "q-CR3nF796.js",
-		"s_OWDvw0JhwHs": "q-D4Y1Rtu0.js",
-		"s_1azw0r0Jby4": "q-CIY9jk7p.js",
+		"s_OWDvw0JhwHs": "q-Iv0yFetR.js",
+		"s_1azw0r0Jby4": "q--BNUItE8.js",
 		"s_JIS1H0V9Fig": "q-BdLHOTur.js",
-		"s_eJD062YWLyQ": "q-DPX1KZq4.js",
+		"s_eJD062YWLyQ": "q-fZ7Wev_b.js",
 		"s_mmFaKxK5ldM": "q-BRFt0aWL.js",
 		"s_03MtoPh1cAQ": "q-BzYdt2Z1.js",
 		"s_3yu6ce1RvX4": "q-D_Z2RnEr.js",
@@ -80,7 +80,7 @@
 		"s_eKx8vnQwsbI": "q-CAcbtyUg.js",
 		"s_3l2mAo0nHiY": "q-DFAAjMhg.js",
 		"s_Bxhd1C5lfD4": "q-Dp0RKg2_.js",
-		"s_LDcpesjcjsM": "q-D4Y1Rtu0.js",
+		"s_LDcpesjcjsM": "q-Iv0yFetR.js",
 		"s_LRYIAjb9kaI": "q-DMKH9Cfk.js",
 		"s_R4yOttYduIc": "q-nZbEtN6c.js",
 		"s_SMX0V0YjLcc": "q-3MgO2LWu.js",
@@ -90,7 +90,7 @@
 		"_run": "q-BBHK_-NB.js",
 		"_task": "q-BBHK_-NB.js",
 		"_val": "q-BBHK_-NB.js",
-		"s_mP0Qwvt2uxQ": "q-D4Y1Rtu0.js",
+		"s_mP0Qwvt2uxQ": "q-Iv0yFetR.js",
 		"s_ouYh0hZiboc": "q-D4vc-aIU.js",
 		"s_0KL1VkllYxY": "q-CAcbtyUg.js",
 		"s_5GFankzTzNk": "q-qdt7QYdA.js",
@@ -106,6 +106,34 @@
 		"s_wbdVA0Gjl44": "q-qdt7QYdA.js"
 	},
 	"bundles": {
+		"q--BNUItE8.js": {
+			"size": 3214,
+			"total": 7198,
+			"imports": [
+				"q-drJ8sNOH.js",
+				"q-DZ0eJeMq.js"
+			],
+			"dynamicImports": [
+				"q-CiG7yJDu.js",
+				"q-Cus95fNv.js",
+				"q-uPxxOlKB.js"
+			],
+			"origins": [
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_aXZ6b0EIZpU.js",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_button_q_e_click_9UQWCwwVVOk.js",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_div_label_input_q_e_change_BzWm8bC8wHw.js",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_q_e_click_YhqKeI3bVAA.js",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_useStyles_1azw0r0Jby4.js"
+			],
+			"symbols": [
+				"s_1azw0r0Jby4",
+				"s_9UQWCwwVVOk",
+				"s_aXZ6b0EIZpU",
+				"s_BzWm8bC8wHw",
+				"s_YhqKeI3bVAA"
+			],
+			"interactivity": 5
+		},
 		"q-0rfwXgeN.js": {
 			"size": 809,
 			"total": 809,
@@ -252,6 +280,20 @@
 			],
 			"interactivity": 0
 		},
+		"q-BGz1dZcx.js": {
+			"size": 305,
+			"total": 1250,
+			"imports": [
+				"q-drJ8sNOH.js"
+			],
+			"dynamicImports": [
+				"q-Dhy3dq2_.js"
+			],
+			"origins": [
+				"src/routes/index.tsx"
+			],
+			"interactivity": 0
+		},
 		"q-BiUY5KLA.js": {
 			"size": 2464,
 			"total": 5122,
@@ -371,24 +413,6 @@
 			],
 			"interactivity": 0
 		},
-		"q-BxBrE3X8.js": {
-			"size": 477,
-			"total": 477,
-			"dynamicImports": [
-				"q-B7tqOQtY.js",
-				"q-BkjNV7d0.js",
-				"q-BPv4pfJr.js",
-				"q-CIY9jk7p.js",
-				"q-CR3nF796.js"
-			],
-			"origins": [
-				"src/components/lightframe/dashboard/components/ActionCard.tsx",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx",
-				"src/components/lightframe/dashboard/components/InfoCards.tsx",
-				"src/components/lightframe/dashboard/components/StarCard.tsx"
-			],
-			"interactivity": 0
-		},
 		"q-ByyKsWT_.js": {
 			"size": 110,
 			"total": 110,
@@ -458,6 +482,20 @@
 			],
 			"interactivity": 2
 		},
+		"q-C75qPFZL.js": {
+			"size": 298,
+			"total": 298,
+			"dynamicImports": [
+				"q-BGz1dZcx.js",
+				"q-BJ_YZmwQ.js",
+				"q-BqdFbrsB.js",
+				"q-XCfZXFed.js"
+			],
+			"origins": [
+				"@qwik-router-config"
+			],
+			"interactivity": 0
+		},
 		"q-C9Yxy6sy.js": {
 			"size": 899,
 			"total": 11610,
@@ -495,37 +533,6 @@
 			],
 			"interactivity": 2
 		},
-		"q-CBFkpkS7.js": {
-			"size": 298,
-			"total": 298,
-			"dynamicImports": [
-				"q-BJ_YZmwQ.js",
-				"q-BqdFbrsB.js",
-				"q-CpfHE8JA.js",
-				"q-XCfZXFed.js"
-			],
-			"origins": [
-				"@qwik-router-config"
-			],
-			"interactivity": 0
-		},
-		"q-CCeR6UjW.js": {
-			"size": 405,
-			"total": 2113,
-			"imports": [
-				"q-0rfwXgeN.js",
-				"q-CSKwe77t.js",
-				"q-DRRch29n.js",
-				"q-eDeL11e_.js"
-			],
-			"origins": [
-				"src/routes/index.tsx_routes_component_poDIf1IDDp8.js"
-			],
-			"symbols": [
-				"s_poDIf1IDDp8"
-			],
-			"interactivity": 2
-		},
 		"q-Cd5ABCp3.js": {
 			"size": 301,
 			"total": 301,
@@ -556,34 +563,6 @@
 			],
 			"symbols": [
 				"s_yuz0KrXr53M"
-			],
-			"interactivity": 5
-		},
-		"q-CIY9jk7p.js": {
-			"size": 3165,
-			"total": 7149,
-			"imports": [
-				"q-drJ8sNOH.js",
-				"q-DZ0eJeMq.js"
-			],
-			"dynamicImports": [
-				"q-CiG7yJDu.js",
-				"q-Cus95fNv.js",
-				"q-uPxxOlKB.js"
-			],
-			"origins": [
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_aXZ6b0EIZpU.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_button_q_e_click_9UQWCwwVVOk.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_div_div_div_label_input_q_e_change_BzWm8bC8wHw.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_div_q_e_click_YhqKeI3bVAA.js",
-				"src/components/lightframe/dashboard/components/DownloadModal.tsx_DownloadModal_component_useStyles_1azw0r0Jby4.js"
-			],
-			"symbols": [
-				"s_1azw0r0Jby4",
-				"s_9UQWCwwVVOk",
-				"s_aXZ6b0EIZpU",
-				"s_BzWm8bC8wHw",
-				"s_YhqKeI3bVAA"
 			],
 			"interactivity": 5
 		},
@@ -889,20 +868,6 @@
 			],
 			"interactivity": 0
 		},
-		"q-CpfHE8JA.js": {
-			"size": 305,
-			"total": 1250,
-			"imports": [
-				"q-drJ8sNOH.js"
-			],
-			"dynamicImports": [
-				"q-CCeR6UjW.js"
-			],
-			"origins": [
-				"src/routes/index.tsx"
-			],
-			"interactivity": 0
-		},
 		"q-CppdeVW3.js": {
 			"size": 169,
 			"total": 169,
@@ -985,28 +950,6 @@
 			],
 			"interactivity": 1
 		},
-		"q-D4Y1Rtu0.js": {
-			"size": 5974,
-			"total": 22354,
-			"imports": [
-				"q-BT16UVfY.js",
-				"q-CBFkpkS7.js",
-				"q-fuTe14yd.js"
-			],
-			"origins": [
-				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_goto_mP0Qwvt2uxQ.js",
-				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_registerPreventNav_LDcpesjcjsM.js",
-				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_useStyles_OWDvw0JhwHs.js",
-				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_useTask_QmtAUaKL0K0.js"
-			],
-			"symbols": [
-				"s_LDcpesjcjsM",
-				"s_mP0Qwvt2uxQ",
-				"s_OWDvw0JhwHs",
-				"s_QmtAUaKL0K0"
-			],
-			"interactivity": 3
-		},
 		"q-D_Z2RnEr.js": {
 			"size": 997,
 			"total": 7425,
@@ -1056,6 +999,23 @@
 			],
 			"interactivity": 1
 		},
+		"q-Dhy3dq2_.js": {
+			"size": 405,
+			"total": 2113,
+			"imports": [
+				"q-0rfwXgeN.js",
+				"q-CSKwe77t.js",
+				"q-DRRch29n.js",
+				"q-HcL7Wdzj.js"
+			],
+			"origins": [
+				"src/routes/index.tsx_routes_component_poDIf1IDDp8.js"
+			],
+			"symbols": [
+				"s_poDIf1IDDp8"
+			],
+			"interactivity": 2
+		},
 		"q-DI6zxzV1.js": {
 			"size": 1207,
 			"total": 1207,
@@ -1102,26 +1062,6 @@
 				"s_Bxhd1C5lfD4"
 			],
 			"interactivity": 1
-		},
-		"q-DPX1KZq4.js": {
-			"size": 984,
-			"total": 5203,
-			"imports": [
-				"q-BTapkWsD.js",
-				"q-BxBrE3X8.js"
-			],
-			"dynamicImports": [
-				"q-KboVgras.js"
-			],
-			"origins": [
-				"src/components/lightframe/dashboard/dashboard.tsx_dashboard_component_7mN2zaUGE0o.js",
-				"src/components/lightframe/dashboard/dashboard.tsx_dashboard_component_useStyles_eJD062YWLyQ.js"
-			],
-			"symbols": [
-				"s_7mN2zaUGE0o",
-				"s_eJD062YWLyQ"
-			],
-			"interactivity": 2
 		},
 		"q-drJ8sNOH.js": {
 			"size": 945,
@@ -1170,19 +1110,6 @@
 			],
 			"interactivity": 0
 		},
-		"q-eDeL11e_.js": {
-			"size": 260,
-			"total": 260,
-			"dynamicImports": [
-				"q-BiUY5KLA.js",
-				"q-DPX1KZq4.js"
-			],
-			"origins": [
-				"src/components/lightframe/acknowledgement/acknowledgement.tsx",
-				"src/components/lightframe/dashboard/dashboard.tsx"
-			],
-			"interactivity": 0
-		},
 		"q-fuTe14yd.js": {
 			"size": 5371,
 			"total": 5371,
@@ -1211,6 +1138,26 @@
 			],
 			"interactivity": 2
 		},
+		"q-fZ7Wev_b.js": {
+			"size": 984,
+			"total": 5203,
+			"imports": [
+				"q-BTapkWsD.js",
+				"q-MKvg5HIA.js"
+			],
+			"dynamicImports": [
+				"q-KboVgras.js"
+			],
+			"origins": [
+				"src/components/lightframe/dashboard/dashboard.tsx_dashboard_component_7mN2zaUGE0o.js",
+				"src/components/lightframe/dashboard/dashboard.tsx_dashboard_component_useStyles_eJD062YWLyQ.js"
+			],
+			"symbols": [
+				"s_7mN2zaUGE0o",
+				"s_eJD062YWLyQ"
+			],
+			"interactivity": 2
+		},
 		"q-GvGEjNQa.js": {
 			"size": 2417,
 			"total": 2417,
@@ -1218,6 +1165,41 @@
 				"src/components/lightframe/log/log.css?inline"
 			],
 			"interactivity": 0
+		},
+		"q-HcL7Wdzj.js": {
+			"size": 260,
+			"total": 260,
+			"dynamicImports": [
+				"q-BiUY5KLA.js",
+				"q-fZ7Wev_b.js"
+			],
+			"origins": [
+				"src/components/lightframe/acknowledgement/acknowledgement.tsx",
+				"src/components/lightframe/dashboard/dashboard.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-Iv0yFetR.js": {
+			"size": 5974,
+			"total": 22354,
+			"imports": [
+				"q-BT16UVfY.js",
+				"q-C75qPFZL.js",
+				"q-fuTe14yd.js"
+			],
+			"origins": [
+				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_goto_mP0Qwvt2uxQ.js",
+				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_registerPreventNav_LDcpesjcjsM.js",
+				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_useStyles_OWDvw0JhwHs.js",
+				"node_modules/@qwik.dev/router/lib/index.qwik.mjs_useQwikRouter_useTask_QmtAUaKL0K0.js"
+			],
+			"symbols": [
+				"s_LDcpesjcjsM",
+				"s_mP0Qwvt2uxQ",
+				"s_OWDvw0JhwHs",
+				"s_QmtAUaKL0K0"
+			],
+			"interactivity": 3
 		},
 		"q-KboVgras.js": {
 			"size": 455,
@@ -1258,6 +1240,24 @@
 				"s_PhFn0YhfkmA"
 			],
 			"interactivity": 2
+		},
+		"q-MKvg5HIA.js": {
+			"size": 477,
+			"total": 477,
+			"dynamicImports": [
+				"q--BNUItE8.js",
+				"q-B7tqOQtY.js",
+				"q-BkjNV7d0.js",
+				"q-BPv4pfJr.js",
+				"q-CR3nF796.js"
+			],
+			"origins": [
+				"src/components/lightframe/dashboard/components/ActionCard.tsx",
+				"src/components/lightframe/dashboard/components/DownloadModal.tsx",
+				"src/components/lightframe/dashboard/components/InfoCards.tsx",
+				"src/components/lightframe/dashboard/components/StarCard.tsx"
+			],
+			"interactivity": 0
 		},
 		"q-nZbEtN6c.js": {
 			"size": 1323,
@@ -1410,7 +1410,7 @@
 			"name": "style.css",
 			"size": 45171
 		},
-		"assets/UgAkXxI7-bundle-graph.json": {
+		"assets/CIeKhilP-bundle-graph.json": {
 			"name": "bundle-graph.json",
 			"size": 423
 		}
@@ -1495,8 +1495,8 @@
 			"parent": "s_aXZ6b0EIZpU",
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				2936,
-				2957
+				2952,
+				2973
 			]
 		},
 		"s_zbUWSaTnPc8": {
@@ -1526,8 +1526,8 @@
 			"parent": "s_aXZ6b0EIZpU",
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
-				3795,
-				3886
+				3818,
+				3909
 			],
 			"captureNames": [
 				"_rawProps"
@@ -1999,7 +1999,7 @@
 			"origin": "components/lightframe/dashboard/components/DownloadModal.tsx",
 			"loc": [
 				528,
-				4401
+				4424
 			],
 			"paramNames": [
 				"_rawProps"
