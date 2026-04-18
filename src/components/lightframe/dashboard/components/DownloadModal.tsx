@@ -91,7 +91,7 @@ export const DownloadModal = component$<DownloadModalProps>(
                 disabled={!agreedToTerms.value}
                 type="button"
               >
-                Windows x64 (推荐)
+                LightFrame 1.0 x64 <br></br>(推荐)
               </button>
             </a>
             <a
@@ -104,7 +104,7 @@ export const DownloadModal = component$<DownloadModalProps>(
                 disabled={!agreedToTerms.value}
                 type="button"
               >
-                Windows x86
+                LightFrame 1.0 x86
               </button>
             </a>
             
@@ -113,7 +113,7 @@ export const DownloadModal = component$<DownloadModalProps>(
               disabled={true}
               type="button"
             >
-              LightFrame 2.0 X64
+              LightFrame 2.0 x64
             </button>
             <button
               class="download-link"
