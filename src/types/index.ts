@@ -34,6 +34,8 @@ export interface ContributionGroup {
   explain: string;
   link: NavigationLink;
   names: string[];
+  /** sponsors 表示名单来自接口，而不是配置里的 names */
+  source?: "static" | "sponsors";
 }
 
 // 更新日志项类型
@@ -63,7 +65,8 @@ export interface ContributorsApiData {
   date: string;
 }
 
-// 最近贡献者 API 响应类型
+// 最近贡献者 API 响应类型：接口在无人时会返回 null
 export interface RecentContributorsApiData {
-  contributors: string[];
+  contributors?: string[] | null;
+  sponsors?: string[] | null;
 }

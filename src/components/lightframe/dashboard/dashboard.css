@@ -1,261 +1,338 @@
-.dashboard-container {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 140px 40px 60px;
-  box-sizing: border-box;
+/* ==================== 首屏 ==================== */
+.hero {
+  padding: clamp(40px, 6vw, 76px) 0 var(--spacing-8);
+}
+
+.hero-inner {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 32rem;
+}
+
+.hero-title {
+  margin-bottom: var(--spacing-5);
+}
+
+.hero-lede {
+  font-size: var(--font-size-lg);
+  color: var(--lf-text-color-secondary);
+  max-width: 36ch;
+  margin-bottom: var(--spacing-8);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-5);
+}
+
+.hero-facts {
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color-tertiary);
+  letter-spacing: 0.01em;
+}
+
+/* ==================== 桌面画布 ==================== */
+.desktop {
   position: relative;
-  touch-action: pan-y;
+  padding: clamp(14px, 1.6vw, 20px);
+  border: 1px solid var(--lf-line);
+  border-radius: var(--border-radius-2xl);
+  background: var(--lf-surface-soft);
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.star-canvas {
+.desktop-wallpaper {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  inset: 0;
+  z-index: 0;
   pointer-events: none;
-  z-index: 5;
+  background:
+    radial-gradient(
+      110% 80% at 84% 6%,
+      rgba(var(--lf-primary-rgb), 0.26),
+      transparent 62%
+    ),
+    radial-gradient(90% 70% at 4% 96%, rgba(56, 189, 248, 0.16), transparent 64%);
 }
 
-.dashboard-card {
-  height: 260px;
-  border-radius: var(--border-radius-xl, 16px);
+.desktop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(var(--lf-line-soft) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.desktop-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "clock note"
+    "calendar shape";
+  gap: clamp(10px, 1.2vw, 14px);
+}
+
+/* ==================== 桌面组件 ==================== */
+.widget {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  border: 1px solid var(--lf-line);
+  border-radius: var(--border-radius-lg);
+  background: var(--lf-glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: clamp(16px, 1.6vw, 22px);
+  min-height: clamp(150px, 16vw, 186px);
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-sizing: border-box;
 }
 
-@media (hover: hover) {
-  .dashboard-card:hover {
-    transform: scale(1.02);
-    box-shadow:
-      0 20px 25px -5px rgba(0, 0, 0, 0.1),
-      0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
+.widget-clock {
+  grid-area: clock;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
 }
 
-.star-card {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+.clock-time {
+  display: flex;
+  align-items: baseline;
+  font-family: var(--font-family-display);
+  font-size: clamp(38px, 4.4vw, 52px);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.clock-colon {
+  margin: 0 0.04em;
+  font-weight: var(--font-weight-medium);
+  opacity: 0.55;
+}
+
+.clock-minute {
+  display: inline-block;
+  animation: minute-in 0.18s var(--ease-out);
+}
+
+.clock-date {
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color-secondary);
+}
+
+/* ==================== 日历 ==================== */
+.widget-calendar {
+  grid-area: calendar;
+  justify-content: flex-start;
+  gap: var(--spacing-2);
+}
+
+.calendar-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.calendar-month {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.calendar-year {
+  font-size: var(--font-size-xs);
+  color: var(--lf-text-color-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  row-gap: 1px;
+  text-align: center;
+}
+
+.calendar-weekday {
+  padding-bottom: 3px;
+  font-size: 12px;
+  color: var(--lf-text-color-tertiary);
+}
+
+.calendar-day {
+  height: 22px;
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--lf-text-color-secondary);
+  font-variant-numeric: tabular-nums;
+  border-radius: var(--border-radius-full);
+}
+
+.calendar-day.is-today {
+  background: var(--lf-primary-color);
+  color: var(--lf-accent-contrast);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==================== 便签 ==================== */
+.widget-note {
+  grid-area: note;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+}
+
+.note-label {
+  font-size: var(--font-size-xs);
+  color: var(--lf-text-color-tertiary);
+}
+
+.note-list {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  overflow: visible !important;
-  position: relative;
-  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
 }
 
-.star-card:hover {
-  transform: none;
-  box-shadow: none;
+.note-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color-secondary);
 }
 
-.star-canvas {
+.note-list li.is-done {
+  color: var(--lf-text-color-tertiary);
+  text-decoration: line-through;
+}
+
+.note-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border: 1px solid var(--lf-line);
+  border-radius: var(--border-radius-xs);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.is-done .note-check {
+  background: var(--lf-primary-color);
+  border-color: transparent;
+  color: var(--lf-accent-contrast);
+}
+
+/* ==================== 形状 ==================== */
+.widget-shape {
+  grid-area: shape;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.shape-canvas {
   position: absolute;
-  top: -50px;
-  left: -50px;
-  width: calc(100% + 100px);
-  height: calc(100% + 100px);
-  object-fit: contain;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.widget-hint {
+  position: absolute;
+  right: var(--spacing-4);
+  bottom: var(--spacing-3);
+  font-size: var(--font-size-xs);
+  color: var(--lf-text-color-tertiary);
   pointer-events: none;
 }
 
-@media (max-width: 1200px) {
-  .dashboard-container {
-    grid-template-columns: repeat(2, 1fr);
+/* ==================== 响应式 ==================== */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(32px, 6vw, 48px);
+  }
+
+  .hero-copy {
+    max-width: 40rem;
+  }
+
+  .hero-lede {
+    max-width: 44ch;
   }
 }
 
 @media (max-width: 640px) {
-  .dashboard-container {
-    grid-template-columns: 1fr;
-    padding: 100px 20px 40px;
+  .hero {
+    padding: var(--spacing-8) 0 var(--spacing-12);
+  }
+
+  .hero-lede {
+    font-size: var(--font-size-md);
+  }
+
+  .desktop-grid {
+    grid-template-areas:
+      "clock clock"
+      "calendar calendar"
+      "note shape";
+  }
+
+  .widget {
+    min-height: 120px;
+  }
+
+  .note-list li {
+    font-size: 13px;
+  }
+
+  .widget-clock {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+  }
+
+  .widget-calendar {
+    min-height: 0;
+  }
+
+  .widget-shape {
+    min-height: 180px;
   }
 }
 
-.meet-card {
-  background-color: var(--lf-card-bg);
-  color: var(--lf-text-color);
-  align-items: flex-start;
-  padding: 3rem 2.5rem 2.5rem;
-  border: 1px solid rgba(128, 128, 128, 0.2);
-}
-
-.meet-line {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  height: 10px;
-  background-color: #6366f1;
-  border-radius: 10px;
-}
-
-.meet-text {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 3.2rem;
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--lf-text-color);
-  opacity: 0.6;
-  margin-top: 2rem;
-}
-
-.clock-card {
-  background-color: var(--lf-card-bg);
-  border: 1px solid rgba(128, 128, 128, 0.2);
-}
-
-.clock-text {
-  font-family: var(--font-family-mono, monospace);
-  font-size: 4.5rem;
-  font-weight: 700;
-  color: var(--lf-text-color);
-  opacity: 0.6;
-  letter-spacing: -2px;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.action-card {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 0;
-  overflow: visible;
-}
-
-.action-card:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-.click-btn {
-  flex: 1.2;
-  background-color: #c6c6c6;
-  border: 4px solid #000;
-  box-shadow:
-    inset 4px 4px 0 #fff,
-    inset -4px -4px 0 #555;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 0;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  color: #fff;
-  text-shadow: 2px 2px 0 #3f3f3f;
-  font-family: var(--font-family-minecraft);
-  font-size: 2rem;
-  image-rendering: pixelated;
-  transition: all 0.1s ease;
-}
-
-@media (hover: hover) {
-  .click-btn:hover {
-    background-color: #999;
-    color: #ffff55;
+@media (max-width: 480px) {
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.click-btn:active {
-  box-shadow:
-    inset 4px 4px 0 #555,
-    inset -4px -4px 0 #fff;
-  padding-top: 4px;
-}
-
-.date-row {
-  flex: 0.8;
-  display: flex;
-  gap: 0.75rem;
-  width: 100%;
-}
-
-.date-box {
-  flex: 1;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family-primary, sans-serif);
-  font-weight: 800;
-  font-size: 1.4rem;
-  transition: transform 0.2s ease;
-  color: #e2e2e2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.date-box span {
-  display: block;
-}
-
-@media (hover: hover) {
-  .date-box:hover {
-    transform: scale(1.02);
+@keyframes minute-in {
+  from {
+    opacity: 0.3;
+    transform: translateY(-2px);
   }
-}
-
-.month-box {
-  background-color: #6366f1;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
-}
-
-.day-box {
-  background-color: #1a1a1a;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Explicit dark mode overrides for deep black cards */
-@media (prefers-color-scheme: dark) {
-  .meet-card {
-    background-color: #1a1a1a;
-    border-color: #333;
-  }
-
-  .clock-card {
-    background-color: #1e1e1e;
-    border-color: #333;
-  }
-
-  .clock-text {
-    opacity: 0.85;
-  }
-
-  .meet-text {
-    opacity: 0.8;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .clock-text {
-    opacity: 0.8;
-  }
-
-  .meet-text {
-    opacity: 0.7;
+  to {
+    opacity: 1;
+    transform: none;
   }
 }

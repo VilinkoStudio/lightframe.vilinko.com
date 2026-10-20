@@ -1,25 +1,25 @@
-import { component$, useSignal, $, useStylesScoped$ } from "@qwik.dev/core";
+import { component$, useSignal, $, useStyles$ } from "@qwik.dev/core";
 import { Link } from "@qwik.dev/router";
 import { headerConfig } from "~/config";
 import { Icon } from "~/components/common/Icon";
 import styles from "./header.css?inline";
 
 export default component$(() => {
-  useStylesScoped$(styles);
+  useStyles$(styles);
 
   const isMenuOpen = useSignal(false);
 
   const toggleMenu = $(() => {
     isMenuOpen.value = !isMenuOpen.value;
     if (typeof document !== "undefined") {
-      document.body.style.overflow = isMenuOpen.value ? "hidden" : "";
+      document.body.classList.toggle("is-locked", isMenuOpen.value);
     }
   });
 
   const closeMenu = $(() => {
     isMenuOpen.value = false;
     if (typeof document !== "undefined") {
-      document.body.style.overflow = "";
+      document.body.classList.remove("is-locked");
     }
   });
 
@@ -27,8 +27,15 @@ export default component$(() => {
     <>
       <header class="header">
         <div class="header-container">
-          <Link href="/" class="logo" aria-label="LightFrame Home">
-            <span>LightFrame</span>
+          <Link href="/" class="logo" aria-label="LightFrame 首页">
+            <img
+              src="/images/logo.webp"
+              alt=""
+              width={26}
+              height={26}
+              class="logo-mark"
+            />
+            <span class="logo-name">LightFrame</span>
           </Link>
 
           <nav class="nav-desktop">
@@ -47,12 +54,15 @@ export default component$(() => {
                 {item.text}
               </Link>
             ))}
+            <a class="header-cta" href="#download">
+              下载
+            </a>
           </nav>
 
           <button
             class="mobile-menu-btn"
             onClick$={toggleMenu}
-            aria-label="Toggle menu"
+            aria-label={isMenuOpen.value ? "关闭导航" : "打开导航"}
             aria-expanded={isMenuOpen.value}
           >
             <Icon
@@ -65,8 +75,8 @@ export default component$(() => {
                       "M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z",
                     ]
               }
-              width={24}
-              height={24}
+              width={22}
+              height={22}
             />
           </button>
         </div>
@@ -85,13 +95,18 @@ export default component$(() => {
             class="mobile-nav-link"
             target={item.href.startsWith("http") ? "_blank" : undefined}
             rel={
-              item.href.startsWith("http") ? "noopener noreferrer" : undefined
+              item.href.startsWith("http")
+                ? "noopener noreferrer"
+                : undefined
             }
             onClick$={closeMenu}
           >
             {item.text}
           </Link>
         ))}
+        <a class="mobile-nav-link mobile-nav-cta" href="#download" onClick$={closeMenu}>
+          下载
+        </a>
       </nav>
     </>
   );

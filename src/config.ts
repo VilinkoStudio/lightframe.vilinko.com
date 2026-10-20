@@ -20,7 +20,7 @@ export const headerConfig: HeaderConfig = {
       href: LINKS.WALLPAPER,
     },
     {
-      text: "BILIBILI",
+      text: "哔哩哔哩",
       href: LINKS.BILIBILI,
     },
      {
@@ -41,7 +41,7 @@ export const introConfig: IntroConfig = {
       ],
       word: "轻量",
       intro:
-        "即开即用。使用自开发轻量级框架,实现极低的资源占用¹在满足桌面体验需求的同时保证日常使用流畅。",
+        "即开即用。自研轻量级框架，日常占用很低，桌面体验依旧流畅。",
     },
     {
       icon: [
@@ -49,7 +49,7 @@ export const introConfig: IntroConfig = {
       ],
       word: "灵感",
       intro:
-        "使用应用内时钟、日历、便签纸等组件创造一个您喜爱的桌面²。此外,您还可以使用混合、组件切割功能使其更加贴合您的壁纸。",
+        "时钟、日历、便签等组件随你摆放，混合与组件切割让它们贴合你的壁纸。",
     },
     {
       icon: [
@@ -58,7 +58,7 @@ export const introConfig: IntroConfig = {
       ],
       word: "沉浸",
       intro:
-        "专注于您的体验。应用提供专注空间功能,您可以轻易组织您的任务。同时您可以搭配桌面组件布置,创造更加丰富的日常体验。",
+        "专注空间帮你整理任务，再配上桌面组件，把日常安排放在看得见的地方。",
     },
     {
       icon: [
@@ -66,7 +66,7 @@ export const introConfig: IntroConfig = {
       ],
       word: "免费",
       intro:
-        "本应用始终不强制收费。当然,在有能力的情况下,希望您可以支持本应用来帮助我们长期开发和维护。",
+        "不强制收费。如果它帮到了你，可以在爱发电支持我们继续开发。",
     },
   ],
 };
@@ -76,7 +76,7 @@ export const introConfig: IntroConfig = {
  */
 const participators: ContributionGroup = {
   title: "贡献者",
-  explain: "为本项目提供技术上支持的人~",
+  explain: "提供技术支持的人",
   link: {
     text: "关于项目",
     href: LINKS.GITHUB,
@@ -95,12 +95,13 @@ const participators: ContributionGroup = {
 
 const sponsors: ContributionGroup = {
   title: "赞助者",
-  explain: "提供经费支持的人~",
+  explain: "提供经费支持的人",
   link: {
     text: "用爱发电",
     href: LINKS.AFDIAN,
   },
-  names: [""],
+  names: [],
+  source: "sponsors",
 };
 
 export const contributions: ContributionGroup[] = [participators, sponsors];

@@ -10,7 +10,7 @@ import type {
   RecentContributorsApiData,
   LogItem,
 } from "~/types";
-import { API, MESSAGES, DOWNLOAD } from "~/constants";
+import { API, DOWNLOAD } from "~/constants";
 import { parse } from "kdljs";
 
 /**
@@ -90,14 +90,15 @@ export async function getRecentContributors(
       API.ENDPOINTS.CONTRIBUTORS_RECENT,
     );
 
-    if (data?.code === 200 && data.data?.contributors) {
-      return data.data.contributors.slice(0, limit);
+    const names = data?.data?.contributors ?? data?.data?.sponsors;
+    if (data?.code === 200 && names) {
+      return names.slice(0, limit);
     }
   } catch (error) {
     console.error("获取最近贡献者列表失败:", error);
   }
 
-  return [MESSAGES.NO_DATA];
+  return [];
 }
 
 /**

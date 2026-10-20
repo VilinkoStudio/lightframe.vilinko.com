@@ -2,78 +2,75 @@
 .toggle-container {
   display: flex;
   justify-content: center;
-  margin: clamp(1rem, 3vw, 2rem) 0;
+  margin-top: clamp(24px, 4vw, 36px);
+}
+
+.toggle-container.align-start {
+  justify-content: flex-start;
 }
 
 .toggle-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 500;
+  gap: var(--spacing-2);
+  height: 44px;
+  padding: 0 var(--spacing-5);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   color: var(--lf-text-color);
-  background: rgba(var(--lf-primary-rgb), 0.05);
-  border: 1px solid rgba(var(--lf-primary-rgb), 0.1);
-  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--lf-line);
+  border-radius: var(--border-radius-full);
   cursor: pointer;
-  transition: all var(--transition-normal) var(--transition-ease);
-  min-height: 48px;
+  transition:
+    background-color var(--transition-fast) var(--ease-out),
+    border-color var(--transition-fast) var(--ease-out);
+}
+
+.toggle-btn:focus-visible {
+  outline: 2px solid var(--lf-outline-color);
+  outline-offset: 2px;
 }
 
 @media (hover: hover) {
   .toggle-btn:hover {
-    background-color: var(--lf-primary-color);
-    color: var(--lf-background-color);
-    border-color: var(--lf-primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.2);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .toggle-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .toggle-btn:hover {
-    box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.6);
+    background: var(--lf-hover-bg);
+    border-color: var(--lf-border-color);
   }
 }
 
 .toggle-btn:active {
-  transform: translateY(0);
+  transform: scale(0.985);
 }
 
 .toggle-icon {
-  display: inline-block;
-  transition: transform var(--transition-normal) var(--transition-ease);
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lf-text-color-tertiary);
+  transition: transform var(--transition-normal) var(--ease-out);
 }
 
 .toggle-icon.up {
   transform: rotate(180deg);
 }
 
-/* 响应式优化 */
 @media (max-width: 400px) {
   .toggle-btn {
     width: 100%;
-    max-width: 280px;
-    padding: 16px 24px;
-    font-size: 14px;
+    max-width: 320px;
+    justify-content: center;
   }
 }
 
-/* 减少动画模式支持 */
 @media (prefers-reduced-motion: reduce) {
   .toggle-btn,
   .toggle-icon {
     transition: none;
   }
 
-  .toggle-btn:hover {
+  .toggle-btn:active {
     transform: none;
   }
 }

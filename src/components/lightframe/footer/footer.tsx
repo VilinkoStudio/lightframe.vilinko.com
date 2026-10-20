@@ -24,25 +24,25 @@ export default component$(() => {
   return (
     <footer class="footer">
       <div class="footer-container">
-        <div class="footer-grid">
+        <div class="footer-top">
           <div class="footer-brand">
-            <div class="brand-logo">
+            <div class="brand-lockup">
               <img
                 src="/images/logo.webp"
-                alt="LightFrame Logo"
-                width={32}
-                height={32}
-                class="brand-logo-img"
+                alt=""
+                width={34}
+                height={34}
+                class="brand-mark"
                 loading="lazy"
                 decoding="async"
               />
-              <span class="brand-name">{APP_META.TITLE}</span>
+              <span class="brand-name">LightFrame</span>
             </div>
             <p class="brand-description">{APP_META.SUBTITLE}</p>
           </div>
 
-          <div class="footer-right">
-            <div class="footer-section">
+          <nav class="footer-nav" aria-label="页脚导航">
+            <div class="footer-col">
               <h3>产品</h3>
               <ul>
                 {FOOTER_LINKS.product.map((link) => (
@@ -59,7 +59,7 @@ export default component$(() => {
               </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="footer-col">
               <h3>社区</h3>
               <ul>
                 {FOOTER_LINKS.community.map((link) => (
@@ -75,25 +75,21 @@ export default component$(() => {
                 ))}
               </ul>
             </div>
-          </div>
+          </nav>
         </div>
 
         <div class="footer-bottom">
-          <div class="footer-bottom-content">
-            <p>
-              Copyright &copy; {currentYear} Vilinko. All rights reserved.
-            </p>
-            <div class="footer-bottom-links">
-              <a href="https://docs.vilinko.com/agreement/privacy.html">隐私政策</a>
-              <a href="https://docs.vilinko.com/agreement/tos.html">服务条款</a>
-              <a
-                href="https://beian.miit.gov.cn/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                粤ICP备2025454076号
-              </a>
-            </div>
+          <p>© {currentYear} Vilinko Studio</p>
+          <div class="footer-legal">
+            <a href={LINKS.PRIVACY}>隐私政策</a>
+            <a href={LINKS.TOS}>服务条款</a>
+            <a
+              href="https://beian.miit.gov.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              粤ICP备2025454076号
+            </a>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ export default function (opts: RenderToStreamOptions) {
     ...opts,
     // Use container attributes to set attributes on the html tag.
     containerAttributes: {
-      lang: "en-us",
+      lang: "zh-CN",
       ...opts.containerAttributes,
     },
     serverData: {

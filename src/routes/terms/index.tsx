@@ -4,19 +4,21 @@ import type { DocumentHead } from "@qwik.dev/router";
 export default component$(() => {
   useStyles$(`
     .agreement-page {
-      padding: 140px 20px 80px;
+      padding: 72px var(--page-gutter) 80px;
       max-width: 800px;
       margin: 0 auto;
       color: var(--lf-text-color);
       line-height: 1.8;
     }
     .agreement-page h1 {
-      margin-bottom: 40px;
-      text-align: center;
+      margin-bottom: 32px;
+      font-size: clamp(28px, 4vw, 40px);
+      text-align: left;
     }
     .agreement-page h2 {
-      margin: 30px 0 15px;
-      font-size: 1.5rem;
+      margin: 32px 0 12px;
+      font-size: 1.25rem;
+      font-weight: 600;
     }
     .agreement-page p {
       margin-bottom: 15px;

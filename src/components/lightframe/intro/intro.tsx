@@ -1,43 +1,33 @@
-import { component$, useStylesScoped$, $ } from "@qwik.dev/core";
+import { component$, useStylesScoped$ } from "@qwik.dev/core";
 import { introConfig } from "~/config";
 import { Icon } from "~/components/common/Icon";
-import type { IntroView } from "~/types";
 import styles from "./intro.css?inline";
 
 export default component$(() => {
   useStylesScoped$(styles);
 
-  const handleMouseMove = $((e: MouseEvent, currentTarget: HTMLElement) => {
-    const { left, top } = currentTarget.getBoundingClientRect();
-    const x = e.clientX - left;
-    const y = e.clientY - top;
-    currentTarget.style.setProperty("--mouse-x", `${x}px`);
-    currentTarget.style.setProperty("--mouse-y", `${y}px`);
-  });
-
   return (
-    <div class="intro">
-      <div class="intro-grid">
-        {introConfig.views.map((item) => (
-          <IntroItem key={item.word} {...item} onMouseMove$={handleMouseMove} />
-        ))}
+    <section class="intro section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-text">
+            <h2>为什么是 LightFrame</h2>
+            <p>把喜欢的桌面留下来，而不是每天面对一个将就的桌面。</p>
+          </div>
+        </div>
+
+        <div class="intro-grid">
+          {introConfig.views.map((item) => (
+            <div class="intro-item" key={item.word}>
+              <div class="intro-icon">
+                <Icon paths={item.icon} width={20} height={20} />
+              </div>
+              <h3>{item.word}</h3>
+              <p>{item.intro}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 });
-
-interface IntroItemProps extends IntroView {
-  onMouseMove$?: any;
-}
-
-const IntroItem = component$<IntroItemProps>(
-  ({ icon, word, intro, onMouseMove$ }) => (
-    <div class="intro-item" onMouseMove$={onMouseMove$}>
-      <div class="intro-icon">
-        <Icon paths={icon} width={24} height={24} />
-      </div>
-      <h3>{word}</h3>
-      <p>{intro}</p>
-    </div>
-  ),
-);

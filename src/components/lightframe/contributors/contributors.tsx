@@ -6,52 +6,33 @@ import {
 } from "@qwik.dev/core";
 import { contributions } from "~/config";
 import { getSponsors, getRecentContributors } from "~/services/api";
+import { LINKS } from "~/constants";
+import type { SponsorsData } from "~/types";
 import { useToggle } from "~/hooks/useToggle";
 import { ToggleButton } from "~/components/common/ToggleButton";
-import type { SponsorsData } from "~/types";
-import { Icon } from "~/components/common/Icon";
 import styles from "./contributors.css?inline";
 
-const LoadingState = () => <div class="loading">加载中...</div>;
-const ErrorState = ({ message }: { message: string }) => (
-  <span class="contributor-name error">{message}</span>
-);
+const SPONSOR_PREVIEW = 36;
 
-const ContributorNames = ({ names }: { names: string[] }) => (
-  <>
-    {names.map((name, index) => (
-      <span key={index} class="contributor-name">
-        {name}
-      </span>
+const NameList = ({ names }: { names: string[] }) => (
+  <ul class="name-list">
+    {names.map((name) => (
+      <li key={name}>{name}</li>
     ))}
-  </>
+  </ul>
 );
 
-const SponsorsList = ({
-  data,
-  explain,
-}: {
-  data: SponsorsData;
-  explain: string;
-}) => (
-  <div class="sponsor-list">
-    <div class="sponsor-explain">
-      {explain}（非默认名字按照字符顺序排列😃，最后一次更新：{data.lastUpdate}）
-    </div>
-    <ContributorNames names={data.names} />
-  </div>
-);
-
-const ContributorList = ({ names }: { names: string[] }) => (
-  <div class="contributor-list">
-    <ContributorNames names={names} />
-  </div>
+const SponsorChips = ({ names }: { names: string[] }) => (
+  <ul class="name-list name-list-inline">
+    {names.map((name) => (
+      <li key={name}>{name}</li>
+    ))}
+  </ul>
 );
 
 export default component$(() => {
   useStylesScoped$(styles);
-
-  const { value: isExpanded } = useToggle(false);
+  const { value: sponsorsExpanded } = useToggle(false);
 
   const sponsorsResource = useResource$<SponsorsData>(async ({ cleanup }) => {
     const controller = new AbortController();
@@ -60,82 +41,104 @@ export default component$(() => {
   });
 
   const recentContributorsResource = useResource$<string[]>(async () => {
-    return await getRecentContributors();
+    const names = await getRecentContributors();
+    return names.filter((name) => name && !name.includes("还没有"));
   });
 
   return (
-    <div class="contributors">
+    <section class="contributors section section-divided">
       <div class="container">
-        <h2 class="section-title">贡献者</h2>
+        <div class="section-head">
+          <div class="section-head-text">
+            <h2>贡献者</h2>
+            <p>代码、测试、反馈和支持，都算数。</p>
+          </div>
+          <a
+            class="section-head-action"
+            href={LINKS.GITHUB}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            项目仓库
+          </a>
+        </div>
 
-        <div class="recent-contributors">
-          <h3>最近</h3>
-          <div class="recent-list">
+        <div class="recent">
+          <span class="recent-label">最近加入</span>
+          <div class="recent-names">
             <Resource
               value={recentContributorsResource}
-              onPending={LoadingState}
-              onRejected={() => <ErrorState message="呜呜呜，还没有～" />}
+              onPending={() => <span class="recent-empty">读取中…</span>}
+              onRejected={() => (
+                <span class="recent-empty">本月暂无新增贡献者</span>
+              )}
               onResolved={(names) =>
-                names.length === 1 && names[0] === "呜呜呜，还没有～" ? (
-                  <ErrorState message="呜呜呜，还没有～" />
+                names.length === 0 ? (
+                  <span class="recent-empty">本月暂无新增贡献者</span>
                 ) : (
-                  <ContributorNames names={names} />
+                  <ul class="name-list name-list-inline">
+                    {names.map((name) => (
+                      <li key={name}>{name}</li>
+                    ))}
+                  </ul>
                 )
               }
             />
           </div>
         </div>
 
-        <div
-          class={`contributors-container ${isExpanded.value ? "expanded" : ""}`}
-        >
-          <div class="contributors-grid">
-            {contributions.map((group) => (
-              <div key={group.title} class="contributor-group">
-                <h3>{group.title}</h3>
-                <p>{group.explain}</p>
+        <div class="contributor-groups">
+          {contributions.map((group) => (
+            <div class="contributor-group" key={group.title}>
+              <h3>{group.title}</h3>
+              <p class="group-explain">{group.explain}</p>
 
-                {group.title === "赞助者" ? (
-                  <Resource
-                    value={sponsorsResource}
-                    onPending={LoadingState}
-                    onRejected={() => <ErrorState message="加载失败" />}
-                    onResolved={(data) => (
-                      <SponsorsList data={data} explain={group.explain} />
-                    )}
-                  />
-                ) : (
-                  <ContributorList names={group.names} />
-                )}
-
-                {group.link.text && (
-                  <div class="contribution-link">
-                    <a
-                      href={group.link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {group.link.text}
-                      <Icon
-                        paths={["M5.8 3.6l6 6-6 6"]}
-                        width={16}
-                        height={16}
+              {group.source === "sponsors" ? (
+                <Resource
+                  value={sponsorsResource}
+                  onPending={() => <span class="recent-empty">读取中…</span>}
+                  onRejected={() => (
+                    <span class="recent-empty">赞助者名单读取失败</span>
+                  )}
+                  onResolved={(data) => (
+                    <>
+                      <SponsorChips
+                        names={
+                          sponsorsExpanded.value
+                            ? data.names
+                            : data.names.slice(0, SPONSOR_PREVIEW)
+                        }
                       />
-                    </a>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+                      {data.names.length > SPONSOR_PREVIEW && (
+                        <ToggleButton
+                          isExpanded={sponsorsExpanded}
+                          expandedText="收起赞助者"
+                          collapsedText={`全部 ${data.names.length} 位赞助者`}
+                        />
+                      )}
+                      <p class="group-note">名单更新于 {data.lastUpdate}</p>
+                    </>
+                  )}
+                />
+              ) : (
+                <NameList names={group.names} />
+              )}
 
-        <ToggleButton
-          isExpanded={isExpanded}
-          expandedText="收起详情"
-          collapsedText="查看全部贡献者"
-          class="contributors-toggle"
-        />
+              {group.link.text && (
+                <div class="group-link">
+                  <a
+                    href={group.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {group.link.text}
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 });

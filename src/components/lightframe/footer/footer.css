@@ -1,312 +1,128 @@
+/* ==================== 页脚 ==================== */
 .footer {
-  background: #000;
-  margin-top: 120px;
-  position: relative;
   padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  /*background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(255,255,255,0.1) 20%,
-    rgba(255,255,255,0.1) 80%,
-    transparent 100%);*/
+  background: var(--lf-footer-bg);
+  border-top: 1px solid var(--lf-line-soft);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--spacing-4);
+  padding: 0 var(--page-gutter);
 }
 
-.footer-grid {
+.footer-top {
   display: flex;
   justify-content: space-between;
-  gap: 80px;
-  padding: 80px 0 60px;
+  gap: clamp(32px, 6vw, 80px);
+  padding: clamp(40px, 6vw, 64px) 0;
 }
 
-.footer-right {
-  display: flex;
-  gap: 80px;
-}
-
-/* 品牌区域 */
-.footer-brand {
-  color: #ffffff;
-}
-
-.brand-logo {
-  display: flex;
+.brand-lockup {
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
 }
 
-.brand-logo-img {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  display: block;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
-  transition: transform 0.3s ease;
-}
-
-@media (hover: hover) {
-  .brand-logo-img:hover {
-    transform: scale(1.05);
-  }
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--border-radius-sm);
 }
 
 .brand-name {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
   color: #ffffff;
-  margin: 0;
 }
 
 .brand-description {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0 0 32px 0;
-  max-width: 300px;
-}
-
-.brand-social {
-  display: flex;
-  gap: 12px;
-}
-
-.social-link {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-@media (hover: hover) {
-  .social-link:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    transform: translateY(-2px); /* 使用全局hover-lift效果 */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  }
-}
-
-/* 功能区域 */
-.footer-section {
-  color: #ffffff;
-}
-
-.footer-section h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 0 28px 0;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  max-width: 26ch;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: rgba(255, 255, 255, 0.58);
 }
 
-.footer-section li {
-  margin-bottom: 16px;
+.footer-nav {
+  display: flex;
+  gap: clamp(40px, 8vw, 96px);
 }
 
-.footer-section a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 0.2s ease; /* 使用标准过渡时间 */
-  position: relative;
-  display: inline-block;
-}
-
-.footer-section a:hover {
+.footer-col h3 {
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   color: #ffffff;
 }
 
-.footer-section a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--lf-border-color);
-  transition: width 0.3s ease;
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
 }
 
-.footer-section a:hover::after {
-  width: 100%;
-}
-
-/* 支持区域 */
-.support-info {
-  text-align: center;
-}
-
-.support-info p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-  margin: 0 0 16px 0;
-}
-
-.support-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+.footer-col a {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.58);
 }
 
 @media (hover: hover) {
-  .support-btn:hover {
-    transform: translateY(-2px); /* 使用全局hover-lift效果 */
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+  .footer-col a:hover {
+    color: #ffffff;
   }
 }
 
-.support-btn span:first-child {
-  font-size: 16px;
-}
-
-/* 底部区域 */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 24px 0;
-}
-
-.footer-bottom-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 13px;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  padding: var(--spacing-5) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.58);
 }
 
 .footer-bottom p {
   margin: 0;
 }
 
-.footer-bottom-links {
+.footer-legal {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: var(--spacing-5);
 }
 
-.footer-bottom-links a {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  font-size: 13px;
-  transition: color 0.2s ease;
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.58);
 }
 
-.footer-bottom-links a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* 响应式设计 */
-@media (max-width: 1024px) {
-  .footer-grid {
-    flex-direction: column;
-    gap: 60px;
-    padding: 60px 0 48px;
-  }
-
-  .footer-brand {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .brand-logo {
-    justify-content: center;
-  }
-
-  .footer-right {
-    flex-direction: column;
-    gap: 48px;
+@media (hover: hover) {
+  .footer-legal a:hover {
+    color: rgba(255, 255, 255, 0.8);
   }
 }
 
 @media (max-width: 768px) {
-  .footer-grid {
-    gap: 48px;
-    padding: 48px 0 36px;
-  }
-
-  .footer-brand {
-    text-align: center;
-    display: flex;
+  .footer-top {
     flex-direction: column;
-    align-items: center;
   }
 
-  .footer-section {
-    text-align: center;
-  }
-
-  .footer-right {
+  .footer-bottom {
     flex-direction: column;
-    gap: 40px;
-  }
-
-  .footer-bottom-content {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
+    align-items: flex-start;
+    gap: var(--spacing-3);
   }
 }
 
 @media (max-width: 480px) {
-  .footer-container {
-    padding: 0 16px;
-  }
-
-  .brand-logo {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .brand-name {
-    font-size: 18px;
-  }
-
-  .support-btn {
-    padding: 10px 20px;
-    font-size: 13px;
-  }
-
-  .footer-bottom-links {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
+  .footer-nav {
+    gap: var(--spacing-10);
   }
 }

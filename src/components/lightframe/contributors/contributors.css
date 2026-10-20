@@ -1,223 +1,113 @@
-.contributors {
-  padding: 80px 0;
-  background: var(--lf-background-color);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-4);
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-  color: var(--lf-text-color);
-  letter-spacing: -0.02em;
-}
-
-.recent-contributors {
-  text-align: center;
-  margin-bottom: 48px;
-  background: var(--lf-card-bg);
-  padding: 32px;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.recent-contributors h3 {
-  color: var(--lf-text-color);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-
-.recent-list {
+/* ==================== 最近加入 ==================== */
+.recent {
   display: flex;
+  align-items: baseline;
+  gap: var(--spacing-5);
+  padding: var(--spacing-4) 0;
+  border-top: 1px solid var(--lf-line-soft);
+  border-bottom: 1px solid var(--lf-line-soft);
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.recent-label {
+  flex-shrink: 0;
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color-tertiary);
+}
+
+.recent-names {
+  min-width: 0;
+}
+
+.recent-empty {
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color-secondary);
+}
+
+/* ==================== 名单 ==================== */
+.name-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--lf-line-soft);
+}
+
+.name-list li {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--lf-line-soft);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--lf-text-color-secondary);
+}
+
+.name-list-inline {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
+  gap: var(--spacing-2);
 }
 
-.contributor-name {
-  padding: 8px 16px;
-  background: rgba(var(--lf-primary-rgb), 0.05);
-  border: 1px solid rgba(var(--lf-primary-rgb), 0.1);
-  border-radius: 20px;
-  font-size: 0.9rem;
-  color: var(--lf-text-color);
-  transition: all 0.2s ease;
+.name-list-inline li {
+  padding: 3px var(--spacing-3);
+  border: 1px solid var(--lf-line-soft);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-xs);
 }
 
-.contributor-name:hover {
-  background: var(--lf-primary-color);
-  color: #fff;
-  border-color: var(--lf-primary-color);
-  transform: translateY(-2px);
-}
-
-.contributors-container {
-  max-height: 400px;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-  position: relative;
-}
-
-.contributors-container.expanded {
-  max-height: none;
-  overflow: visible;
-}
-
-.contributors-grid {
+/* ==================== 分组 ==================== */
+.contributor-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 56px);
+}
+.name-list-inline li {
+  padding: 4px var(--spacing-3);
+  border: 1px solid var(--lf-line-soft);
+  border-radius: var(--border-radius-full);
+  font-size: 13px;
 }
 
-.contributor-group {
-  background: var(--lf-card-bg);
-  padding: 32px;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+.group-explain {
+  margin-bottom: var(--spacing-5);
+  font-size: var(--font-size-sm);
+  color: var(--lf-text-color-secondary);
 }
 
-.contributor-group h3 {
-  color: var(--lf-text-color);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.group-note {
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-xs);
+  color: var(--lf-text-color-tertiary);
 }
 
-.contributor-group h3::before {
-  content: "";
-  display: block;
-  width: 4px;
-  height: 16px;
-  background: var(--lf-primary-color);
-  border-radius: 2px;
+.group-link {
+  margin-top: var(--spacing-5);
 }
 
-.contributor-group p {
-  color: var(--lf-text-color-secondary, #666);
-  font-size: 0.9rem;
-  margin-bottom: 24px;
-  line-height: 1.5;
-}
-
-.contributor-list,
-.sponsor-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.contribution-link {
-  text-align: right;
-  margin-top: auto;
-}
-
-.contribution-link a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.group-link a {
+  font-size: var(--font-size-sm);
   color: var(--lf-primary-color);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: gap 0.2s ease;
 }
 
-.contribution-link a:hover {
-  gap: 10px;
-}
-
-.contributors-toggle {
-  text-align: center;
-  margin-top: 32px;
-}
-
-.contributors-container:not(.expanded)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 150px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--lf-background-color)
-  );
-  pointer-events: none;
-}
-
-.loading,
-.error {
-  padding: 12px 24px;
-  color: var(--lf-text-color-secondary, #666);
-  font-size: 0.9rem;
-  background: rgba(0, 0, 0, 0.03);
-  border-radius: 8px;
-  display: inline-block;
-}
-
-@media (prefers-color-scheme: dark) {
-  .recent-contributors,
-  .contributor-group {
-    background: var(--lf-card-bg);
-    border-color: rgba(255, 255, 255, 0.05);
-  }
-
-  .recent-contributors h3,
-  .contributor-group h3 {
-    color: var(--lf-text-color);
-  }
-
-  .contributor-group p {
-    color: var(--lf-text-color-secondary);
-  }
-
-  .contributor-name {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    font-weight: 500;
-  }
-
-  .contributor-name:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
-    color: #ffffff;
-    transform: translateY(-2px);
-  }
-
-  .loading,
-  .error {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--lf-text-color-secondary);
-  }
-
-  .contributors-container:not(.expanded)::after {
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--lf-background-color)
-    );
-  }
+.group-link a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-  .contributors-grid {
-    grid-template-columns: 1fr;
+  .recent {
+    flex-direction: column;
+    gap: var(--spacing-3);
   }
 
-  .recent-contributors {
-    padding: 24px;
+  .contributor-groups {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--spacing-8);
   }
+}
+
+@media (max-width: 480px) {
 }

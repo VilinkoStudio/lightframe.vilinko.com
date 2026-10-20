@@ -35,25 +35,10 @@ export const LINKS = {
   SUPPORT: "https://support.vilinko.com",
 } as const;
 
-// UI 相关常量
-export const UI = {
-  RECENT_CONTRIBUTORS_LIMIT: 5,
-  DEFAULT_ICON_SIZE: 42,
-} as const;
-
-// 消息文本
-export const MESSAGES = {
-  LOADING: "加载中...",
-  LOAD_FAILED: "加载失败",
-  NO_DATA: "呜呜呜，还没有～",
-  FETCH_ERROR: "无法获取数据",
-} as const;
-
 // 应用元数据
 export const APP_META = {
   TITLE: "轻框 | LightFrame",
   SUBTITLE: "以轻量的方式定义自己喜欢的桌面",
   DESCRIPTION:
     "LightFrame - 以轻量的方式定义自己喜欢的桌面。轻量、灵感、沉浸、免费的桌面应用。",
-  COPYRIGHT: "Copyright © 2026 Vilinko. All rights reserved.",
 } as const;

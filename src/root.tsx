@@ -4,7 +4,6 @@ import { QwikRouterProvider, RouterOutlet } from "@qwik.dev/router";
 import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
-import "./styles/modern-layout.css";
 
 export default component$(() => {
   /**
