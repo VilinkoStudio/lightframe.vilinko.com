@@ -1,9 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "qwik-project-name",
-  "short_name": "Welcome to Qwik",
+  "name": "轻框 | LightFrame",
+  "short_name": "LightFrame",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
-  "description": "A Qwik project app."
+  "background_color": "#f7f7f5",
+  "theme_color": "#5b53e8",
+  "description": "以轻量的方式定义自己喜欢的桌面"
 }

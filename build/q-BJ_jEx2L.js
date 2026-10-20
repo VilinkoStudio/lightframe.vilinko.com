@@ -1,0 +1,1 @@
+import{_ as e}from"./q-xbjexvGE.js";import{t as o,i}from"./q-BBHK_-NB.js";const s=()=>e(()=>import("./q-B9maRHyg.js").then(t=>t.a),[]),r=[{title:"技术支持",text:"提供技术支持与建议的开发者。"},{title:"用户反馈",text:"提交反馈和建议的每一位用户。"},{title:"社区贡献",text:"参与讨论、分享经验的社区成员。"}],a=o(i(s,"s_ljVYcDTckKk"));export{a as A,r as T};

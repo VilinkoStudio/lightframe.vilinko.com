@@ -1,1 +1,0 @@
-const e=".icon{display:inline-flex;align-items:center;justify-content:center}.icon svg{display:block;width:100%;height:100%}";export{e as s};
